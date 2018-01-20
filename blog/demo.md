@@ -8,4 +8,4 @@
 * cont2
 
 # 
-* [demo2](http://github.com/faiz-lisp/faiz-lisp.github.io/blog/demo2.md)
+* [demo2](https://github.com/faiz-lisp/faiz-lisp.github.io/blob/master/blog/demo2.md)
