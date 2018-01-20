@@ -9,7 +9,5 @@
 
 # 
 * [demo2](https://github.com/faiz-lisp/faiz-lisp.github.io/blob/master/blog/demo2.md)
-* [demo2](https://github.com/faiz-lisp/faiz-lisp.github.io/blog/demo2.md)
-* [demo2](https://faiz-lisp.github.io/blog/demo2.md)
 * [demo2](./demo2.md)
-* [demo2](demo2.md)
+* [Demo 2](demo2.md)
