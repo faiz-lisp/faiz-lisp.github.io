@@ -2,6 +2,10 @@
 <html>
 hello world !
 <script>
-document.write("hi world !")
+var fib0 = function(n){
+  if(n<=2) return 1;
+  else return fib0(n-1)+fib0(n-2);
+}
+document.write("fib0(6)= ",fib0(6))
 </script>
 </html>
