@@ -38,11 +38,11 @@ DEBUG=1;dCnt=0;
 	
 	<title>html project list</title>
 	
-	<script src='../_jsm/jquery.min.js'></script>	
+	<script src='_jsm/jquery.min.js'></script>	
 	<!--script src='../_js/addevent.js'></script-->
-	<script src='../_js/evercookie.js'></script>
-	<script src='../_js/md5.js'></script>
-	<script src='../_js/json2.js'></script>
+	<script src='_js/evercookie.js'></script>
+	<script src='_js/md5.js'></script>
+	<script src='_js/json2.js'></script>
 	<!--script src='../_js/jump.js'></script-->
 	<script src='js/mymath.js'></script>
 	<script src='js/mytest.js'></script>
@@ -802,7 +802,6 @@ DEBUG=1;dCnt=0;
 	function get() {
 		try{
 			var o = document.createElement("script"); 
-			//o.src="http://www.icon-global.com/src/testjson.js";//.jsonp.php
 			o.src="testjson.js";
 			o.type="text/javascript";
 			document.body.appendChild(o);
@@ -1038,7 +1037,7 @@ DEBUG=1;dCnt=0;
    
 	<div id="fd" class="fd" style="display:none;filter:alpha(opacity=80)" onMousemove="
 var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px'"> 
-			<div class="content" style="position:absolute" rem:hideSize>�ƶ���</div>
+			<div class="content" style="position:absolute" rem:hideSize>asd</div>
 	</div> 
 
 	<div class="wrap">
@@ -1047,29 +1046,23 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		<div id="title">html project list:</div>
 		<br/>    
 		<div id="mota"><a href='motajs/src/index.html'> Mota</a></div>
-		<div id="fruit_ninja"><a        href='fruit_ninja_html5/index.html'>   x Fruit Ninja</a></div>
-		<div id="street_fighter"><a     href='sf/index.html'>                  x Street Fighter</a></div>
-		<div id="russia_square"><a      href='RussiaSquare/index.html'>        x Tetris</a></div>
+		<div id="fruit_ninja"><a        href='fruit_ninja_html5/index.html'>   Fruit Ninja</a></div>
+		<div id="street_fighter"><a     href='sf/index.html'>                  Street Fighter</a></div>
+		<div id="russia_square"><a      href='RussiaSquare/index.html'>         Tetris</a></div>
+		<div id="rainyday"><a           href='rainyday/index.html'>             Rainy Day</a></div>
+		<div id="snow3d_with_snow"><a   href='Snow3dWithSnow/index.html'>      Snow3d With Snow</a></div>
+		<div id="dancing_timer"><a      href='dancing_timer_canvas/index.html'> Dancing Timer</a></div>
+		<div id="flame"><a              href='flame_canvas/index.html'>         Flame</a></div>
+		<div id="snow_3d"><a            href='snow3d/snow3d/index.html'>        Snow 3d</a></div>
+		<div id="virtual_keybd"><a      href='SoftKeybd/index.html'>            Virtual Keyboard</a></div>
+		<div id="video_player"><a       href='video_js/index.html'>            x Video Player</a></div>
+		<div id="chess"><a              href='chess/index.html'>               x incomplete Chess</a></div>
 		<div id="3d_rotatable_tags"><a  href='newform/2/index.html'>           x 3d Rotatable Tags</a></div>
-		<div id="rainyday"><a           href='rainyday/index.html'>            x Rainy Day</a></div>
-		<div id="snow3d_with_snow"><a   href='Snow3dWithSnow/index.html'>      x Snow3d With Snow</a></div>
-		<div id="dancing_timer"><a      href='dancing_timer_canvas/index.html'>x Dancing Timer</a></div>
 		<div id="clay_font"><a          href='clay_font/index.html'>           x Clay Font</a></div>
-		<div id="flame"><a              href='flame_canvas/index.html'>        x Flame</a></div>
-		<div id="qq_list_imitation"><a  href='newform/3/index.html'>           x QQ List Imitation</a></div>
 		<div id="json_test"><a          href='json/1/index.html'>              x Json Test</a></div>
 		<div id="my_editor"><a          href='myEdtr/index.html'>              x my editor</a></div>
-		<div id="imap_online"><a        href='src/index.html'>                 x [iMap Online]</a></div>
-		<div id="snow_3d"><a            href='snow3d/snow3d/index.html'>       x Snow 3d</a></div>
-		<div id="virtual_keybd"><a      href='SoftKeybd/index.html'>           x Virtual Keyboard</a></div>
-		<div id="video_player"><a       href='video_js/index.html'>            x Video Player</a></div>
-		<div id="louver_viewer"><a      href='louver/index.html'>              x Louver Viewer</a></div>
-		<div id="chess"><a              href='chess/index.html'>               x incomplete Chess</a></div>
-		<div id="games"><a              href="javascript:location.href='game/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">x Games</a></div>
-		<div id="compatible"><a         href="javascript:location.href='compatible/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">x Compatible Webpage</a></div>
-    
+		<div id="games"><a              href="javascript:location.href='game/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">x Games</a></div>    
 		<div id="js_editor"><a          href="data:text/html,<style type=%22text/css%22>#e{position:absolute;top:4%;right:0;bottom:0;left:0;font-size:1.3em}button{position:absolute;top:0;}</style><button onClick=c()>color</button><div id=%22e%22 onkeydown='if(event.altKey)switch(event.keyCode){case 67:c();break;}'></div><script src=%22http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js%22 type=%22text/javascript%22 charset=%22utf-8%22></script><script>var n=1,e=ace.edit(%22e%22);e.setTheme(%22ace/theme/eclipse%22);e.getSession().setMode(%22ace/mode/javascript%22);function c(){e.setTheme(n++%2==0?'ace/theme/eclipse':%22ace/theme/monokai%22);}</script>">x js editor</a></div>
-		<!--div id="rotatable_earth"><a href='./../rotatable_earth/index.html'>Rotatable Earth</a></div-->		
 		
 	<script src='js/base64_transfer.js'></script>
     <script>/*<!--*/
@@ -1168,9 +1161,8 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 			//
 		var canvas = document.createElement('canvas');  
 		var ctx = canvas.getContext('2d');
-		var txt = 'http://www.icon-global.com/';//ctx.textBaseline = "top";  
+		var txt = 'faiz-lisp.github.io';//ctx.textBaseline = "top";  
 		ctx.font = "14px 'Arial'";//
-		//ctx.textBaseline = "icon-global";  		//ctx.fillStyle = "#fff";//f60  		ctx.fillRect(125,1,62,20);//  32*62=1984 *8=15872
 		ctx.fillStyle = "#fff";//999
 		ctx.fillText(txt, 2, 15);//2,16  
 		ctx.fillStyle = "rgba(128,128,128, 1)";//102, 204, 0, 0.7 128,128,128,0.9~0.1

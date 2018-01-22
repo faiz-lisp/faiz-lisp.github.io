@@ -1,0 +1,86 @@
+<!---->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
+"http://www.w3.org/TR/html4/frameset.dtd">
+
+<html>
+<style>
+body{
+background-color:#202020;
+position:absolute;bottom:0;right:0;/*height:100%;*/
+width:100%;
+}
+img{
+width:100%;height:100%;
+}
+</style>
+
+<head>
+<title id=ti>Merry Christmas</title>
+<script>
+	window.requestAnimFrame = (function(){    //.reduce cpu occupy
+		return window.requestAnimationFrame ||    
+				window.webkitRequestAnimationFrame ||    
+				window.mozRequestAnimationFrame ||    
+				window.oRequestAnimationFrame ||    
+				window.msRequestAnimationFrame ||    
+				function(callback) {    
+					window.setTimeout(callback, 1000 / 60);    
+				};    
+	})(); 
+</script>
+</head>
+
+<body onload=(onclick=run)()>
+	<img id=bg>
+	
+	<script>/*<!--*/
+		var aNL	='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+			,cnt=0
+		;
+		//run()
+		//alert(1)
+
+		function run()
+		{		
+			var ss = 'http://i.imgur.com/'
+				, i= 0
+				, imag= document.getElementById('bg')
+				
+			//imag.crossOrigin= '';
+			//imag.src= 'img/bg.jpg';
+			//if(! imag.complete)
+			{
+				imag.onload= function(){
+					//alert(3)
+					var engine= new RainyDay( {image:this} );
+					
+					/*engine.gravity =engine.GRAVITY_NON_LINEAR;
+					engine.reflection =engine.REFLECTION_MINIATURE;*/
+					engine.trail= engine.TRAIL_DROPS //NONE;/*TRAIL_DROPS;*/
+					engine.rain([ [0,2,500]]); /*1, 2, 8000 ] ]);*/
+					engine.rain([ [3,3,0.88],[5,5,0.9],[6,2,1]], 144)										
+				};
+			}
+			
+			//for( ;i<7;++i){ ss+= aNL[Math.random().toString().replace(/(^[0|.]*)/g,'')%62]}			
+			for(var i=0;i<7;++i){ ss+= aNL[Math.ceil(Math.random()*61)]; }
+			// for1(6) ss+= aNL[ m2n(62, m2n(10, (ran % m2n(62,'1000000',10)), 62).split('')[i], 10)] 			
+			ss+= '.jpg'; /*document.write("<body style='width:100%;'><img id=bg style='width:100%;'>");*/
+				
+			imag.crossOrigin= '';
+			//imag.src= 'img/bg.jpg'
+			//imag.src= ss
+			//imag.src= './img/bg.jpg'
+			imag.src= (cnt%8==0? 'http://i.imgur.com/N7ETzFO.jpg': ss) /*cnt++;*/ //trigger.onload
+				
+			document.getElementById('ti').text= (cnt==0? document.title: cnt+' '+imag.src.substring(5,30))
+			//cnt= Math.floor( Math.random()*512)
+			cnt= Math.floor(Math.random()*7)
+			//alert(cnt)
+			//alert(2)
+		}
+		//-->
+	</script>
+	<script src='js/rainyday.js'></script>
+</body>
+</html>
