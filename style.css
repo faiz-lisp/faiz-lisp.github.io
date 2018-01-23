@@ -18,7 +18,6 @@ border:0 solid #FF0099;
     behavior: url(/htc/ie-css3.htc);
 }
 #backtop{}
-#gotobottom{}
 div{
 width:95%; margin:0 auto;
 line-height:1.5em; overflow:hidden; background-color:#e0e0e0; 
