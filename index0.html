@@ -1,0 +1,1371 @@
+<script>
+//todo:next-page; cnt err in ie; chrysanthemum;
+//file:\\\f:\proj\list\index.html
+var prox,proy,proxc,proyc
+	,dx,dy,mx,my
+	,mouseD
+	,odrag
+	,od
+	; 
+DEBUG=1;dCnt=0;
+</script>
+<!DOCTYPE html>
+<!--[if gt IE 8]>
+<html class="">ie8+ <![endif]-->
+<!--[if IE 8]>
+<html class="lt-ie9">ie8 <![endif]-->
+<!--[if IE 7]>
+<html class="lt-ie9 lt-ie8">ie7/8 <![endif]-->
+<!--[if lt IE 7]>
+<html class="lt-ie9 lt-ie8 lt-ie7">ie7- <![endif]-->
+<meta content="text/html;charset=utf-8"><!--</meta>--MIME-->
+<!--meta http-equiv="Cache-Control"content="no-cache"-->
+
+<!---->
+<meta name="Viewport" content="width=device-width; user-scaleable=no; initial-scale=1.0"/>
+<!--[if lt IE 9]>
+<script src="_js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="_code/strapdown.css">
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="document.selection.empty()" oncopy="document.selection.empty()" onbeforecopy="return false" onmouseup="document.selection.empty()">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+<!--meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"-->
+<meta name="HandheldFriendly" content="true">
+
+  <!-- <div class=wrap> -->
+	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
+  <!-- </div> -->
+  <xmp><title>html project list v0.04</title>
+  [ ]:# (a comment of markdown)
+  ### Data Markup Language:
+  * [markdown注释写法 /How to write a comment in the markdown format?](_code/blog-html/demo1.html)
+  ### Proggaming Language:
+  * C++
+  </xmp>
+	<a id=top name=top></a>
+  
+  
+	<!--[if lt IE 9]> 
+	<script type="text/javascript" src="js/html5.js"></script>
+	<script type="text/javascript" src="js/excanvas.compiled.js"></script>
+	<![endif]-->
+	<script src='_jsm/jquery.min.js'></script>	
+	<!--script src='_js/addevent.js'></script-->
+	<script src='_js/evercookie.js'></script>
+	<script src='_js/md5.js'></script>
+	<script src='_js/json2.js'></script>
+	<!--script src='_js/jump.js'></script-->
+	<script src='_code/js/mymath.js'></script>
+	<script src='_code/js/mytest.js'></script>
+    <!-- <script type="text/javascript">
+        var scriptDom = document.createElement("script");
+        scriptDom.setAttribute("type", "text/javascript");
+        if(DEBUG){
+            scriptDom.setAttribute("src", "http://w.1616.net/chaxun/iptolocal.php");
+        }else{
+            //scriptDom.setAttribute("src", "2.js");
+        }
+        document.getElementsByTagName("head")[0].appendChild(scriptDom);
+    </script> -->
+    <!--script src="http://w.1616.net/chaxun/iptolocal.php"></script-->
+	<script>/*<!--{*/
+	//=!-[1,];	
+	var isIE= /*@cc_on!@*/0;	//Compile Cmd
+	/*@
+	if(DEBUG){
+	document.write("JScriptV" + @_jscript_version);
+	
+	document.write("; ");
+	@if (@_jscript_version > 5.8) 
+	document.write("IE8+");
+	@elif (@_jscript_version == 5.8) 
+	document.write("IE8");
+	@elif (@_jscript_version == 5.7 && window.XMLHttpRequest) 
+	document.write("IE7"); 
+	@elif (@_jscript_version == 5.6 || (@_jscript_version == 5.7 && !window.XMLHttpRequest)) 
+	document.write("IE6"); 
+	@elif (@_jscript_version == 5.5) 
+	document.write("IE5.5"); 
+	@else 
+	document.write("IE5-"); 
+	@end
+	
+	document.write("; ");
+	}
+	@*/ 
+
+	/*
+	//jQuery.noConflict(); //$ == jQuery
+	jQuery( function(){ //.	prototype conflict //document).ready(
+		alert();
+		//var b= window.onload; window.onload= function(){ b(); init(); }
+		jQuery(".content").mouseenter(function ()
+		{
+				jQuery(this).children().css("background-color", "#f1f1f1");
+		});
+
+		jQuery(".content").mouseleave(function ()
+		{
+				jQuery(this).children().css("background-color", "#ffffff");
+		});		
+	})*/	
+	/*$(function(){
+     $("#img").each(function(k,img){
+        new JumpObj(img,8);
+    });
+	});*/
+    
+	dCnt+=1;
+	//}--></script>
+</head>
+<body>
+
+    
+	<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8">
+	//http://ip.ws.126.net/ipquery
+	//http://1212.ip138.com/ic.asp
+	</script> -->
+    <!--foreigner-cant-access-cdn-smoothly-->
+    <!--add-an-op-of-timeout-->
+    
+	
+    
+	<script src="http://ip.ws.126.net/ipquery"></script>
+	<script>
+	
+	
+	//var returnCitySN = {"cip": "113.66.157.69"};
+	//var WData = ['113.66.189.249','广州','yanzhou','广东']; if (typeof(WData_callback) != 'undefined') { WData_callback();}
+	function getIp(){ 
+		try	{
+			//return returnCitySN.cip;//+','+unescape(returnCitySN["cname"]));
+			return WData[0]+' '+lo+lc;
+			//return returnCitySN["cname"];
+		}catch(e){ d();}
+		return '';
+	}		
+	
+    //math
+    function fibo(n) {
+        return n>1? fibo(n-1)+fibo(n-2): 1;
+    }
+    
+	//wmi+ActvX+ie
+	function getSysInfo2(){ 
+		try{
+			var locator = new ActiveXObject ("WbemScripting.SWbemLocator"); 
+			var service = locator.ConnectServer("."); 
+			//CPU��Ϣ 
+			var cpu = new Enumerator (service.ExecQuery("SELECT * FROM Win32_Processor")).item(); 
+			var cpuType=cpu.Name,hostName=cpu.SystemName; 
+			//usb��Ϣ 
+			var audio = new Enumerator (service.ExecQuery("SELECT * FROM Win32_SoundDevice")); 
+			for (var aud=[],i=0;!audio.atEnd();audio.moveNext()) aud[i++]={cap:audio.item().Capacity/1024/1024,speed:audio.item().Speed} 
+			//ϵͳ��Ϣ 
+			var system=new Enumerator (service.ExecQuery("SELECT * FROM Win32_ComputerSystem")).item();
+			var physicMenCap=Math.ceil(system.TotalPhysicalMemory/1024/1024),curUser=system.UserName,cpuCount=system.NumberOfProcessors 
+
+			return {cpuType:cpuType,cpuCount:cpuCount,hostName:hostName,curUser:curUser
+			,aud:aud
+			}
+		}catch(e){
+			d();
+			return '';
+		}			
+	} 
+
+	function debuglog( s){//add a global call cntr
+		//p =$(p);
+		var tmp =document.getElementById('debug');//createElement( 'div' );
+		tmp.innerHTML +=s+'<br>';
+		//while(tmp.firstChild){p.appendChild( tmp.firstChild );}
+	}
+	
+	//function $(obj){		return document.getElementById(obj);	}//.
+	
+	/*sys*/
+	
+	/*check*/
+	function isNum(value){
+		return (typeof value === "number")	&&	isFinite(value);
+	}
+    
+	// ת��Ϊ���� 
+	function intval(v) 
+	{ 
+	v = parseInt(v); 
+	return isNaN(v) ? 0 : v; 
+	}	
+	
+	// ��ȡԪ����Ϣ 
+	function getPos(e) 
+	{ 
+		var l = 0; 
+		var t = 0; 
+		var w = intval(e.style.width); 
+		var h = intval(e.style.height); 
+		var wb = e.offsetWidth; 
+		var hb = e.offsetHeight; 
+		while (e.offsetParent){ 
+		l += e.offsetLeft + (e.currentStyle?intval(e.currentStyle.borderLeftWidth):0); 
+		t += e.offsetTop + (e.currentStyle?intval(e.currentStyle.borderTopWidth):0); 
+		e = e.offsetParent; 
+		} 
+		l += e.offsetLeft + (e.currentStyle?intval(e.currentStyle.borderLeftWidth):0); 
+		t += e.offsetTop + (e.currentStyle?intval(e.currentStyle.borderTopWidth):0); 
+		return {x:l, y:t, w:w, h:h, wb:wb, hb:hb}; 
+	} 
+	// ��ȡ��������Ϣ 
+	function getScroll() 
+	{ 
+		var t, l, w, h; 
+		if (document.documentElement && document.documentElement.scrollTop) { 
+		t = document.documentElement.scrollTop; 
+		l = document.documentElement.scrollLeft; 
+		w = document.documentElement.scrollWidth; 
+		h = document.documentElement.scrollHeight; 
+		} else if (document.body) { 
+		t = document.body.scrollTop; 
+		l = document.body.scrollLeft; 
+		w = document.body.scrollWidth; 
+		h = document.body.scrollHeight; 
+		} 
+		return { t: t, l: l, w: w, h: h }; 
+	} 		
+	/*get*/
+	function getCPU()//.OSBit
+	{		
+		var agent=navigator.userAgent.toLowerCase();
+
+		if(agent.indexOf("win64")>=0||agent.indexOf("wow64")>=0) return "Win64";//!
+
+		return navigator.platform;//. navigator.cpuClass
+	}
+				
+	function isIe(){
+		//var isIE=!!window.ActiveXObject; 
+		var isIE6=isIE&&!window.XMLHttpRequest; 
+		var isIE8=isIE&&!!document.documentMode; 
+		var isIE7=isIE&&!isIE6&&!isIE8; 
+		if (isIE){ 
+			if (isIE6){ 
+				return("IE6"); 
+			}else if (isIE8){ 
+				return("IE8+"); 
+			}else if (isIE7){ 
+				return("IE7"); 
+			} 
+		}else{			
+			if (navigator.appName.indexOf('Netscape') != -1) 
+			{	
+					return("Firefox/Netscape"); 
+			}else
+			
+			{
+				return("notIE");
+			}
+		}		
+	}	
+	
+	function CheckBrowser() 
+	{ 
+		var app=navigator.appName; 
+		var verStr=navigator.appVersion; 
+		//
+		if (navigator.appName.indexOf('Netscape') != -1) 
+		{	
+				return("Firefox/Netscape"); 
+		} 
+		else if (app.indexOf('Microsoft') != -1) 
+		{ 
+			return isIe();
+		}else
+		{
+			return("notIE");
+		} 
+	}
+	
+	// ê��(Anchor)��ƽ����ת 
+	function scroller(el, duration) 
+	{ 
+		if(typeof el != 'object') { el = document.getElementById(el); } 
+		if(!el) return; 
+		var z = this; 
+		z.el = el; 
+		z.p = getPos(el); 
+		z.s = getScroll(); 
+		z.clear = function(){window.clearInterval(z.timer);z.timer=null}; 
+		z.t=(new Date).getTime(); 
+		z.step = function(){ 
+		var t = (new Date).getTime(); 
+		var p = (t - z.t) / duration; 
+		if (t >= duration + z.t) { 
+		z.clear(); 
+		window.setTimeout(function(){z.scroll(z.p.y, z.p.x)},13); 
+		} else { 
+		st = ((-Math.cos(p*Math.PI)/2) + 0.5) * (z.p.y-z.s.t) + z.s.t; 
+		sl = ((-Math.cos(p*Math.PI)/2) + 0.5) * (z.p.x-z.s.l) + z.s.l; 
+		z.scroll(st, sl); 
+		} 
+		}; 
+		z.scroll = function (t, l){window.scrollTo(l, t)}; 
+		z.timer = window.setInterval(function(){z.step();},13); 
+	} 
+				
+    function show(id){/*--����--*/ 
+        clearInterval(prox); 
+        clearInterval(proy); 
+        clearInterval(proxc); 
+        clearInterval(proyc); 
+        var o = document.getElementById(id); 
+        o.style.display = "block"; 
+        o.style.width = "1px"; 
+        o.style.height = "1px";  
+        prox = setInterval(function(){openx(o,500)},10); 
+    }     
+    function openx(o,x){/*--����x--*/ 
+        var cx = parseInt(o.style.width); 
+        if(cx < x) 
+        { 
+            o.style.width = (cx + Math.ceil((x-cx)/5)) +"px"; 
+        } 
+        else 
+        { 
+            clearInterval(prox); 
+            proy = setInterval(function(){openy(o,200)},10); 
+        } 
+    }     
+    function openy(o,y){/*--����y--*/     
+        var cy = parseInt(o.style.height); 
+        if(cy < y) 
+        { 
+            o.style.height = (cy + Math.ceil((y-cy)/5)) +"px"; 
+        } 
+        else 
+        { 
+            clearInterval(proy);             
+        } 
+    }     
+    function hide(id){/*--�ر�--*/ 
+        clearInterval(prox); 
+        clearInterval(proy); 
+        clearInterval(proxc); 
+        clearInterval(proyc);         
+        var o = document.getElementById(id); 
+        if(o.style.display == "block") 
+        { 
+            proyc = setInterval(function(){closey(o)},10);             
+        }         
+    }     
+    function closey(o){/*--����y--*/     
+        var cy = parseInt(o.style.height); 
+        if(cy > 0) 
+        { 
+            o.style.height = (cy - Math.ceil(cy/5)) +"px"; 
+        } 
+        else 
+        { 
+            clearInterval(proyc);                 
+            proxc = setInterval(function(){closex(o)},10); 
+        } 
+    }     
+    function closex(o){/*--����x--*/ 
+        var cx = parseInt(o.style.width); 
+        if(cx > 0) 
+        { 
+            o.style.width = (cx - Math.ceil(cx/5)) +"px"; 
+        } 
+        else 
+        { 
+            clearInterval(proxc); 
+            o.style.display = "none"; 
+        } 
+    }    
+		
+	// Find the right method, call on correct element
+	function launchFullScreen(element) {
+	//var fullscreenElement = document.mozFullScreenElement || document.webkitFullscreenElement || document.fullscreenElement;
+		try{
+			if(element.requestFullScreen) {
+				element.requestFullScreen();
+			} else if(element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			} else if(element.webkitRequestFullScreen) {
+				element.webkitRequestFullScreen();
+			}
+		}catch(e){			
+		}
+	}
+	 
+	function getWinVer() {//.
+		try{
+			var ua = window.navigator.userAgent; 
+			var osVersion = ua.split(";")[2]; 
+			var osV = osVersion.substr(osVersion.length-3,3); 
+			switch(osV) 
+			{ 
+			case "5.0": 
+			return("Win2000"); 
+			break; 
+			case "5.1": 
+			return("WinXP"); 
+			break; 
+			case "5.2": 
+			return("Win2003"); 
+			break;             
+			case "6.1": 
+                return("Win7");
+                break;  
+			default: 
+			return("Others"); 
+			break; 
+			}
+		}catch(e){		
+			d();
+			return '';
+		}
+	}
+	
+	function chkTouchProp() {
+		//return typeof(document.hasOwnProperty);
+		try{
+				if(document.hasOwnProperty("ontouchstart")) {
+						return("touchEna:true");
+				} else {
+						return("touchEna:false");
+				}
+		}
+		catch (e)	{		
+			d();
+			return "";
+		}	
+	}
+	
+	function chkSys() {//.
+		try{
+			var system ={};  
+			var p = navigator.platform;       
+			system.win = p.indexOf("Win") == 0;  
+			system.mac = p.indexOf("Mac") == 0;  
+			system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+			if(system.win||system.mac||system.x11){
+				return 'PC';
+					//window.location.href="http://www.baidu.com/";  
+			}else{
+				return 'mobile'; 
+			}
+		}catch(e){
+			d();
+			return '';
+		}			
+	}		
+	
+	function trim(t){
+		return (t||"").replace(/^\s+|\s+$/g, "");
+	}
+	
+	function getBatteryState()
+	{	//var arrBattery =new Array();
+		try{
+			var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+			// A few useful battery properties
+			return(" Charging:"+battery.charging+",Battery:"+battery.level+",DischargTime:"+battery.dischargingTime);//?
+		}catch(e){
+			d();
+			return '';
+		}
+	}
+	
+	function getDPI() {	
+    var arrDPI = new Array();
+    if (window.screen.deviceXDPI != undefined) {
+        arrDPI[0] = window.screen.deviceXDPI;
+        if(arrDPI[0]!=window.screen.deviceYDPI) arrDPI[1] = window.screen.deviceYDPI;
+    }else if(chkSys()=='mobile'){
+			alert('mob');
+			arrDPI[0] = metri.densityDPI;
+    }else {//dpi //width of a char:.5em(ppi), getDPI
+        var tmpNode = document.createElement("DIV");
+        tmpNode.style.cssText = "width:1in;height:1in;position:absolute;left:0px;top:0px;z-index:99;visibility:hidden";//
+        document.body.appendChild(tmpNode);
+        arrDPI[0] = parseInt(tmpNode.offsetWidth);
+        if(arrDPI[0]!=parseInt(tmpNode.offsetHeight)) arrDPI[1] = parseInt(tmpNode.offsetHeight);
+        tmpNode.parentNode.removeChild(tmpNode);    
+    }
+		//metri.densityDPI
+    return arrDPI;
+	}
+	
+	function getPixRatio () {//.
+		try{
+			return window.devicePixelRatio ;
+		}catch(e){
+			d();
+		}
+	}
+	
+	
+	function getPPI(){
+		var ppi='';
+		try{
+			ppi=android.media.ExifInterface.ResolutionUnit;
+			return ' PPI:'+ppi;
+		}catch(e){
+			d();
+		}
+		return '';		
+	}
+		
+	function getInch() {
+		try{
+			if(getDPI()>0){
+				var inch=Math.round( 10* Math.sqrt( Math.pow(screen.width,2)+Math.pow(screen.height,2) ) /getDPI() ) /10;//.DPI*3/4
+				return ' mon:'+inch+'(Inch)';
+			}else{
+				return '';
+			}
+		}catch(e){
+			d();
+			return '';
+		}
+	}
+/*
+	function getlocation(){
+		if (navigator.geolocation) {    
+			navigator.geolocation.getcurrentposition(function(position) {    
+				var latlng = new google.maps.latlng(position.coords.latitude, position.coords.longitude);    
+				var marker = new google.maps.marker({position: latlng, map: map});    
+				map.setcenter(latlng);    
+			}, errorhandler);    
+		}
+	}*/
+	
+	function updateConnectionClass() {    
+		try{
+			var root = document.documentElement,    
+					types = "unknown ethernet wifi 2g 3g 4g none".split(" ");    
+			for (var i = 0, n = types.length; i < n; i++) { //.   
+					root.classList.remove("network-" + types[i]);    
+			}    
+			root.classList.add("network-" + navigator.connection.type);    
+			return(''+navigator.connection.type+' bandwidth:'+navigator.connection.bandwidth);
+		}catch(e){
+			d();
+			return '';
+		}
+	}   
+
+	function flashChecker() {
+		var hasFlash = 0; //
+		var flashVersion = 0; //flash version
+		try{
+		
+			if (isIE) {
+				var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');//.
+				if (swf) {
+					hasFlash = 1;
+					flashVersion = swf.GetVariable("$version");
+				}
+			} else {
+				if (navigator.plugins && navigator.plugins.length > 0) {
+					var swf = navigator.plugins["Shockwave Flash"];//.				
+					if (swf) {
+						hasFlash = 1;
+						flashVersion = swf.description.split(" ");
+					}
+				}
+			}
+			
+		}catch(e){
+			d();
+		}
+		
+		return {
+			f: hasFlash,
+			v: flashVersion
+		};			
+	}	
+	
+	function trim(str){ //del SPCs at lf & rt
+		return str.replace(/(^\s*)|(\s*$)/g, "");
+	}
+	function ltrim(str){ //del SPCs on th lf side
+		return str.replace(/(^\s*)/g,"");
+	}
+	function rtrim(str){ //del SPCs on th lf side
+		return str.replace(/(\s*$)/g,"");
+	}
+
+	function getBjTime(){
+		var xmlhttp =
+		(function(){try {
+			return new ActiveXObject("Microsoft.XMLHTTP"||"Msxml2.XMLHTTP.6.0"||"Msxml2.XMLHTTP.4.0"||"Msxml2.XMLHTTP.3.0")//.
+		} catch(e) {
+			//d();//
+			try {
+				return new XMLHttpRequest()
+			} catch(e) {return false}
+		}})();
+		
+		if(!xmlhttp){
+			xmlhttp.open("GET", "http://bjtime.cn", false);
+			xmlhttp.setRequestHeader("If-Modified-Since", "bjtime");
+			xmlhttp.send();/**/
+			var dateStr = xmlhttp.getResponseHeader("Date");
+			var date= new Date(dateStr);
+		}else{
+			var date= new Date();
+		}
+		var year  = date.getFullYear()
+			, month = date.getMonth() + 1
+			, date1 = date.getDate()
+			, date2 = function(){
+					return['��','һ','��','��','��','��','��'][date.getDay()] }()
+			, hour  = date.getHours()
+			, minutes= padTime(date.getMinutes())
+			, second = padTime(date.getSeconds())
+			;
+		return unescape(date + "  |  " + year + "-" + month + "-" + date1 +"("+date2+') ' + hour + ":" + minutes + ":" + second + "");
+	}
+	
+	function padTime(i){
+		return(i<10? '0'+i: i)
+	}
+				
+	function pad( num, n) {
+		//return (Array(n).join(0)+num).slice(-n);//.
+		//.return Array(n-(''+num).length+1).join(0)+num;
+		return Array( n>num? (n-(''+num).length+1): 0 ).join(0) +num;
+	}
+
+
+	function getdata(data){ //Json->Obj
+����return (new Function("return "+data))(); 
+	} 
+	function JSONLength(obj) {
+		var size = 0, key;
+		for (key in obj) {
+			if (obj.hasOwnProperty(key)) size++;
+		}
+		return size;
+	};
+
+	//
+	function funSave() {
+		var id = $('#testText1')[0].value;
+		var name = $('#testText2')[0].value;
+		var str = '{mydata:[' + '{id:' + id + ',name:' + name + '}' + ']}';
+
+		str = "{MyData:[{id:'" + id + "',name:'" + name + "'}]}";
+		//var json = eval('(' + str + ')');
+
+		var fso, tf;
+		try{
+		fso = new ActiveXObject("Scripting.FileSystemObject");//.
+					tf = fso.CreateTextFile("DB_USER.json", true);
+					tf.WriteLine(str);
+		}catch(err){
+		}finally{
+		tf.Close();
+		}
+	}
+	function funSearch() {
+		var fso, ts, s;
+		var ForReading = 1;
+		try{
+		fso = new ActiveXObject("Scripting.FileSystemObject");
+					ts = fso.OpenTextFile("DB_USER.json", ForReading);//.
+					s = ts.ReadLine();
+					var json = eval('(' + s + ')');
+					alert(json.MyData[0].id);
+		}catch(err){
+		}finally{
+		ts.Close();
+		}
+	} 
+	///////////////////////
+	
+	function getSysInfo(){ 
+		try{
+			var locator = new ActiveXObject("WbemScripting.SWbemLocator"); //.
+			var service = locator.ConnectServer("."); 
+			
+			var cpu = new Enumerator(service.ExecQuery("SELECT * FROM Win32_Processor")).item(); 
+			var cpuType=cpu.Name, hostName=cpu.SystemName; 
+			return cpuType;
+		}catch(e){		
+			d();
+			return '';
+		}
+	}
+	
+	function printObj(obj){ 
+		var temp = ""
+				//,val				,vals
+				;
+		//var	rgl=/^functio(.*)$/g;
+		for(var i in obj){//��javascript��for/inѭ���������������� 
+			//val =result.exec(obj[i]);
+			//vals = rgl.test(val[0]);
+			//if(  )
+			{
+			//}else{
+				temp += i+":"+obj[i]+"<br><br>"; 
+			}
+		}
+		return(temp);
+	} 
+	
+	function getEvercookie(){
+		var ec = new Evercookie();/*
+		ec.set("id", "12345");
+		ec.get("id", function(value) { alert("Cookie value is " + value) }); 
+		//
+		function getCookie(best_candidate, all_candidates)
+    {
+        alert("The retrieved cookie is: " + best_candidate + "\n" +
+        	"You can see what each storage mechanism returned " +
+    		"by looping through the all_candidates object.");
+ 
+    	for (var item in all_candidates)
+    		document.write("Storage mechanism " + item +
+    			" returned: " + all_candidates[item] + "<br>");
+    }
+    ec.get("id", getCookie);*/
+		return '';//<div class="txt" style="width:64em;text-align:left">'+printObj(navigator)+'</div>';//
+	}
+	
+	//*
+	String.prototype.trim=function(){
+		 return this.replace(/(^\s*)|(\s*$)/g, "");//.trimMiddle
+	}
+	String.prototype.ltrim=function(){
+		 return this.replace(/(^\s*)/g,"");
+	}
+	String.prototype.rtrim=function(){
+		 return this.replace(/(\s*$)/g,"");
+	}//*/
+	
+	function init(){
+		try{
+			var strCookie=document.cookie; alert(''+strCookie);
+		}catch(e){
+			if(1)//isIE)
+			{
+				d();//document.write(this.toString());
+			}else{
+				document.write(this.name);
+			}
+		}
+	}
+						
+	function submit(){
+		try{
+			//window.location.href="test.json";
+		 var a ="<%=testjson%>";//.ss() is a func at th svr//PUBLIC STRING testjson;
+		 //setCopy("asd"); //php need compile
+		 alert(unescape(a));
+		 $("#submit").hide();
+		}catch(e){
+			//d();
+		}
+	}
+	function showtest(s){
+		debuglog(''+navigator.userAgent);
+	}
+	
+	function setLocSto(mydata){		
+		try{						
+			localStorage.setItem("data", mydata);//"mydata");
+			var foo= localStorage.getItem("data");
+			alert('Set LocSto ..Done:'+foo);
+		}catch(e){
+			//d();
+		}
+	}
+	function getLocSto(s)	{	
+//		document.write("asd");
+		var foo;
+		foo= localStorage.getItem("data");
+		alert('LocSto='+foo);
+		//foo=$("#aaa").val();//getElementById('aaa').value;
+		//alert(foo);
+	}
+	function rmLocSto(s){
+		if(s=="*"){localStorage.clear();//rmAll
+		}else{
+			localStorage.removeItem(s);
+		}
+		alert('window.localStorage.length='+window.localStorage.length);
+	}
+	function isNewbie(){ try{
+		var foo=localStorage.getItem("cnt");//cnt.. //restart then no cnt?
+		if( isNum(parseInt(foo)) ){//!="0"/null
+			foo=1+parseInt(foo);//
+			//debuglog("cookie:"+"cnt="+document.cookie.cnt);
+			debuglog("Welcome back! It's your "+foo+"th(/rd/nd) time visit.");//your next coming');//welcome back			
+		}else{
+			//document.cookie='cnt=1;path=/';
+			alert("Thanks for your first time come in.");//F5 do not add cnt;
+			foo=1;
+		}
+		localStorage.setItem("cnt", foo); }catch(e){d();}
+	}
+	
+	function get() {
+		try{
+			var o = document.createElement("script"); 
+			o.src="testjson.js";
+			o.type="text/javascript";
+			document.body.appendChild(o);
+		}catch(e){
+			d();
+		}
+	}		
+	
+	function gcd(x, y) {
+		if (x==y){return x;}
+		while((x>1) && (y>1)){
+			if (x>y){
+				x%= y;
+			}else{// if(y>x)
+				y%= x;
+			}
+		}return x<1? y: y<1?x:Math.min(x,y);
+	}	
+		
+	function getWidHeiRate(){
+		var g=gcd(screen.width,screen.height);
+		return (screen.width/g+':'+screen.height/g);
+	}
+	
+	function CheckStatus(url)//.
+	{
+		XMLHTTP = new ActiveXObject("Microsoft.XMLHTTP")
+		XMLHTTP.open("HEAD",url,false)
+		XMLHTTP.send()
+		return XMLHTTP.status==200 //dn_valid
+	}
+
+	/*maths*/
+	function date2day(y,m,d){//sd000~9999asd -asd1~12asd-asd1~31.asd
+		var day=3,leap=0//.0123456
+			,q,r,tm=3//
+			,ref,ori
+			;
+		ref.m=3;ref.d=1;ref.day=3;//ref.y=0;day('400*N-3-1')=3
+		//trim divide ()//199-1-2
+		y%=400;q=y/100;r=y%100;//
+		tm+=q*5;
+		q=r/4;r%=4;
+		tm+=q*5;		
+		{
+			switch(r){
+			case 3:
+				++tm;
+			case 2:
+				++tm;
+			case 1:
+				++tm;
+			case 0:
+				leap=1;
+				break;
+			}
+		}day=tm;
+		
+		//s //season:0,1,2,3,4? //1-leap,0,1,1,0		
+		//m //[]={3,leap,3,2,3,2,3,3,2,3,2,3}
+		if(m>2){
+			leap=0;
+		}else{//1+31+28+leap	
+		}		
+		//d //aDate[m-1]={31,28+leap,31,30,31,30,31,31,30,31,30,31};//
+		
+		//day
+		day=tm;
+		day%=7;
+		return day;
+	}
+	
+	//position
+	function getPositionSuccess( position ){
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        alert( "�����ڵ�λ�ã� γ��" + lat + "������" + lng );
+        if(typeof position.address !== "undefined"){
+                var country = position.address.country;
+                var province = position.address.region;
+                var city = position.address.city;
+                alert(' ��λ�� ' + country + province + 'ʡ' + city +'��');
+        }
+	}
+	function getPositionError(error) {
+		switch (error.code) {
+			case error.TIMEOUT:
+				alert("���ӳ�ʱ��������");
+				break;
+			case error.PERMISSION_DENIED:
+				debuglog("���ܾ���ʹ��λ�ù������񣬲�ѯ��ȡ��");
+				break;
+			case error.POSITION_UNAVAILABLE:
+				alert("��ȡλ����Ϣʧ��");
+				break;
+		}
+	}
+	
+	function showPosition(position)//Jing:longitude,Wei:latitude
+	{
+		var latlon = position.coords.latitude+','+position.coords.longitude;    //google
+		var url = ''; //'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN';
+		$.ajax({
+			type: "GET",
+			url: url,
+			beforeSend: function(){
+				$("#google_geo").html('���ڶ�λ...');//
+			},
+			success: function (json) {
+				if(json.status=='OK'){
+					var results = json.results;
+					$.each(results,function(index,array){
+						if(index==0){
+							$("#google_geo").html(array['formatted_address']);
+						}
+					});
+				}
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown) {
+				$("#google_geo").html(latlon+"��ַλ�û�ȡʧ��");
+			}
+		});
+	}
+	
+	/*debug*/
+	if(DEBUG){
+		try{
+			document.write('~')
+		}catch(e){}
+	}
+	
+	function d(s){ //try{}catch(e){d()}
+		if(DEBUG){
+			var re = /function\s*(\w*)/i,
+					matches;				
+			try{
+				if(s==null){
+					s='_';
+					if(arguments.callee.caller==null){
+						matches = re.exec(arguments.callee.toString());
+						s=' ['+matches[1]+']';
+					}else{
+						matches = re.exec(arguments.callee.caller.toString());
+						s=' ['+matches[1]+']';
+					}
+				}
+				document.write(s)//.
+			}catch(e){
+				if(1)//isIE)
+				{
+					matches = re.exec( arguments.callee.toString() );
+					document.write(matches[1]);
+				}else{
+					document.write(this.name);
+				}
+			}
+		}
+	}
+	
+	/*function strAdd(sNum1, sNum2)
+	{ 
+		//����һλ��λ�Լ�¼����λ��һ������
+		var sNum1 = ['0', sNum1].join(''),
+			sNum2 = ['0', sNum2].join(''); 
+		//���̵������ַ����Ӳ�0
+		var len1 = sNum1.length,
+			len2 = sNum2.length, 
+		zeroArr = function(len){ 
+			var arr = new Array(len), i=len; 
+			while(i--)
+				{arr[i] = 0;} 
+			return arr; 
+		}; 
+		if(len1 > len2){ 
+			var arrTemp = zeroArr(len1 - len2); 
+			arrTemp.push(sNum2), 
+			sNum2 = arrTemp.join(''); 
+		} 
+		else if(len2 > len1){ 
+			var arrTemp = zeroArr(len2 - len1); 
+			arrTemp.push(sNum1), 
+			sNum1 = arrTemp.join(''); 
+		} 
+		//���ַ���ת��Ϊ���飬����Ӧ��λ������
+		var arr1 = sNum1.split(''), arr2 = sNum2.split(''); 
+		var arrAddRes = new Array(arr1.length), i=arr1.length; 
+		var andone = 0, // ��λ�����Ƿ���һ     cur1, cur2, curAdd; 
+		while(i--){
+			cur1 = +arr1[i], cur2 = +arr2[i]; 
+			curAdd = cur1+cur2+andone; 
+			if(10 > curAdd) 
+				arrAddRes[i] = curAdd, 
+				andone = 0; 
+			else
+				arrAddRes[i] = +curAdd.toString().slice(1,2), 
+			andone = 1; 
+		} 
+		if(!andone){ // �����Ƿ���һ��������ȡǰ����0
+		   arrAddRes.splice(0,1); 
+		} 
+		//������ȡǰ19λ�����У��ÿ�ѧ����������ʾ��������
+		var keeplen = 19; // js��С��ֻ����С��������18λ
+		var eAfter = arrAddRes.length - 1; // e�����ı�������
+		var eBefore, eBeforeStr = '';      // eǰ����С������ 
+		if(keeplen < arrAddRes.length) 
+			eBeforeStr = [arrAddRes[0], '.', arrAddRes.slice(1, keeplen).join('')].join(''); 
+		else
+			eBeforeStr = [arrAddRes[0], '.', arrAddRes.slice(1).join('')].join(''); 
+		eBefore = +eBeforeStr; 
+		return [Number(arrAddRes.join('')), eBefore, eAfter]; 
+	}
+	*/
+
+	dCnt+=10;	//
+	
+	//}--></script>
+	
+	
+	<canvas id=cv width=4 height=18></canvas>
+  
+	<INPUT onkeypress="SubmitKeyClick()" id="inp1" type="text">
+<input type="hidden" name="FunName">
+	<button id=submit name='submit' style="display:show" onclick="showtest(document.getElementById('inp1').value)" action="testjson.js">showTest
+	</button>
+	<button id=setLocSto name='setLocSto' style="display:show" onclick="setLocSto(document.getElementById('inp1').value)">setLocSto
+	</button>	<!--$('#aaa').val()-->
+	</button>
+	<button id=getLocSto name='getLocSto' style="display:show" onclick="getLocSto()">getLocSto
+	</button>
+	<button id=rmLocSto name='rmLocSto' style="display:show" onclick="rmLocSto($('#inp1').val())">rmLocSto
+	</button>	
+	<button id=show1 name='show1' style="display:show" onclick="show('fd')">show1</button>
+	<button id=hide1 name='hide1' style="display:show" onclick="hide('fd')">hide1</button>
+   
+  
+	<div id="fd" class="fd" style="display:none;filter:alpha(opacity=80)" onMousemove="
+var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px'"> 
+			<div class="content" style="position:absolute" rem:hideSize>asd</div>
+	</div> 
+  
+  <div style="margin:8"></div>
+
+	<div class="wrap">
+	<div class="content">	
+    <br/>
+		<div id="title">html project list:</div>
+		<br/>
+		<div id="mota"><a href='motajs/src/index.html'> Mota</a></div>
+		<div id="fruit_ninja"><a        href='fruit_ninja_html5/index.html'>   Fruit Ninja</a></div>
+		<div id="street_fighter"><a     href='sf/index.html'>                  Street Fighter</a></div>
+    <!-- <div id="street_fighter"><a     href='../StreetFighter/index.html'>                  x Street Fighter</a></div> -->
+		<div id="russia_square"><a      href='RussiaSquare/index.html'>        Tetris</a></div>
+		<div id="rainyday"><a           href='rainyday/index.html'>            Rainy Day</a></div>
+		<div id="snow3d_with_snow"><a   href='Snow3dWithSnow/index.html'>      Snow3d With Snow</a></div>
+		<div id="dancing_timer"><a      href='dancing_timer_canvas/index.html'>Dancing Timer</a></div>
+		<div id="flame"><a              href='flame_canvas/index.html'>        Flame</a></div>
+		<div id="snow_3d"><a            href='snow3d/snow3d/index.html'>       Snow 3d</a></div>
+		<div id="virtual_keybd"><a      href='SoftKeybd/index.html'>           Virtual Keyboard</a></div>
+		<div id="video_player"><a       style="display:none" href='video_js/index.html'>            x Video Player</a></div>
+		<div id="chess"><a              style="display:none" href='chess/index.html'>               x incomplete Chess</a></div>
+		<div id="3d_rotatable_tags"><a  style="display:none" href='newform/2/index.html'>           x 3d Rotatable Tags</a></div>
+		<div id="json_test"><a          style="display:none" href='json/1/index.html'>              x Json Test</a></div>
+		<div id="my_editor"><a          style="display:none" href='myEdtr/index.html'>              x my editor</a></div>
+		<div id="games"><a              style="display:none" href="javascript:location.href='game/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">x Games</a></div>
+		<div><br/></div>
+		
+	<script src='js/base64_transfer.js'></script>
+    <script>/*<!--*/
+        function d(s){//sec
+            if(DEBUG){
+                var re = /function\s*(\w*)/i,
+                        matches;				
+                try{
+                    if(s==null){
+                        s='_';
+                        if(arguments.callee.caller==null){
+                            matches = re.exec(arguments.callee.toString());
+                            s=' ['+matches[1]+']';
+                        }else{
+                            matches = re.exec(arguments.callee.caller.toString());
+                            s=' ['+matches[1]+']';
+                        }
+                    }
+                    document.write(s)//.
+                }catch(e){
+                    if(1)//isIE)
+                    {
+                        matches = re.exec( arguments.callee.toString() );
+                        document.write(matches[1]);
+                    }else{
+                        document.write(this.name);
+                    }
+                }
+            }
+        }
+        
+		var browser={
+			versions:function(){ 
+				var u = navigator.userAgent, app = navigator.appVersion; 
+				return { 
+					trident: u.indexOf('Trident') > -1, //IE Webkit
+					presto: u.indexOf('Presto') > -1, //opera
+					webKit: u.indexOf('AppleWebKit') > -1, //Apple,Google
+					gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //FF
+					mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/),
+					
+					ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios terminal
+					android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android or uc browser
+					iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //iPhone or QQHDBrowser
+					iPad: u.indexOf('iPad') > -1, //iPad 
+					webApp: u.indexOf('Safari') == -1 //is it webApplication, without header and footer
+				};				
+			}()
+		} 
+		
+		//var ss=Math.random().toString().replace(/(^[0|.]*)/g,'')%3;alert(ss);
+		var nv=navigator ,bv=browser.versions;
+		document.write('<br>');
+		//document.write(getSysInfo());//.wmi
+		document.write(''+chkSys());//
+		var ua = navigator.userAgent
+			,isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua)
+			;
+		document.write(''+(isMobileWebkit==true?' MobileWebkit':''));
+		document.write(' '+(bv.android==true?' android':bv.iPad==true?' iPad':bv.ios==true?' ios':getCPU()));
+		document.write(' '+updateConnectionClass());
+		document.write(' '+CheckBrowser());
+		document.write(' javaEna:'+nv.javaEnabled())//.
+		document.write(' '+chkTouchProp());
+		//document.write(getBatteryState())//.
+		//document.write((nv.onLine==true?' Online':' offline'));//.
+		document.write(' '+getIp());
+		document.write('<br>'+getEvercookie());
+		document.write(getInch());
+		document.write(' PixRate:'+getPixRatio());
+		document.write(' widHeiRate='+getWidHeiRate());
+		document.write(' resolution:'+screen.width+'*'+screen.height);
+		document.write(' DPI:'+getDPI());
+		document.write(getPPI());
+		document.write(' colorDepth:'+screen.colorDepth);
+		document.write('<br>'+getSysInfo2());
+		document.write('');
+		
+		document.write('<br>');				
+		var fls = flashChecker();//.
+		if (fls.f) document.write(unescape("falsh�汾:") + fls.v);
+		else document.write(unescape("��û�а�װflash"));
+				
+		//getdata([{"name":"boke"},{"age":"23"}]);
+		//var json = new { a = 1, b = "b" };string jsonstr = new JavaScriptSerializer().Serialize(json);//.
+		//
+		//var jsonStr1 = '{"Name":"Tom","Sex":"Man"}';var jsonObj1 = eval(jsonStr1);alert(jsonObj1.Name); 
+		
+//var keleyijson={"plug1":"myslider","plug2":"zonemenu","plug3":"javascript"};document.write("json������Ԫ�ظ����ǣ�"+JSONLength(keleyijson));
+
+		
+		var ut16="ABC!abc!012",//document.getElementById
+			bs64=//"3DUyOn9OWzwaLpQnqAnxzF94r7mgB8w0Tq0vDl+XoOa7OAc9V83DEFKV+GhLaGgqqS6Azpo8yHQ=",
+			"iVBORw0KGgoAAAANSUhEUgAAAAQAAAASCAYAAAB8fn/4AAAAE0lEQVQYV2NkQAOMowIoIYARHgAMjQATts4IBAAAAABJRU5ErkJggg==",
+			ut16b;
+			//
+		var canvas = document.createElement('canvas');  
+		var ctx = canvas.getContext('2d');
+		var txt = 'faiz-lisp.github.io';//ctx.textBaseline = "top";  
+		ctx.font = "14px 'Arial'";//
+		ctx.fillStyle = "#fff";//999
+		ctx.fillText(txt, 2, 15);//2,16  
+		ctx.fillStyle = "rgba(128,128,128, 1)";//102, 204, 0, 0.7 128,128,128,0.9~0.1
+		ctx.fillText(txt, 4, 17);//4,16
+		//document.getElementById('img1')
+  		//var b64=
+		var b64=canvas.toDataURL().replace("data:image/png;base64,","");//document.getElementById("cv")	
+		var bin =atob(b64);	var crc = binToHex(bin.slice(-16,-12));//.md5 //[-15,-12]
+		//var bin =atob(bs64);	var crc = binToHex(bin.slice(-16,-12));
+		//bin=bin.slice(16,-16);
+		bin =md5(bin)//.binToHex(bin);	//1488	
+		//bin =charToBinSp(bin);
+			document.write('<br><div class="txt" style="word-break:break-all;width:31em;overflow:auto;text-align:center">md5:'+bin+'<br>crc(352417c8?):'+crc+'</div>');//
+			//closeMsg('maybe this will shutdown ur pc');
+			//this.name=crc; //TTL: th sam as cur dialog
+			//document.write('<br>crc:'+this.name);
+			//bs64=strencode(ut16);
+//document.write('<br>'+md5("123"));			
+//ut16b=strdecode(bs64);document.write("<br>(bs64,ut16b)=("+bs64+","+ut16b+")");		
+		//alert("fib(x):"+fib(63));
+		//8px==0.5em;
+		//java.awt.Toolkit.getDefaultToolkit().beep();		
+		dCnt+=100000;
+		//--></script>
+	</div>
+	</div>
+	<hr>
+	<div id="debug"></div>
+	
+	<br>
+	<div id=time class="wrap">
+		<noscript> 
+		<div style="color:red">javascript nonsupport, partial functions no go.</div> 
+		</noscript> 
+
+		<script>
+		document.getElementById('time').innerHTML=getBjTime();//.
+		setInterval("document.getElementById('time').innerHTML=getBjTime()",1000);
+		dCnt+=10000;//
+		</script>		
+	</div>
+	
+	<div class=wrap>
+	<audio src="_muz/jingle_bells.mp3" loop>
+	Your browser do not support 'audio' tag.<br>
+	</audio>
+	<a id=backtop href="#top" target="_self">Back To To</a>
+	<a id=backtop2 href="javascript:scroller('top',400);" target="_self">p</a>
+	<a id=bottom name=bottom></a>  
+  <br/>Copyright &copy; 2018-2020
+	</div>
+	
+	<img src="" id="img1"/><!--file:///F:/Proj/list/1.png--file:///E:/AlphaE/Project/ConvNums/ConvNums/Release/ConvNums.exe-->			
+	
+	
+	
+	<script>/*<!--*/
+	
+	od = document.getElementById("fd");
+	      
+    document.onmousedown = function(e){ 
+        var e = e ? e : event; 
+        if(e.button == (document.all ? 1 : 0)) 
+        { 
+            mouseD = true;             
+        } 
+    } 
+    document.onmousemove = function(e){ 
+        var e = e ? e : event; 
+         
+        //alert(mrx); 
+        //alert(e.button);         
+        if(mouseD==true && odrag) 
+        {         
+            var mrx = e.clientX - mx; 
+            var mry = e.clientY - my;     
+            od.style.left = parseInt(od.style.left) +mrx + "px"; 
+            od.style.top = parseInt(od.style.top) + mry + "px";             
+            mx = e.clientX; 
+            my = e.clientY; 
+             
+        } 
+    } 
+    od.onmousedown = function(e){ 
+        odrag = this; 
+        var e = e ? e : event; 
+        if(e.button == (document.all ? 1 : 0)) 
+        { 
+            mx = e.clientX; 
+            my = e.clientY; 
+            od.style.left = od.offsetLeft + "px"; 
+            od.style.top = od.offsetTop + "px"; 
+            if(isIE) 
+            { 
+                od.setCapture();                 
+                od.filters.alpha.opacity = 50; 
+            } 
+            else 
+            { 
+                window.captureEvents(Event.MOUSEMOVE); 
+                od.style.opacity = 0.5; 
+            } 
+             
+            //alert(mx); 
+            //alert(my); 
+             
+        }  
+    } 
+    document.onmouseup = function(){ 
+        mouseD = false; 
+        odrag = ""; 
+        if(isIE) 
+        { 
+            od.releaseCapture(); 
+            od.filters.alpha.opacity = 80; 
+        } 
+        else 
+        { 
+            window.releaseEvents(od.MOUSEMOVE); 
+            od.style.opacity = 0.8; 
+        }         
+    }      
+		
+		
+//
+	
+	var    s  =  "";
+	s  +=  "\r\nwindow.screenLeft		"+  window.screenLeft			;
+	s  +=  "\r\nwindow.screenTop		"+  window.screenTop			;
+	s  +=  "\r\nwindow.screen.width		"+  window.screen.width			;
+	s  +=  "\r\nwindow.screen.height		"+  window.screen.height		;
+	s  +=  "\r\nwindow.screen.availWidth	"+  window.screen.availWidth	;
+	s  +=  "\r\nwindow.screen.availHeight	"+  window.screen.availHeight	;
+	s  +=  "\r\n";
+	s  +=  "\r\ndocument.body.scrollLeft	"+  document.body.scrollLeft	;
+	s  +=  "\r\ndocument.body.scrollTop		"+  document.body.scrollTop		;
+	s  +=  "\r\ndocument.body.scrollWidth 	"+  document.body.scrollWidth 	;
+	s  +=  "\r\ndocument.body.scrollHeight	"+  document.body.scrollHeight	;
+	s  +=  "\r\ndocument.body.clientWidth 	"+  document.body.clientWidth 	;
+	s  +=  "\r\ndocument.body.clientHeight	"+  document.body.clientHeight	;
+	s  +=  "\r\ndocument.body.offsetWidth  	"+  document.body.offsetWidth  +" (with sidelineWidth)";
+	s  +=  "\r\ndocument.body.offsetHeight  	"+  document.body.offsetHeight  +" (with sidelineWidth)";
+	//var divC = document.getElementById("mota");//tagName//Class//Id
+//alert(s);
+
+	var storage = window.localStorage;//window.
+	isNewbie();	
+	debuglog('window.localStorage.length='+window.localStorage.length);
+	for (i = 0; i < storage.length; ++i) {
+		edd = storage.key(i);
+		debuglog('<div width="50px"/>'+edd+'='+storage.getItem(edd));
+	}
+
+	var position_option = {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 20000
+	};
+	navigator.geolocation.getCurrentPosition(getPositionSuccess, getPositionError, position_option);
+
+
+	//
+	dCnt+=100;
+	//--></script>	
+	<!--Math.random().toString().replace(/(^[0|.]*)/g,'')%-->
+	
+	<!--html5 new function: pre load js for my_editor page :at th end/head-->
+	<!-- <link rel="prefetch" href="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"/> -->
+	<!--link rel="prefetch" href="http://video-js.zencoder.com/oceans-clip.mp4"/-->
+    
+</body></html>
+<script>
+    _i=10
+    d('fibo('+_i+'):'+fibo(_i)+'<br>');
+
+    //ContentSize(16)
+
+    d(''+document.body.clientWidth+' '+'<br>');//window.location+
+    dCnt+=1000;
+    d(dCnt);//+'(111111)');
+	//document.querySelector('#title').innerHTML+='asd'
+	f1()
+	//echol('asd')
+</script>
+
+<br/>
+<script src='_code/js/strapdown.js'></script>
