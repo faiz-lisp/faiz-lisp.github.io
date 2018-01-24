@@ -226,7 +226,7 @@ function keyDownInDocument() {
         player.dialogObject.id == 311 || player.dialogObject.id == 317 || //怪物查看书、飞行器
         player.dialogObject.id == 603 || player.dialogObject.id == 604 ||
         player.dialogObject.id == 655 || player.dialogObject.id == 656 //加属性老人
-      ) {
+      ) { //todo: [301,302,303,].indexOf(player.dialogObject.id) != -1
         player.updatePageInfo();
         speakWin.close();
       } else if(player.dialogObject.id <= 300) { //遇见不能打的怪物
