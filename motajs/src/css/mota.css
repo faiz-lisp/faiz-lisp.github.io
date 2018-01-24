@@ -2,7 +2,7 @@ body, table, tr, td, th, div, select, span, input {
   font-size: 9pt;
 }
  /*Download by http://www.codefans.net*/
-/*¿ªÊ¼½éÉÜµÄcss*/
+/*å¼€å§‹ä»‹ç»çš„css*/
 .jieshaoClass{
   background-color:#dcdcdc;
   width:600px;
@@ -19,7 +19,7 @@ body, table, tr, td, th, div, select, span, input {
   font-weight:bold;
 }
 
-/*ÏÔÊ¾Íæ¼ÒÊôĞÔµÄcss*/
+/*æ˜¾ç¤ºç©å®¶å±æ€§çš„css*/
 .playerinfotext {
   font-weight: bold;
   font-family: sans-serif;
@@ -27,7 +27,7 @@ body, table, tr, td, th, div, select, span, input {
   line-height: 20px;;
 }
 
-/*Game´°Ìå*/
+/*Gameçª—ä½“*/
 #gameFrame {
   width: 352px;
   height: 352px;
@@ -47,7 +47,7 @@ body, table, tr, td, th, div, select, span, input {
   z-index: 20;
 }
 
-/*¶Ô»°¿ò*/
+/*å¯¹è¯æ¡†*/
 #gameFrame .speakDialogCss {
   position: absolute;
   z-index: 50;
@@ -60,7 +60,7 @@ body, table, tr, td, th, div, select, span, input {
   text-align: center;
 }
 
-/*¶Ô»°¿ò*/
+/*å¯¹è¯æ¡†*/
 #gameFrame #speakDialogInner {
   width: 100%;
   height: 76px;
@@ -69,7 +69,7 @@ body, table, tr, td, th, div, select, span, input {
   margin-left: 5px;
 }
 
-/*Õ½¶·¿ò*/
+/*æˆ˜æ–—æ¡†*/
 #gameFrame .fightWinCss {
   position: absolute;
   z-index: 30;
@@ -82,7 +82,7 @@ body, table, tr, td, th, div, select, span, input {
   text-align: center;
 }
 
-/*Õ½¶·¿ò*/
+/*æˆ˜æ–—æ¡†*/
 #gameFrame .duizhanInfoWin {
   float: left;
   width: 120px;
@@ -93,7 +93,7 @@ body, table, tr, td, th, div, select, span, input {
   position: relative;
 }
 
-/*Õ½¶·¿ò*/
+/*æˆ˜æ–—æ¡†*/
 #gameFrame .duizhanContentWin {
   float: left;
   width: 190px;
@@ -105,7 +105,7 @@ body, table, tr, td, th, div, select, span, input {
   text-align: left;
 }
 
-/*Õ½¶·¿ò*/
+/*æˆ˜æ–—æ¡†*/
 #gameFrame .fightTimer {
   position: absolute;
   z-index: 35;
@@ -142,12 +142,12 @@ body, table, tr, td, th, div, select, span, input {
   color:blue;
 }
 
-/*Õ½¶·¹ı³ÌÖĞÃ¿Ò»ĞĞµÄÑùÊ½*/
+/*æˆ˜æ–—è¿‡ç¨‹ä¸­æ¯ä¸€è¡Œçš„æ ·å¼*/
 #gameFrame .fightLineStyle {
   display: none;
 }
 
-/*Õ½¶·¿ò¹Ø±Õ°´Å¥ÑùÊ½*/
+/*æˆ˜æ–—æ¡†å…³é—­æŒ‰é’®æ ·å¼*/
 #gameFrame .closeFightInfo {
   position: absolute;
   z-index: 35;
@@ -160,7 +160,7 @@ body, table, tr, td, th, div, select, span, input {
   display: none;
 }
 
-/*ÏÔÊ¾¹ÖÎïÊôĞÔ¿ò*/
+/*æ˜¾ç¤ºæ€ªç‰©å±æ€§æ¡†*/
 #gameFrame .viewGuaiDialogCss {
   position: absolute;
   z-index: 30;
@@ -174,7 +174,7 @@ body, table, tr, td, th, div, select, span, input {
   overflow:scroll;
 }
 
-/*¹ºÂò¿ò*/
+/*è´­ä¹°æ¡†*/
 #gameFrame .goumaiDialogCss {
   position: absolute;
   z-index: 30;
@@ -207,14 +207,14 @@ body, table, tr, td, th, div, select, span, input {
   margin-top:8px;
 }
 
-/*Game½áÊø´°¿ÚÑùÊ½*/
+/*Gameç»“æŸçª—å£æ ·å¼*/
 #gameFrame .finishInnerDiv{
   margin-top:10px;
   margin-left:60px;
   margin-right:60px;
   font-size:18pt;
   color:#f0e68c;
-  font-family:'Á¥Êé';
+  font-family:'éš¶ä¹¦';
 }
 
 #gameFrame .finishReStartDiv{
@@ -224,7 +224,7 @@ body, table, tr, td, th, div, select, span, input {
   font-size:20pt;
   background-color:#6495ed;
   color:#8b0000;
-  font-family:'Á¥Êé';
+  font-family:'éš¶ä¹¦';
   text-align:center;
   cursor:pointer;
 }

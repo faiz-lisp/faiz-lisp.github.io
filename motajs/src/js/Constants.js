@@ -5,20 +5,20 @@ function initHtmlContent() {
           '<td>' +
           '<div style="width:138px;height:352px;background: url(\''+IMAGE_PATH+'509.jpg\') repeat;">' +
           '<ul style="list-style:none;margin-left:16px;margin-top:16px;">' +
-          '<li id="dengji" class="playerinfotext">µÈ¼¶£º<span></span></li>' +
-          '<li id="shengming" class="playerinfotext">ÉúÃü£º<span></span></li>' +
-          '<li id="gongji" class="playerinfotext">¹¥»÷£º<span></span></li>' +
-          '<li id="fangyu" class="playerinfotext">·ÀÓù£º<span></span></li>' +
-          '<li id="sudu" class="playerinfotext">ËÙ¶È£º<span></span></li>' +
-          '<li id="jinbi" class="playerinfotext">½ğ±Ò£º<span></span></li>' +
-          '<li id="jingyan" class="playerinfotext">¾­Ñé£º<span></span></li>' +
-          '<li id="shiqi" class="playerinfotext" title="Õ½¶·ÖĞ³öÏÖµÄ×î´ó¹¥»÷£¬Ê¿ÆøÔ½¸ß£¬×î´ó¹¥»÷´ÎÊıÔ½¶à">Ê¿Æø£º<span></span></li>' +
-          '<li id="xingyun" class="playerinfotext" title="Õ½¶·½áÊøºó»ñµÃµÄ½ğ±ÒÓë¾­Ñé£¬ĞÒÔËÔ½¸ß£¬»ñµÃ×î¸ß½ğ±ÒÓë¾­ÑéµÄ¿ÉÄÜÔ½´ó">ĞÒÔË£º<span></span></li>' +
-          '<li id="fuyuan" class="playerinfotext" title="Õ½¶·ÖĞ³öÏÖµÄÌØÊâ¹¥»÷£¬¸£ÔµÔ½¸ß£¬ÌØÊâ¹¥»÷´ÎÊıÔ½¶à">¸£Ôµ£º<span></span></li>' +
-          '<li id="huangKey" class="playerinfotext"><img src="'+IMAGE_PATH+'301.jpg" alt="»ÆÔ¿³×" style="width:20px;height:20px;">£º<span></span></li>' +
-          '<li id="lanKey" class="playerinfotext"><img src="'+IMAGE_PATH+'302.jpg" alt="À¶Ô¿³×" style="width:20px;height:20px;">£º<span></span></li>' +
-          '<li id="hongKey" class="playerinfotext"><img src="'+IMAGE_PATH+'303.jpg" alt="ºìÔ¿³×" style="width:20px;height:20px;">£º<span></span></li>' +
-          '<li id="floor" class="playerinfotext">Â¥²ã£º<span></span></li>' +
+          '<li id="dengji" class="playerinfotext">ç­‰çº§ï¼š<span></span></li>' +
+          '<li id="shengming" class="playerinfotext">ç”Ÿå‘½ï¼š<span></span></li>' +
+          '<li id="gongji" class="playerinfotext">æ”»å‡»ï¼š<span></span></li>' +
+          '<li id="fangyu" class="playerinfotext">é˜²å¾¡ï¼š<span></span></li>' +
+          '<li id="sudu" class="playerinfotext">é€Ÿåº¦ï¼š<span></span></li>' +
+          '<li id="jinbi" class="playerinfotext">é‡‘å¸ï¼š<span></span></li>' +
+          '<li id="jingyan" class="playerinfotext">ç»éªŒï¼š<span></span></li>' +
+          '<li id="shiqi" class="playerinfotext" title="æˆ˜æ–—ä¸­å‡ºç°çš„æœ€å¤§æ”»å‡»ï¼Œå£«æ°”è¶Šé«˜ï¼Œæœ€å¤§æ”»å‡»æ¬¡æ•°è¶Šå¤š">å£«æ°”ï¼š<span></span></li>' +
+          '<li id="xingyun" class="playerinfotext" title="æˆ˜æ–—ç»“æŸåè·å¾—çš„é‡‘å¸ä¸ç»éªŒï¼Œå¹¸è¿è¶Šé«˜ï¼Œè·å¾—æœ€é«˜é‡‘å¸ä¸ç»éªŒçš„å¯èƒ½è¶Šå¤§">å¹¸è¿ï¼š<span></span></li>' +
+          '<li id="fuyuan" class="playerinfotext" title="æˆ˜æ–—ä¸­å‡ºç°çš„ç‰¹æ®Šæ”»å‡»ï¼Œç¦ç¼˜è¶Šé«˜ï¼Œç‰¹æ®Šæ”»å‡»æ¬¡æ•°è¶Šå¤š">ç¦ç¼˜ï¼š<span></span></li>' +
+          '<li id="huangKey" class="playerinfotext"><img src="'+IMAGE_PATH+'301.jpg" alt="é»„é’¥åŒ™" style="width:20px;height:20px;">ï¼š<span></span></li>' +
+          '<li id="lanKey" class="playerinfotext"><img src="'+IMAGE_PATH+'302.jpg" alt="è“é’¥åŒ™" style="width:20px;height:20px;">ï¼š<span></span></li>' +
+          '<li id="hongKey" class="playerinfotext"><img src="'+IMAGE_PATH+'303.jpg" alt="çº¢é’¥åŒ™" style="width:20px;height:20px;">ï¼š<span></span></li>' +
+          '<li id="floor" class="playerinfotext">æ¥¼å±‚ï¼š<span></span></li>' +
           '</ul>' +
           '</div>' +
           '</td>' +
@@ -45,147 +45,147 @@ function initHtmlContent() {
 }
 
 function initFillGoods(p_goods_array) {
-  //-------ÎïÆ·Êı×é
-  //ÎïÆ· 0-300¹ÖÎï
-  p_goods_array[0] = new GuaiWu(0, "Ğ¡Ê·À³Ä·",0,[{name:"shengming",value:110},{name:"gongjiMin",value:13},{name:"gongjiMax",value:18},{name:"fangyu",value:2},{name:"sudu",value:100},{name:"jinbiMin",value:2},{name:"jinbiMax",value:5},{name:"jingyanMin",value:2},{name:"jingyanMax",value:4}]);
-p_goods_array[1] = new GuaiWu(1, "ºìÊ·À³Ä·",1,[{name:"shengming",value:140},{name:"gongjiMin",value:17},{name:"gongjiMax",value:22},{name:"fangyu",value:4},{name:"sudu",value:99},{name:"jinbiMin",value:3},{name:"jinbiMax",value:8},{name:"jingyanMin",value:3},{name:"jingyanMax",value:5}]);
-p_goods_array[2] = new GuaiWu(2, "ºÚÊ·À³Ä·",2,[{name:"shengming",value:300},{name:"gongjiMin",value:48},{name:"gongjiMax",value:58},{name:"fangyu",value:33},{name:"sudu",value:96},{name:"jinbiMin",value:10},{name:"jinbiMax",value:25},{name:"jingyanMin",value:10},{name:"jingyanMax",value:18}]);
-p_goods_array[3] = new GuaiWu(3, "Ğ¡òùòğ",3,[{name:"shengming",value:150},{name:"gongjiMin",value:21},{name:"gongjiMax",value:25},{name:"fangyu",value:5},{name:"sudu",value:98},{name:"jinbiMin",value:5},{name:"jinbiMax",value:13},{name:"jingyanMin",value:5},{name:"jingyanMax",value:9}]);
-p_goods_array[4] = new GuaiWu(4, "÷¼÷Ã±ø",4,[{name:"shengming",value:183},{name:"gongjiMin",value:25},{name:"gongjiMax",value:30},{name:"fangyu",value:10},{name:"sudu",value:97},{name:"jinbiMin",value:7},{name:"jinbiMax",value:18},{name:"jingyanMin",value:7},{name:"jingyanMax",value:13}]);
-p_goods_array[5] = new GuaiWu(5, "÷¼÷Ã½£Ê¿",5,[{name:"shengming",value:330},{name:"gongjiMin",value:68},{name:"gongjiMax",value:80},{name:"fangyu",value:40},{name:"sudu",value:94},{name:"jinbiMin",value:14},{name:"jinbiMax",value:35},{name:"jingyanMin",value:14},{name:"jingyanMax",value:25}]);
-p_goods_array[6] = new GuaiWu(6, "³õ¼¶·¨Ê¦",6,[{name:"shengming",value:200},{name:"gongjiMin",value:80},{name:"gongjiMax",value:150},{name:"fangyu",value:20},{name:"sudu",value:95},{name:"jinbiMin",value:12},{name:"jinbiMax",value:30},{name:"jingyanMin",value:12},{name:"jingyanMax",value:22}]);
-p_goods_array[7] = new GuaiWu(7, "ÊŞÈË",7,[{name:"shengming",value:650},{name:"gongjiMin",value:200},{name:"gongjiMax",value:240},{name:"fangyu",value:140},{name:"sudu",value:91},{name:"jinbiMin",value:20},{name:"jinbiMax",value:50},{name:"jingyanMin",value:20},{name:"jingyanMax",value:36}]);
-p_goods_array[8] = new GuaiWu(8, "³õ¼¶É®ÂÂ",8,[{name:"shengming",value:350},{name:"gongjiMin",value:300},{name:"gongjiMax",value:700},{name:"fangyu",value:70},{name:"sudu",value:90},{name:"jinbiMin",value:22},{name:"jinbiMax",value:55},{name:"jingyanMin",value:22},{name:"jingyanMax",value:40}]);
-p_goods_array[9] = new GuaiWu(9, "´óòùòğ",9,[{name:"shengming",value:340},{name:"gongjiMin",value:80},{name:"gongjiMax",value:100},{name:"fangyu",value:50},{name:"sudu",value:93},{name:"jinbiMin",value:15},{name:"jinbiMax",value:38},{name:"jingyanMin",value:15},{name:"jingyanMax",value:27}]);
-p_goods_array[10] = new GuaiWu(10, "ÎüÑªòùòğ",10,[{name:"shengming",value:900},{name:"gongjiMin",value:480},{name:"gongjiMax",value:630},{name:"fangyu",value:220},{name:"sudu",value:87},{name:"jinbiMin",value:28},{name:"jinbiMax",value:70},{name:"jingyanMin",value:28},{name:"jingyanMax",value:50}]);
-p_goods_array[11] = new GuaiWu(11, "÷¼÷ÃÎäÊ¿",11,[{name:"shengming",value:700},{name:"gongjiMin",value:160},{name:"gongjiMax",value:200},{name:"fangyu",value:120},{name:"sudu",value:92},{name:"jinbiMin",value:17},{name:"jinbiMax",value:43},{name:"jingyanMin",value:17},{name:"jingyanMax",value:31}]);
-p_goods_array[12] = new GuaiWu(12, "¸ß¼¶É®ÂÂ",12,[{name:"shengming",value:1000},{name:"gongjiMin",value:700},{name:"gongjiMax",value:1100},{name:"fangyu",value:200},{name:"sudu",value:84},{name:"jinbiMin",value:33},{name:"jinbiMax",value:83},{name:"jingyanMin",value:33},{name:"jingyanMax",value:59}]);
-p_goods_array[13] = new GuaiWu(13, "Ê¯Í·¹Ö",13,[{name:"shengming",value:1550},{name:"gongjiMin",value:400},{name:"gongjiMax",value:450},{name:"fangyu",value:400},{name:"sudu",value:85},{name:"jinbiMin",value:31},{name:"jinbiMax",value:78},{name:"jingyanMin",value:31},{name:"jingyanMax",value:56}]);
-p_goods_array[14] = new GuaiWu(14, "³õ¼¶ÎÀ±ø",14,[{name:"shengming",value:750},{name:"gongjiMin",value:300},{name:"gongjiMax",value:400},{name:"fangyu",value:120},{name:"sudu",value:89},{name:"jinbiMin",value:25},{name:"jinbiMax",value:63},{name:"jingyanMin",value:25},{name:"jingyanMax",value:45}]);
-p_goods_array[15] = new GuaiWu(15, "ÆïÊ¿ÎÀ±ø",15,[{name:"shengming",value:1450},{name:"gongjiMin",value:640},{name:"gongjiMax",value:800},{name:"fangyu",value:500},{name:"sudu",value:83},{name:"jinbiMin",value:35},{name:"jinbiMax",value:88},{name:"jingyanMin",value:35},{name:"jingyanMax",value:63}]);
-p_goods_array[16] = new GuaiWu(16, "Ë«ÊÖ½£Ê¿",16,[{name:"shengming",value:2650},{name:"gongjiMin",value:1300},{name:"gongjiMax",value:1800},{name:"fangyu",value:1200},{name:"sudu",value:73},{name:"jinbiMin",value:65},{name:"jinbiMax",value:163},{name:"jingyanMin",value:65},{name:"jingyanMax",value:117}]);
-p_goods_array[17] = new GuaiWu(17, "ÖĞ¼¶·¨Ê¦",17,[{name:"shengming",value:800},{name:"gongjiMin",value:500},{name:"gongjiMax",value:900},{name:"fangyu",value:150},{name:"sudu",value:86},{name:"jinbiMin",value:30},{name:"jinbiMax",value:75},{name:"jingyanMin",value:30},{name:"jingyanMax",value:54}]);
-p_goods_array[18] = new GuaiWu(18, "´ó·¨ÎÀ±ø",18,[{name:"shengming",value:1400},{name:"gongjiMin",value:600},{name:"gongjiMax",value:900},{name:"fangyu",value:470},{name:"sudu",value:82},{name:"jinbiMin",value:40},{name:"jinbiMax",value:100},{name:"jingyanMin",value:40},{name:"jingyanMax",value:72}]);
-p_goods_array[19] = new GuaiWu(19, "¿ñ±©ÆïÊ¿",19,[{name:"shengming",value:2200},{name:"gongjiMin",value:900},{name:"gongjiMax",value:1200},{name:"fangyu",value:700},{name:"sudu",value:79},{name:"jinbiMin",value:50},{name:"jinbiMax",value:125},{name:"jingyanMin",value:50},{name:"jingyanMax",value:90}]);
-p_goods_array[20] = new GuaiWu(20, "ÊŞÎäÊ¿",20,[{name:"shengming",value:2100},{name:"gongjiMin",value:800},{name:"gongjiMax",value:1000},{name:"fangyu",value:600},{name:"sudu",value:80},{name:"jinbiMin",value:45},{name:"jinbiMax",value:113},{name:"jingyanMin",value:45},{name:"jingyanMax",value:81}]);
-p_goods_array[21] = new GuaiWu(21, "ÖĞ¼¶ÎÀ±ø",21,[{name:"shengming",value:2400},{name:"gongjiMin",value:1000},{name:"gongjiMax",value:1300},{name:"fangyu",value:900},{name:"sudu",value:78},{name:"jinbiMin",value:55},{name:"jinbiMax",value:138},{name:"jingyanMin",value:55},{name:"jingyanMax",value:99}]);
-p_goods_array[22] = new GuaiWu(22, "¸ß¼¶ÎÀ±ø",22,[{name:"shengming",value:2600},{name:"gongjiMin",value:1200},{name:"gongjiMax",value:1600},{name:"fangyu",value:1100},{name:"sudu",value:75},{name:"jinbiMin",value:60},{name:"jinbiMax",value:150},{name:"jingyanMin",value:60},{name:"jingyanMax",value:108}]);
-p_goods_array[23] = new GuaiWu(23, "÷¼÷ÃÍõ",23,[{name:"shengming",value:4500},{name:"gongjiMin",value:1800},{name:"gongjiMax",value:2400},{name:"fangyu",value:1600},{name:"sudu",value:69},{name:"jinbiMin",value:80},{name:"jinbiMax",value:200},{name:"jingyanMin",value:80},{name:"jingyanMax",value:144}]);
-p_goods_array[24] = new GuaiWu(24, "Ú¤ÎÀ±ø",24,[{name:"shengming",value:2750},{name:"gongjiMin",value:1500},{name:"gongjiMax",value:2100},{name:"fangyu",value:1500},{name:"sudu",value:72},{name:"jinbiMin",value:70},{name:"jinbiMax",value:175},{name:"jingyanMin",value:70},{name:"jingyanMax",value:126}]);
-p_goods_array[25] = new GuaiWu(25, "°µÒ¹ÆïÊ¿",25,[{name:"shengming",value:5800},{name:"gongjiMin",value:2200},{name:"gongjiMax",value:3000},{name:"fangyu",value:1800},{name:"sudu",value:68},{name:"jinbiMin",value:85},{name:"jinbiMax",value:213},{name:"jingyanMin",value:85},{name:"jingyanMax",value:153}]);
-p_goods_array[26] = new GuaiWu(26, "ÔªËØ",26,[{name:"shengming",value:6800},{name:"gongjiMin",value:2400},{name:"gongjiMax",value:3600},{name:"fangyu",value:2100},{name:"sudu",value:65},{name:"jinbiMin",value:90},{name:"jinbiMax",value:225},{name:"jingyanMin",value:90},{name:"jingyanMax",value:162}]);
-p_goods_array[27] = new GuaiWu(27, "Ä§µÀÊ¿",27,[{name:"shengming",value:8500},{name:"gongjiMin",value:2600},{name:"gongjiMax",value:4000},{name:"fangyu",value:2300},{name:"sudu",value:60},{name:"jinbiMin",value:100},{name:"jinbiMax",value:250},{name:"jingyanMin",value:100},{name:"jingyanMax",value:180}]);
-p_goods_array[28] = new GuaiWu(28, "Ğ¡Ä§Íõ",28,[{name:"shengming",value:20000},{name:"gongjiMin",value:2000},{name:"gongjiMax",value:3000},{name:"fangyu",value:1800},{name:"sudu",value:60},{name:"jinbiMin",value:150},{name:"jinbiMax",value:375},{name:"jingyanMin",value:150},{name:"jingyanMax",value:270}]);
-p_goods_array[29] = new GuaiWu(29, "´óÊ·À³Ä·",29,[{name:"shengming",value:850},{name:"gongjiMin",value:330},{name:"gongjiMax",value:400},{name:"fangyu",value:220},{name:"sudu",value:88},{name:"jinbiMin",value:26},{name:"jinbiMax",value:65},{name:"jingyanMin",value:26},{name:"jingyanMax",value:47}]);
-p_goods_array[30] = new GuaiWu(30, "¾¿¼«·¨Ê¦",30,[{name:"shengming",value:30000},{name:"gongjiMin",value:3000},{name:"gongjiMax",value:5000},{name:"fangyu",value:2700},{name:"sudu",value:55},{name:"jinbiMin",value:200},{name:"jinbiMax",value:500},{name:"jingyanMin",value:200},{name:"jingyanMax",value:360}]);
-p_goods_array[31] = new GuaiWu(31, "´óÄ§Íõ",31,[{name:"shengming",value:50000},{name:"gongjiMin",value:4000},{name:"gongjiMax",value:6000},{name:"fangyu",value:3800},{name:"sudu",value:50},{name:"jinbiMin",value:300},{name:"jinbiMax",value:750},{name:"jingyanMin",value:300},{name:"jingyanMax",value:540}]);
-p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000},{name:"gongjiMin",value:5000},{name:"gongjiMax",value:8000},{name:"fangyu",value:4800},{name:"sudu",value:45},{name:"jinbiMin",value:500},{name:"jinbiMax",value:1250},{name:"jingyanMin",value:500},{name:"jingyanMax",value:900}]);
+  //-------ç‰©å“æ•°ç»„
+  //ç‰©å“ 0-300æ€ªç‰©
+  p_goods_array[0] = new GuaiWu(0, "å°å²è±å§†",0,[{name:"shengming",value:110},{name:"gongjiMin",value:13},{name:"gongjiMax",value:18},{name:"fangyu",value:2},{name:"sudu",value:100},{name:"jinbiMin",value:2},{name:"jinbiMax",value:5},{name:"jingyanMin",value:2},{name:"jingyanMax",value:4}]);
+p_goods_array[1] = new GuaiWu(1, "çº¢å²è±å§†",1,[{name:"shengming",value:140},{name:"gongjiMin",value:17},{name:"gongjiMax",value:22},{name:"fangyu",value:4},{name:"sudu",value:99},{name:"jinbiMin",value:3},{name:"jinbiMax",value:8},{name:"jingyanMin",value:3},{name:"jingyanMax",value:5}]);
+p_goods_array[2] = new GuaiWu(2, "é»‘å²è±å§†",2,[{name:"shengming",value:300},{name:"gongjiMin",value:48},{name:"gongjiMax",value:58},{name:"fangyu",value:33},{name:"sudu",value:96},{name:"jinbiMin",value:10},{name:"jinbiMax",value:25},{name:"jingyanMin",value:10},{name:"jingyanMax",value:18}]);
+p_goods_array[3] = new GuaiWu(3, "å°è™è ",3,[{name:"shengming",value:150},{name:"gongjiMin",value:21},{name:"gongjiMax",value:25},{name:"fangyu",value:5},{name:"sudu",value:98},{name:"jinbiMin",value:5},{name:"jinbiMax",value:13},{name:"jingyanMin",value:5},{name:"jingyanMax",value:9}]);
+p_goods_array[4] = new GuaiWu(4, "éª·é«…å…µ",4,[{name:"shengming",value:183},{name:"gongjiMin",value:25},{name:"gongjiMax",value:30},{name:"fangyu",value:10},{name:"sudu",value:97},{name:"jinbiMin",value:7},{name:"jinbiMax",value:18},{name:"jingyanMin",value:7},{name:"jingyanMax",value:13}]);
+p_goods_array[5] = new GuaiWu(5, "éª·é«…å‰‘å£«",5,[{name:"shengming",value:330},{name:"gongjiMin",value:68},{name:"gongjiMax",value:80},{name:"fangyu",value:40},{name:"sudu",value:94},{name:"jinbiMin",value:14},{name:"jinbiMax",value:35},{name:"jingyanMin",value:14},{name:"jingyanMax",value:25}]);
+p_goods_array[6] = new GuaiWu(6, "åˆçº§æ³•å¸ˆ",6,[{name:"shengming",value:200},{name:"gongjiMin",value:80},{name:"gongjiMax",value:150},{name:"fangyu",value:20},{name:"sudu",value:95},{name:"jinbiMin",value:12},{name:"jinbiMax",value:30},{name:"jingyanMin",value:12},{name:"jingyanMax",value:22}]);
+p_goods_array[7] = new GuaiWu(7, "å…½äºº",7,[{name:"shengming",value:650},{name:"gongjiMin",value:200},{name:"gongjiMax",value:240},{name:"fangyu",value:140},{name:"sudu",value:91},{name:"jinbiMin",value:20},{name:"jinbiMax",value:50},{name:"jingyanMin",value:20},{name:"jingyanMax",value:36}]);
+p_goods_array[8] = new GuaiWu(8, "åˆçº§åƒ§ä¾£",8,[{name:"shengming",value:350},{name:"gongjiMin",value:300},{name:"gongjiMax",value:700},{name:"fangyu",value:70},{name:"sudu",value:90},{name:"jinbiMin",value:22},{name:"jinbiMax",value:55},{name:"jingyanMin",value:22},{name:"jingyanMax",value:40}]);
+p_goods_array[9] = new GuaiWu(9, "å¤§è™è ",9,[{name:"shengming",value:340},{name:"gongjiMin",value:80},{name:"gongjiMax",value:100},{name:"fangyu",value:50},{name:"sudu",value:93},{name:"jinbiMin",value:15},{name:"jinbiMax",value:38},{name:"jingyanMin",value:15},{name:"jingyanMax",value:27}]);
+p_goods_array[10] = new GuaiWu(10, "å¸è¡€è™è ",10,[{name:"shengming",value:900},{name:"gongjiMin",value:480},{name:"gongjiMax",value:630},{name:"fangyu",value:220},{name:"sudu",value:87},{name:"jinbiMin",value:28},{name:"jinbiMax",value:70},{name:"jingyanMin",value:28},{name:"jingyanMax",value:50}]);
+p_goods_array[11] = new GuaiWu(11, "éª·é«…æ­¦å£«",11,[{name:"shengming",value:700},{name:"gongjiMin",value:160},{name:"gongjiMax",value:200},{name:"fangyu",value:120},{name:"sudu",value:92},{name:"jinbiMin",value:17},{name:"jinbiMax",value:43},{name:"jingyanMin",value:17},{name:"jingyanMax",value:31}]);
+p_goods_array[12] = new GuaiWu(12, "é«˜çº§åƒ§ä¾£",12,[{name:"shengming",value:1000},{name:"gongjiMin",value:700},{name:"gongjiMax",value:1100},{name:"fangyu",value:200},{name:"sudu",value:84},{name:"jinbiMin",value:33},{name:"jinbiMax",value:83},{name:"jingyanMin",value:33},{name:"jingyanMax",value:59}]);
+p_goods_array[13] = new GuaiWu(13, "çŸ³å¤´æ€ª",13,[{name:"shengming",value:1550},{name:"gongjiMin",value:400},{name:"gongjiMax",value:450},{name:"fangyu",value:400},{name:"sudu",value:85},{name:"jinbiMin",value:31},{name:"jinbiMax",value:78},{name:"jingyanMin",value:31},{name:"jingyanMax",value:56}]);
+p_goods_array[14] = new GuaiWu(14, "åˆçº§å«å…µ",14,[{name:"shengming",value:750},{name:"gongjiMin",value:300},{name:"gongjiMax",value:400},{name:"fangyu",value:120},{name:"sudu",value:89},{name:"jinbiMin",value:25},{name:"jinbiMax",value:63},{name:"jingyanMin",value:25},{name:"jingyanMax",value:45}]);
+p_goods_array[15] = new GuaiWu(15, "éª‘å£«å«å…µ",15,[{name:"shengming",value:1450},{name:"gongjiMin",value:640},{name:"gongjiMax",value:800},{name:"fangyu",value:500},{name:"sudu",value:83},{name:"jinbiMin",value:35},{name:"jinbiMax",value:88},{name:"jingyanMin",value:35},{name:"jingyanMax",value:63}]);
+p_goods_array[16] = new GuaiWu(16, "åŒæ‰‹å‰‘å£«",16,[{name:"shengming",value:2650},{name:"gongjiMin",value:1300},{name:"gongjiMax",value:1800},{name:"fangyu",value:1200},{name:"sudu",value:73},{name:"jinbiMin",value:65},{name:"jinbiMax",value:163},{name:"jingyanMin",value:65},{name:"jingyanMax",value:117}]);
+p_goods_array[17] = new GuaiWu(17, "ä¸­çº§æ³•å¸ˆ",17,[{name:"shengming",value:800},{name:"gongjiMin",value:500},{name:"gongjiMax",value:900},{name:"fangyu",value:150},{name:"sudu",value:86},{name:"jinbiMin",value:30},{name:"jinbiMax",value:75},{name:"jingyanMin",value:30},{name:"jingyanMax",value:54}]);
+p_goods_array[18] = new GuaiWu(18, "å¤§æ³•å«å…µ",18,[{name:"shengming",value:1400},{name:"gongjiMin",value:600},{name:"gongjiMax",value:900},{name:"fangyu",value:470},{name:"sudu",value:82},{name:"jinbiMin",value:40},{name:"jinbiMax",value:100},{name:"jingyanMin",value:40},{name:"jingyanMax",value:72}]);
+p_goods_array[19] = new GuaiWu(19, "ç‹‚æš´éª‘å£«",19,[{name:"shengming",value:2200},{name:"gongjiMin",value:900},{name:"gongjiMax",value:1200},{name:"fangyu",value:700},{name:"sudu",value:79},{name:"jinbiMin",value:50},{name:"jinbiMax",value:125},{name:"jingyanMin",value:50},{name:"jingyanMax",value:90}]);
+p_goods_array[20] = new GuaiWu(20, "å…½æ­¦å£«",20,[{name:"shengming",value:2100},{name:"gongjiMin",value:800},{name:"gongjiMax",value:1000},{name:"fangyu",value:600},{name:"sudu",value:80},{name:"jinbiMin",value:45},{name:"jinbiMax",value:113},{name:"jingyanMin",value:45},{name:"jingyanMax",value:81}]);
+p_goods_array[21] = new GuaiWu(21, "ä¸­çº§å«å…µ",21,[{name:"shengming",value:2400},{name:"gongjiMin",value:1000},{name:"gongjiMax",value:1300},{name:"fangyu",value:900},{name:"sudu",value:78},{name:"jinbiMin",value:55},{name:"jinbiMax",value:138},{name:"jingyanMin",value:55},{name:"jingyanMax",value:99}]);
+p_goods_array[22] = new GuaiWu(22, "é«˜çº§å«å…µ",22,[{name:"shengming",value:2600},{name:"gongjiMin",value:1200},{name:"gongjiMax",value:1600},{name:"fangyu",value:1100},{name:"sudu",value:75},{name:"jinbiMin",value:60},{name:"jinbiMax",value:150},{name:"jingyanMin",value:60},{name:"jingyanMax",value:108}]);
+p_goods_array[23] = new GuaiWu(23, "éª·é«…ç‹",23,[{name:"shengming",value:4500},{name:"gongjiMin",value:1800},{name:"gongjiMax",value:2400},{name:"fangyu",value:1600},{name:"sudu",value:69},{name:"jinbiMin",value:80},{name:"jinbiMax",value:200},{name:"jingyanMin",value:80},{name:"jingyanMax",value:144}]);
+p_goods_array[24] = new GuaiWu(24, "å†¥å«å…µ",24,[{name:"shengming",value:2750},{name:"gongjiMin",value:1500},{name:"gongjiMax",value:2100},{name:"fangyu",value:1500},{name:"sudu",value:72},{name:"jinbiMin",value:70},{name:"jinbiMax",value:175},{name:"jingyanMin",value:70},{name:"jingyanMax",value:126}]);
+p_goods_array[25] = new GuaiWu(25, "æš—å¤œéª‘å£«",25,[{name:"shengming",value:5800},{name:"gongjiMin",value:2200},{name:"gongjiMax",value:3000},{name:"fangyu",value:1800},{name:"sudu",value:68},{name:"jinbiMin",value:85},{name:"jinbiMax",value:213},{name:"jingyanMin",value:85},{name:"jingyanMax",value:153}]);
+p_goods_array[26] = new GuaiWu(26, "å…ƒç´ ",26,[{name:"shengming",value:6800},{name:"gongjiMin",value:2400},{name:"gongjiMax",value:3600},{name:"fangyu",value:2100},{name:"sudu",value:65},{name:"jinbiMin",value:90},{name:"jinbiMax",value:225},{name:"jingyanMin",value:90},{name:"jingyanMax",value:162}]);
+p_goods_array[27] = new GuaiWu(27, "é­”é“å£«",27,[{name:"shengming",value:8500},{name:"gongjiMin",value:2600},{name:"gongjiMax",value:4000},{name:"fangyu",value:2300},{name:"sudu",value:60},{name:"jinbiMin",value:100},{name:"jinbiMax",value:250},{name:"jingyanMin",value:100},{name:"jingyanMax",value:180}]);
+p_goods_array[28] = new GuaiWu(28, "å°é­”ç‹",28,[{name:"shengming",value:20000},{name:"gongjiMin",value:2000},{name:"gongjiMax",value:3000},{name:"fangyu",value:1800},{name:"sudu",value:60},{name:"jinbiMin",value:150},{name:"jinbiMax",value:375},{name:"jingyanMin",value:150},{name:"jingyanMax",value:270}]);
+p_goods_array[29] = new GuaiWu(29, "å¤§å²è±å§†",29,[{name:"shengming",value:850},{name:"gongjiMin",value:330},{name:"gongjiMax",value:400},{name:"fangyu",value:220},{name:"sudu",value:88},{name:"jinbiMin",value:26},{name:"jinbiMax",value:65},{name:"jingyanMin",value:26},{name:"jingyanMax",value:47}]);
+p_goods_array[30] = new GuaiWu(30, "ç©¶ææ³•å¸ˆ",30,[{name:"shengming",value:30000},{name:"gongjiMin",value:3000},{name:"gongjiMax",value:5000},{name:"fangyu",value:2700},{name:"sudu",value:55},{name:"jinbiMin",value:200},{name:"jinbiMax",value:500},{name:"jingyanMin",value:200},{name:"jingyanMax",value:360}]);
+p_goods_array[31] = new GuaiWu(31, "å¤§é­”ç‹",31,[{name:"shengming",value:50000},{name:"gongjiMin",value:4000},{name:"gongjiMax",value:6000},{name:"fangyu",value:3800},{name:"sudu",value:50},{name:"jinbiMin",value:300},{name:"jinbiMax",value:750},{name:"jingyanMin",value:300},{name:"jingyanMax",value:540}]);
+p_goods_array[32] = new GuaiWu(32, "ç»ˆæé­”ç‹",32,[{name:"shengming",value:120000},{name:"gongjiMin",value:5000},{name:"gongjiMax",value:8000},{name:"fangyu",value:4800},{name:"sudu",value:45},{name:"jinbiMin",value:500},{name:"jinbiMax",value:1250},{name:"jingyanMin",value:500},{name:"jingyanMax",value:900}]);
 
 
-  //301-500ÎïÆ·
-  p_goods_array[301] = new AddPropertyGoods(301, "»ÆÔ¿³×", 301, [
+  //301-500ç‰©å“
+  p_goods_array[301] = new AddPropertyGoods(301, "é»„é’¥åŒ™", 301, [
     {property:'huangyaoshi',min:1,max:1,am:"add",mmin:0}
-  ], "Äã¼ñÆğÁËÒ»°Ñ»ÆÔ¿³×£¡", null);
-  p_goods_array[302] = new AddPropertyGoods(302, "À¶Ô¿³×", 302, [
+  ], "ä½ æ¡èµ·äº†ä¸€æŠŠé»„é’¥åŒ™ï¼", null);
+  p_goods_array[302] = new AddPropertyGoods(302, "è“é’¥åŒ™", 302, [
     {property:'lanyaoshi',min:1,max:1,am:"add",mmin:0}
-  ], "Äã¼ñÆğÁËÒ»°ÑÀ¶Ô¿³×£¡", null);
-  p_goods_array[303] = new AddPropertyGoods(303, "ºìÔ¿³×", 303, [
+  ], "ä½ æ¡èµ·äº†ä¸€æŠŠè“é’¥åŒ™ï¼", null);
+  p_goods_array[303] = new AddPropertyGoods(303, "çº¢é’¥åŒ™", 303, [
     {property:'hongyaoshi',min:1,max:1,am:"add",mmin:0}
-  ], "Äã¼ñÆğÁËÒ»°ÑºìÔ¿³×£¡", null);
-  p_goods_array[304] = new DaMen(304, "»ÆÉ«´óÃÅ", 304, "huangyaoshi", "Äã¿ªÆôÁËÒ»×ù»ÆÉ«´óÃÅ£¡", "ÄãµÄ»ÆÔ¿³×ÊıÁ¿²»¹»ÁË£¡");
-  p_goods_array[305] = new DaMen(305, "À¶É«´óÃÅ", 305, 'lanyaoshi', "Äã¿ªÆôÁËÒ»×ùÀ¶É«´óÃÅ£¡", "ÄãµÄÀ¶Ô¿³×ÊıÁ¿²»¹»ÁË£¡");
-  p_goods_array[306] = new DaMen(306, "ºìÉ«´óÃÅ", 306, 'hongyaoshi', "Äã¿ªÆôÁËÒ»×ùºìÉ«´óÃÅ£¡", "ÄãµÄºìÔ¿³×ÊıÁ¿²»¹»ÁË£¡");
-  p_goods_array[307] = new AddPropertyGoods(307, "À¶±¦Ê¯", 307, [
+  ], "ä½ æ¡èµ·äº†ä¸€æŠŠçº¢é’¥åŒ™ï¼", null);
+  p_goods_array[304] = new DaMen(304, "é»„è‰²å¤§é—¨", 304, "huangyaoshi", "ä½ å¼€å¯äº†ä¸€åº§é»„è‰²å¤§é—¨ï¼", "ä½ çš„é»„é’¥åŒ™æ•°é‡ä¸å¤Ÿäº†ï¼");
+  p_goods_array[305] = new DaMen(305, "è“è‰²å¤§é—¨", 305, 'lanyaoshi', "ä½ å¼€å¯äº†ä¸€åº§è“è‰²å¤§é—¨ï¼", "ä½ çš„è“é’¥åŒ™æ•°é‡ä¸å¤Ÿäº†ï¼");
+  p_goods_array[306] = new DaMen(306, "çº¢è‰²å¤§é—¨", 306, 'hongyaoshi', "ä½ å¼€å¯äº†ä¸€åº§çº¢è‰²å¤§é—¨ï¼", "ä½ çš„çº¢é’¥åŒ™æ•°é‡ä¸å¤Ÿäº†ï¼");
+  p_goods_array[307] = new AddPropertyGoods(307, "è“å®çŸ³", 307, [
     {property:'gongjiMin',min:3,max:5,am:"add",mmin:0},
     {property:'gongjiMax',min:5,max:8,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»¿ÅÀ¶±¦Ê¯£¬Ôö¼Ó{0}-{1}µã¹¥»÷£¡", null);
-  p_goods_array[308] = new AddPropertyGoods(308, "ºì±¦Ê¯", 308, [
+  ], "ä½ æ¡åˆ°äº†ä¸€é¢—è“å®çŸ³ï¼Œå¢åŠ {0}-{1}ç‚¹æ”»å‡»ï¼", null);
+  p_goods_array[308] = new AddPropertyGoods(308, "çº¢å®çŸ³", 308, [
     {property:'fangyu',min:3,max:5,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»¿Åºì±¦Ê¯£¬Ôö¼Ó{0}µã·ÀÓù£¡", null);
-  p_goods_array[309] = new AddPropertyGoods(309, "À¶ÑªÆ¿", 309, [
+  ], "ä½ æ¡åˆ°äº†ä¸€é¢—çº¢å®çŸ³ï¼Œå¢åŠ {0}ç‚¹é˜²å¾¡ï¼", null);
+  p_goods_array[309] = new AddPropertyGoods(309, "è“è¡€ç“¶", 309, [
     {property:'shengming',min:500,max:750,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»¸öÀ¶ÑªÆ¿£¬Ôö¼Ó{0}µãÉúÃü£¡", null);
-  p_goods_array[310] = new AddPropertyGoods(310, "ºìÑªÆ¿", 310, [
+  ], "ä½ æ¡åˆ°äº†ä¸€ä¸ªè“è¡€ç“¶ï¼Œå¢åŠ {0}ç‚¹ç”Ÿå‘½ï¼", null);
+  p_goods_array[310] = new AddPropertyGoods(310, "çº¢è¡€ç“¶", 310, [
     {property:'shengming',min:200,max:300,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»¸öºìÑªÆ¿£¬Ôö¼Ó{0}µãÉúÃü£¡", null);
-  p_goods_array[311] = new BaseViewGoods(311, "¹ÖÎïËµÃ÷Êé", 311, {
+  ], "ä½ æ¡åˆ°äº†ä¸€ä¸ªçº¢è¡€ç“¶ï¼Œå¢åŠ {0}ç‚¹ç”Ÿå‘½ï¼", null);
+  p_goods_array[311] = new BaseViewGoods(311, "æ€ªç‰©è¯´æ˜ä¹¦", 311, {
     property:"viewGuaiBook",
-    des:"Äã¼ñµ½ÁËÒ»±¾{0}£¬°´{1}¿ÉÒÔ²é¿´¹ÖÎïÏêÏ¸Çé¿ö£¡",
-    tipDes:["¹ÖÎïËµÃ÷Êé","L¼ü"]
+    des:"ä½ æ¡åˆ°äº†ä¸€æœ¬{0}ï¼ŒæŒ‰{1}å¯ä»¥æŸ¥çœ‹æ€ªç‰©è¯¦ç»†æƒ…å†µï¼",
+    tipDes:["æ€ªç‰©è¯´æ˜ä¹¦","Lé”®"]
   });
-  p_goods_array[312] = new AddPropertyGoods(312, "ÂÌ±¦Ê¯", 312, [
+  p_goods_array[312] = new AddPropertyGoods(312, "ç»¿å®çŸ³", 312, [
     {property:'sudu',min:1,max:2,am:"minus",mmin:10}
-  ], "Äã¼ñµ½ÁËÒ»¿ÅÂÌ±¦Ê¯£¬Ôö¼Ó{0}µãËÙ¶È£¡", null);
-  p_goods_array[313] = new AddPropertyGoods(313, "±Ì²¨ÏàÂ¶µ¶", 313, [
+  ], "ä½ æ¡åˆ°äº†ä¸€é¢—ç»¿å®çŸ³ï¼Œå¢åŠ {0}ç‚¹é€Ÿåº¦ï¼", null);
+  p_goods_array[313] = new AddPropertyGoods(313, "ç¢§æ³¢ç›¸éœ²åˆ€", 313, [
     {property:'gongjiMin',min:10,max:15,am:"add",mmin:0},
     {property:'gongjiMax',min:15,max:24,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±ú±Ì²¨ÏàÂ¶µ¶£¬Ôö¼Ó{0}-{1}µã¹¥»÷£¡", null);
-  p_goods_array[314] = new AddPropertyGoods(314, "»Æ½ğ±¦Ïä", 314, [
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„ç¢§æ³¢ç›¸éœ²åˆ€ï¼Œå¢åŠ {0}-{1}ç‚¹æ”»å‡»ï¼", null);
+  p_goods_array[314] = new AddPropertyGoods(314, "é»„é‡‘å®ç®±", 314, [
     {property:'huangyaoshi',min:1,max:1,am:"add",mmin:0},
     {property:'lanyaoshi',min:1,max:1,am:"add",mmin:0},
     {property:'hongyaoshi',min:1,max:1,am:"add",mmin:0}
-  ], "Äã¼ñÆğÁËÒ»¸ö»Æ½ğ±¦Ïä£¬ËùÓĞÔ¿³×ÊıÁ¿Ôö¼Ó1£¡", null);
-  p_goods_array[315] = new AddPropertyGoods(315, "Ìú¶Ü", 315, [
+  ], "ä½ æ¡èµ·äº†ä¸€ä¸ªé»„é‡‘å®ç®±ï¼Œæ‰€æœ‰é’¥åŒ™æ•°é‡å¢åŠ 1ï¼", null);
+  p_goods_array[315] = new AddPropertyGoods(315, "é“ç›¾", 315, [
     {property:'fangyu',min:10,max:15,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±úÌú¶Ü£¬Ôö¼Ó{0}µã·ÀÓù£¡", null);
-  p_goods_array[316] = new AddPropertyGoods(316, "¹Å´ú½ğ±Ò", 316, [
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„é“ç›¾ï¼Œå¢åŠ {0}ç‚¹é˜²å¾¡ï¼", null);
+  p_goods_array[316] = new AddPropertyGoods(316, "å¤ä»£é‡‘å¸", 316, [
     {property:'jinbi',min:400,max:600,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»Ã¶¹Å´ú½ğ±Ò£¬Ôö¼ÓÁË{0}½ğ±Ò£¡", null);
-  p_goods_array[317] = new BaseViewGoods(317, "·ÉĞĞÆ÷", 317, {
+  ], "ä½ æ¡åˆ°äº†ä¸€æšå¤ä»£é‡‘å¸ï¼Œå¢åŠ äº†{0}é‡‘å¸ï¼", null);
+  p_goods_array[317] = new BaseViewGoods(317, "é£è¡Œå™¨", 317, {
     property:"feixingqi",
-    des:"¹§Ï²£¡Äã»ñµÃÁË{0}£¬°´{1}ÏòÉÏ·ÉĞĞÒ»²ã£¬°´{2}ÏòÏÂ·ÉĞĞÒ»²ã£¡",
-    tipDes:["·ÉĞĞÆ÷","W¼ü","S¼ü"]
+    des:"æ­å–œï¼ä½ è·å¾—äº†{0}ï¼ŒæŒ‰{1}å‘ä¸Šé£è¡Œä¸€å±‚ï¼ŒæŒ‰{2}å‘ä¸‹é£è¡Œä¸€å±‚ï¼",
+    tipDes:["é£è¡Œå™¨","Wé”®","Sé”®"]
   });
-  p_goods_array[318] = new BaseViewGoods(318, "Ê¥Ä¸Ê®×Ö¼Ü", 318, {
+  p_goods_array[318] = new BaseViewGoods(318, "åœ£æ¯åå­—æ¶", 318, {
     property:"shizijia",
-    des:"¹§Ï²£¡Äã»ñµÃÁË{0}£¬ÓÃËüÈ´½â¾È{1}°É£¡",
-    tipDes:["Ê¥Ä¸Ê®×Ö¼Ü","¾«Áé"]
+    des:"æ­å–œï¼ä½ è·å¾—äº†{0}ï¼Œç”¨å®ƒå´è§£æ•‘{1}å§ï¼",
+    tipDes:["åœ£æ¯åå­—æ¶","ç²¾çµ"]
   });
-  p_goods_array[319] = new AddPropertyGoods(319, "»ÃÓ°Ñ¥", 319, [
+  p_goods_array[319] = new AddPropertyGoods(319, "å¹»å½±é´", 319, [
     {property:'sudu',min:6,max:9,am:"minus",mmin:10}
-  ], "Äã¼ñµ½ÁËÒ»Ë«»ÃÓ°Ñ¥£¬ËÙ¶ÈÔö¼Ó{0}µã£¡", null);
-  p_goods_array[320] = new AddPropertyGoods(320, "ÕæÎä½£", 320, [
+  ], "ä½ æ¡åˆ°äº†ä¸€åŒå¹»å½±é´ï¼Œé€Ÿåº¦å¢åŠ {0}ç‚¹ï¼", null);
+  p_goods_array[320] = new AddPropertyGoods(320, "çœŸæ­¦å‰‘", 320, [
     {property:'gongjiMin',min:50,max:75,am:"add",mmin:0},
     {property:'gongjiMax',min:75,max:113,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±úÕæÎä½££¬Ôö¼Ó{0}-{1}µã¹¥»÷£¡", null);
-  p_goods_array[321] = new AddPropertyGoods(321, "ÆïÊ¿¶Ü", 321, [
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„çœŸæ­¦å‰‘ï¼Œå¢åŠ {0}-{1}ç‚¹æ”»å‡»ï¼", null);
+  p_goods_array[321] = new AddPropertyGoods(321, "éª‘å£«ç›¾", 321, [
     {property:'fangyu',min:50,max:75,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±úÆïÊ¿¶Ü£¬Ôö¼Ó{0}µã·ÀÓù£¡", null);
-  p_goods_array[322] = new BaseViewGoods(322, "³úÍ·", 322, {
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„éª‘å£«ç›¾ï¼Œå¢åŠ {0}ç‚¹é˜²å¾¡ï¼", null);
+  p_goods_array[322] = new BaseViewGoods(322, "é”„å¤´", 322, {
     property:"chutou",
-    des:"¹§Ï²£¡Äã»ñµÃÁË{0}£¬°ÑËü½»¸ø{1}°É£¡",
-    tipDes:["³úÍ·","½İ¿Ë"]
+    des:"æ­å–œï¼ä½ è·å¾—äº†{0}ï¼ŒæŠŠå®ƒäº¤ç»™{1}å§ï¼",
+    tipDes:["é”„å¤´","æ·å…‹"]
   });
-  p_goods_array[323] = new AddPropertyGoods(323, "´óÑªÆ¿", 323, [
+  p_goods_array[323] = new AddPropertyGoods(323, "å¤§è¡€ç“¶", 323, [
     {property:'shengming',min:3000,max:4500,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»¸ö´óÑªÆ¿£¬Ôö¼Ó{0}µãÉúÃü£¡", null);
-  p_goods_array[324] = new AddPropertyGoods(324, "Ê¥Ë®", 324, [], "Äã¼ñµ½ÁËÒ»Æ¿{0}£¬ÉúÃüÔö¼ÓÒ»±¶£¡", null);
-  p_goods_array[325] = new AddPropertyGoods(325, "Ê¥½£", 325, [
+  ], "ä½ æ¡åˆ°äº†ä¸€ä¸ªå¤§è¡€ç“¶ï¼Œå¢åŠ {0}ç‚¹ç”Ÿå‘½ï¼", null);
+  p_goods_array[324] = new AddPropertyGoods(324, "åœ£æ°´", 324, [], "ä½ æ¡åˆ°äº†ä¸€ç“¶{0}ï¼Œç”Ÿå‘½å¢åŠ ä¸€å€ï¼", null);
+  p_goods_array[325] = new AddPropertyGoods(325, "åœ£å‰‘", 325, [
     {property:'gongjiMin',min:400,max:600,am:"add",mmin:0},
     {property:'gongjiMax',min:600,max:900,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±úÊ¥½££¬Ôö¼Ó{0}-{1}µã¹¥»÷£¡", null);
-  p_goods_array[326] = new AddPropertyGoods(326, "Ê¥¶Ü", 326, [
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„åœ£å‰‘ï¼Œå¢åŠ {0}-{1}ç‚¹æ”»å‡»ï¼", null);
+  p_goods_array[326] = new AddPropertyGoods(326, "åœ£ç›¾", 326, [
     {property:'fangyu',min:400,max:600,am:"add",mmin:0}
-  ], "Äã¼ñµ½ÁËÒ»±úÊ¥¶Ü£¬Ôö¼Ó{0}µã·ÀÓù£¡", null);
+  ], "ä½ æ¡åˆ°äº†ä¸€æŸ„åœ£ç›¾ï¼Œå¢åŠ {0}ç‚¹é˜²å¾¡ï¼", null);
 
-  //501-550Ç½£¬Â¥¡¢Â·µÈ½¨Öş
-  p_goods_array[501] = new BaseGoods(501, "ÆÕÍ¨Ç½", 501);
-  p_goods_array[502] = new BaseGoods(502, "Éı¼¶Ç½×ó", 502);
-  p_goods_array[503] = new BaseGoods(503, "Éı¼¶Ç½ÓÒ", 503);
-  p_goods_array[504] = new BaseGoods(504, "»¨É«ÃÅ", 504);
-  p_goods_array[505] = new BaseGoods(505, "ÑÒ½¬Ç½", 505);
-  p_goods_array[506] = new BaseGoods(506, "ĞÇĞÇÇ½", 506);
-  p_goods_array[507] = new BaseGoods(507, "ÉÏÂ¥Â¥Ìİ", 507);
-  p_goods_array[508] = new BaseGoods(508, "ÏÂÂ¥Â¥Ìİ", 508);
-  p_goods_array[509] = new BaseGoods(509, "Â·", 509);
-  p_goods_array[510] = new BaseGoods(510, "Õ¤À¸ÃÅ", 510);
-  //601ÒÔºóNPC
+  //501-550å¢™ï¼Œæ¥¼ã€è·¯ç­‰å»ºç­‘
+  p_goods_array[501] = new BaseGoods(501, "æ™®é€šå¢™", 501);
+  p_goods_array[502] = new BaseGoods(502, "å‡çº§å¢™å·¦", 502);
+  p_goods_array[503] = new BaseGoods(503, "å‡çº§å¢™å³", 503);
+  p_goods_array[504] = new BaseGoods(504, "èŠ±è‰²é—¨", 504);
+  p_goods_array[505] = new BaseGoods(505, "å²©æµ†å¢™", 505);
+  p_goods_array[506] = new BaseGoods(506, "æ˜Ÿæ˜Ÿå¢™", 506);
+  p_goods_array[507] = new BaseGoods(507, "ä¸Šæ¥¼æ¥¼æ¢¯", 507);
+  p_goods_array[508] = new BaseGoods(508, "ä¸‹æ¥¼æ¥¼æ¢¯", 508);
+  p_goods_array[509] = new BaseGoods(509, "è·¯", 509);
+  p_goods_array[510] = new BaseGoods(510, "æ …æ é—¨", 510);
+  //601ä»¥åNPC
   p_goods_array[601] = new NPC(601, 601, [
     {
-      speaking:['¾«Áé£ºÄãºÃ£¡ÓÂÊ¿£¡ÎÒÊÇÕâÀïµÄ¾«Áé£¡','ÄãºÃ£¬¾«Áé£¡','¾«Áé£ºÄã¾ÍÊÇ±»ÅÉÇ²µ½motaÀï´î¾È¹«Ö÷µÄÓÂÊ¿£¿',
-        '¾«Áé£ºÎÒÃÇµÄ¹«Ö÷±»À§ÔÚmotaµÄ¶¥²ã£¬ÄÇÀïÓĞ¸ö¿ÉÅÂµÄ´óÄ§Íõ¿´ÊØ£¡',
-        '¾«Áé£ºÎÒÏÖÔÚ±»´óÄ§Íõ½ûïÀÔÚÕâÀï£¬Èç¹û¿ÉÒÔÕÒµ½¡±Ê¥Ä¸Ê®×Ö¼Ü¡°£¬ÎÒ¾Í¿ÉÀë¿ªÕâÀï²¢°ÑÎÒµÄ´«¹¦¸øÄã£¿',
-        "¾«Áé£ºÎÒÏÖÔÚÓĞ»Æ¡¢À¶¡¢ºìÈı°ÑÔ¿³×£¬ÎÒ°ÑÔ¿³×ËÍ¸øÄã£¡",'¾«Áé£º¼ÓÓÍÓÂÊ¿£¬Ò»¶¨Òª¾È³ö¹«Ö÷£¡'],
+      speaking:['ç²¾çµï¼šä½ å¥½ï¼å‹‡å£«ï¼æˆ‘æ˜¯è¿™é‡Œçš„ç²¾çµï¼','ä½ å¥½ï¼Œç²¾çµï¼','ç²¾çµï¼šä½ å°±æ˜¯è¢«æ´¾é£åˆ°motaé‡Œæ­æ•‘å…¬ä¸»çš„å‹‡å£«ï¼Ÿ',
+        'ç²¾çµï¼šæˆ‘ä»¬çš„å…¬ä¸»è¢«å›°åœ¨motaçš„é¡¶å±‚ï¼Œé‚£é‡Œæœ‰ä¸ªå¯æ€•çš„å¤§é­”ç‹çœ‹å®ˆï¼',
+        'ç²¾çµï¼šæˆ‘ç°åœ¨è¢«å¤§é­”ç‹ç¦é”¢åœ¨è¿™é‡Œï¼Œå¦‚æœå¯ä»¥æ‰¾åˆ°â€åœ£æ¯åå­—æ¶â€œï¼Œæˆ‘å°±å¯ç¦»å¼€è¿™é‡Œå¹¶æŠŠæˆ‘çš„ä¼ åŠŸç»™ä½ ï¼Ÿ',
+        "ç²¾çµï¼šæˆ‘ç°åœ¨æœ‰é»„ã€è“ã€çº¢ä¸‰æŠŠé’¥åŒ™ï¼Œæˆ‘æŠŠé’¥åŒ™é€ç»™ä½ ï¼",'ç²¾çµï¼šåŠ æ²¹å‹‡å£«ï¼Œä¸€å®šè¦æ•‘å‡ºå…¬ä¸»ï¼'],
       jiangli:[
         {property:'huangyaoshi',min:1,max:1,am:"add",mmin:0},
         {property:'lanyaoshi',min:1,max:1,am:"add",mmin:0},
@@ -198,8 +198,8 @@ p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000
       xuyaowupin:""
     },
     {
-      speaking:["¾«Áé£ººÜºÃ£¬ÄãÕÒµ½ÁË¡±Ê¥Ä¸Ê®×Ö¼Ü¡°£¬ÎÒ´ÓĞÂÖØĞÂ»ñµÃ×ÔÓÉ£¡","¾«Áé£ºÎªÁË´ğĞ»Äã£¬ÎÒ°ÑÎÒ±ÏÉúµÄ¹¦Á¦´«¸øÄã£¡",
-        "Ö»¼û¾«ÁéÁé¹âÉÁ¶¯£¬°ÑËıµÄ±ÏÉúµÄ¹¦Á¦´«¸øÄã£¬×îºóËû¶ÔÄãËµÁËÒ»¾ä»°£º¡±Ò»¶¨Òª¾È³ö¹«Ö÷£¬É±ËÀ´óÄ§Íõ£¡£¡¡°"],
+      speaking:["ç²¾çµï¼šå¾ˆå¥½ï¼Œä½ æ‰¾åˆ°äº†â€åœ£æ¯åå­—æ¶â€œï¼Œæˆ‘ä»æ–°é‡æ–°è·å¾—è‡ªç”±ï¼","ç²¾çµï¼šä¸ºäº†ç­”è°¢ä½ ï¼Œæˆ‘æŠŠæˆ‘æ¯•ç”Ÿçš„åŠŸåŠ›ä¼ ç»™ä½ ï¼",
+        "åªè§ç²¾çµçµå…‰é—ªåŠ¨ï¼ŒæŠŠå¥¹çš„æ¯•ç”Ÿçš„åŠŸåŠ›ä¼ ç»™ä½ ï¼Œæœ€åä»–å¯¹ä½ è¯´äº†ä¸€å¥è¯ï¼šâ€ä¸€å®šè¦æ•‘å‡ºå…¬ä¸»ï¼Œæ€æ­»å¤§é­”ç‹ï¼ï¼â€œ"],
       jiangli:[
         {property:"shengming",min:2000,max:3000,am:"add",mmin:0},
         {property:'gongjiMin',min:150,max:225,am:"add",mmin:0},
@@ -216,9 +216,9 @@ p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000
   ]);
   p_goods_array[602] = new NPC(602, 602, [
     {
-      speaking:["½İ¿Ë£ºÄãºÃ£¬ÎÒÊÇ½İ¿Ë£¡","ÄãºÃ£¬½İ¿Ë£¡","½İ¿Ë£º¸ĞĞ»Äã¾ÈÁËÎÒ£¡ÎªÁË´ğĞ»Äã£¬ÎÒ½«ÎªÄã´ò¿ªµÚ2²ãµÄ»ú¹ØÃÅ£¡",
-        "½İ¿Ë£º¶ÔÁË£¬ÎÒÖªµÀËûÃÇ°Ñ¹«Ö÷¹ØÔÚÄÄÀï£¡","½İ¿Ë£ºÎÒĞèÒªÒ»±ú³úÍ·£¬°ïÄã´ò¿ª¹Ø¹«Ö÷µÄÇ½±Ú£¡",
-        "½İ¿Ë£ºÈç¹ûÄãÕÒµ½³úÍ·£¬»¹¿ÉÒÔÀ´ÕâÀïÕÒÎÒ£¬ÎÒ½«ÎªÄã´ò¿ªÇ½±Ú£¡","½İ¿Ë£º×£ÄãºÃÔË£¡"],
+      speaking:["æ·å…‹ï¼šä½ å¥½ï¼Œæˆ‘æ˜¯æ·å…‹ï¼","ä½ å¥½ï¼Œæ·å…‹ï¼","æ·å…‹ï¼šæ„Ÿè°¢ä½ æ•‘äº†æˆ‘ï¼ä¸ºäº†ç­”è°¢ä½ ï¼Œæˆ‘å°†ä¸ºä½ æ‰“å¼€ç¬¬2å±‚çš„æœºå…³é—¨ï¼",
+        "æ·å…‹ï¼šå¯¹äº†ï¼Œæˆ‘çŸ¥é“ä»–ä»¬æŠŠå…¬ä¸»å…³åœ¨å“ªé‡Œï¼","æ·å…‹ï¼šæˆ‘éœ€è¦ä¸€æŸ„é”„å¤´ï¼Œå¸®ä½ æ‰“å¼€å…³å…¬ä¸»çš„å¢™å£ï¼",
+        "æ·å…‹ï¼šå¦‚æœä½ æ‰¾åˆ°é”„å¤´ï¼Œè¿˜å¯ä»¥æ¥è¿™é‡Œæ‰¾æˆ‘ï¼Œæˆ‘å°†ä¸ºä½ æ‰“å¼€å¢™å£ï¼","æ·å…‹ï¼šç¥ä½ å¥½è¿ï¼"],
       jiangli:[
         {property:'shiqi',min:1,max:5,am:"add",mmin:0},
         {property:'xingyun',min:1,max:5,am:"add",mmin:0},
@@ -228,8 +228,8 @@ p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000
       xuyaowupin:""
     },
     {
-      speaking:["½İ¿Ë£ººÜºÃ£¬ÄãÕÒµ½ÁË³úÍ·£¡","½İ¿Ë£ºÎÒ½«°ïÄã´ò¿ª¹Ø¹«Ö÷µÄÇ½±Ú£¡",
-        "½İ¿Ë£ºÔÙ¼û£¡"],
+      speaking:["æ·å…‹ï¼šå¾ˆå¥½ï¼Œä½ æ‰¾åˆ°äº†é”„å¤´ï¼","æ·å…‹ï¼šæˆ‘å°†å¸®ä½ æ‰“å¼€å…³å…¬ä¸»çš„å¢™å£ï¼",
+        "æ·å…‹ï¼šå†è§ï¼"],
       jiangli:[
         {property:'shiqi',min:1,max:5,am:"add",mmin:0},
         {property:'xingyun',min:1,max:5,am:"add",mmin:0},
@@ -240,26 +240,26 @@ p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000
     }
 
   ]);
-  p_goods_array[603] = new AddPropertyGoods(603, "ÀÏÈËÀ¶2²ã", 603, [
+  p_goods_array[603] = new AddPropertyGoods(603, "è€äººè“2å±‚", 603, [
     {property:'gongjiMin',min:80,max:120,am:"add",mmin:0},
     {property:'gongjiMax',min:120,max:180,am:"add",mmin:0},
     {property:'shiqi',min:1,max:5,am:"add",mmin:0},
     {property:'xingyun',min:1,max:5,am:"add",mmin:0},
     {property:'fuyuan',min:1,max:5,am:"add",mmin:0}
-  ], "ÀÏÈË£ºĞ»Ğ»Äã¾ÈÁËÎÒ£¡×÷Îª´ğĞ»ÎÒËÍÄãÒ»Ö»´ó½££¬¿ÉÔö¼Ó{0}-{1}µã¹¥»÷Á¦£¡", null);
-  p_goods_array[604] = new AddPropertyGoods(604, "ÀÏÈËºì2²ã", 604, [
+  ], "è€äººï¼šè°¢è°¢ä½ æ•‘äº†æˆ‘ï¼ä½œä¸ºç­”è°¢æˆ‘é€ä½ ä¸€åªå¤§å‰‘ï¼Œå¯å¢åŠ {0}-{1}ç‚¹æ”»å‡»åŠ›ï¼", null);
+  p_goods_array[604] = new AddPropertyGoods(604, "è€äººçº¢2å±‚", 604, [
     {property:'fangyu',min:80,max:120,am:"add",mmin:0},
     {property:'shiqi',min:1,max:5,am:"add",mmin:0},
     {property:'xingyun',min:1,max:5,am:"add",mmin:0},
     {property:'fuyuan',min:1,max:5,am:"add",mmin:0}
-  ], "ÀÏÈË£ºĞ»Ğ»Äã¾ÈÁËÎÒ£¡×÷Îª´ğĞ»ÎÒËÍÄãÒ»Ö»Ìú¶Ü£¬¿ÉÔö¼Ó{0}µã·ÀÓùÁ¦£¡", null);
-  p_goods_array[605] = new BaseGoods(605, "Éı¼¶Ç½3²ã", 605);
+  ], "è€äººï¼šè°¢è°¢ä½ æ•‘äº†æˆ‘ï¼ä½œä¸ºç­”è°¢æˆ‘é€ä½ ä¸€åªé“ç›¾ï¼Œå¯å¢åŠ {0}ç‚¹é˜²å¾¡åŠ›ï¼", null);
+  p_goods_array[605] = new BaseGoods(605, "å‡çº§å¢™3å±‚", 605);
   p_goods_array[606] = new NPC(606, 606, [
     {
-      speaking:['¹«Ö÷£ºÄãºÃ£¡ÓÂÊ¿£¡ÄãÊÇÀ´¾ÈÎÒµÄÂğ£¡','ÄãºÃ£¬¹«Ö÷£¡£¬ÎÒ¾ÍÊÇÀ´¾ÍÄúµÄ£¬ÎÒÊÇÄúµÄÓÂÊ¿£¡',
-        '¹«Ö÷£º´óÄ§Íõ¾ÍÔÚÉÏÃæ£¬ÎÒ±»ËûÊ©·¨½ûïÀÔÚÕâÀï£¬ÎŞ·¨ÒÆ¶¯£¡',
-        '¹«Ö÷£ºÓÂÊ¿£¬ÄãÒ»¶¨ÒªÉ±ËÀ´óÄ§Íõ£¬ÎÒÃÇ²ÅÄÜÀë¿ªÕâÀï£¡',
-        '¹«Ö÷¸øÁËÄãÒ»¸öÉîÇéµÄÎÇ£¬ÄãµÄËùÓĞÊôĞÔÈ«²¿Ôö¼Ó£¡£¡','¹«Ö÷£ºÒ»¶¨ÒªÉ±ËÀ´óÄ§Íõ£¡'],
+      speaking:['å…¬ä¸»ï¼šä½ å¥½ï¼å‹‡å£«ï¼ä½ æ˜¯æ¥æ•‘æˆ‘çš„å—ï¼','ä½ å¥½ï¼Œå…¬ä¸»ï¼ï¼Œæˆ‘å°±æ˜¯æ¥å°±æ‚¨çš„ï¼Œæˆ‘æ˜¯æ‚¨çš„å‹‡å£«ï¼',
+        'å…¬ä¸»ï¼šå¤§é­”ç‹å°±åœ¨ä¸Šé¢ï¼Œæˆ‘è¢«ä»–æ–½æ³•ç¦é”¢åœ¨è¿™é‡Œï¼Œæ— æ³•ç§»åŠ¨ï¼',
+        'å…¬ä¸»ï¼šå‹‡å£«ï¼Œä½ ä¸€å®šè¦æ€æ­»å¤§é­”ç‹ï¼Œæˆ‘ä»¬æ‰èƒ½ç¦»å¼€è¿™é‡Œï¼',
+        'å…¬ä¸»ç»™äº†ä½ ä¸€ä¸ªæ·±æƒ…çš„å»ï¼Œä½ çš„æ‰€æœ‰å±æ€§å…¨éƒ¨å¢åŠ ï¼ï¼','å…¬ä¸»ï¼šä¸€å®šè¦æ€æ­»å¤§é­”ç‹ï¼'],
       jiangli:[
         {property:"shengming",min:5000,max:7500,am:"add",mmin:0},
         {property:'gongjiMin',min:200,max:350,am:"add",mmin:0},
@@ -277,40 +277,40 @@ p_goods_array[32] = new GuaiWu(32, "ÖÕ¼«Ä§Íõ",32,[{name:"shengming",value:120000
       xuyaowupin:""
     },
     {
-      speaking:["¹«Ö÷£ºÌ«ºÃÁËÓÂÊ¿£¬ÄãÖÕÓÚÉ±ËÀÁË´óÄ§Íõ£¡£¡¡°"],
+      speaking:["å…¬ä¸»ï¼šå¤ªå¥½äº†å‹‡å£«ï¼Œä½ ç»ˆäºæ€æ­»äº†å¤§é­”ç‹ï¼ï¼â€œ"],
       jiangli:[],
       geiyu:false,
       xuyaowupin:"damowang"
     }
   ]);
-  p_goods_array[650] = new BaseGoods(650, "ÀÏÈËÀ¶5²ã¾­ÑéÉÌµê", 603);
-  p_goods_array[651] = new BaseGoods(651, "ÀÏÈËºì5²ãÂòÔ¿³×ÉÌµê", 604);
-  p_goods_array[652] = new BaseGoods(652, "Éı¼¶Ç½11²ã", 605);
-  p_goods_array[653] = new BaseGoods(653, "ÀÏÈËºì12²ãÊÕ¹ºÔ¿³×ÉÌµê", 604);
-  p_goods_array[654] = new BaseGoods(654, "ÀÏÈËÀ¶13²ã¸ß¼¶¾­ÑéÉÌµê", 603);
-  p_goods_array[655] = new AddPropertyGoods(655, "ÀÏÈËºì15²ãÔö¼Ó¹¥»÷ÀÏÈË", 604, [
+  p_goods_array[650] = new BaseGoods(650, "è€äººè“5å±‚ç»éªŒå•†åº—", 603);
+  p_goods_array[651] = new BaseGoods(651, "è€äººçº¢5å±‚ä¹°é’¥åŒ™å•†åº—", 604);
+  p_goods_array[652] = new BaseGoods(652, "å‡çº§å¢™11å±‚", 605);
+  p_goods_array[653] = new BaseGoods(653, "è€äººçº¢12å±‚æ”¶è´­é’¥åŒ™å•†åº—", 604);
+  p_goods_array[654] = new BaseGoods(654, "è€äººè“13å±‚é«˜çº§ç»éªŒå•†åº—", 603);
+  p_goods_array[655] = new AddPropertyGoods(655, "è€äººçº¢15å±‚å¢åŠ æ”»å‡»è€äºº", 604, [
     {property:'gongjiMin',min:200,max:300,am:"add",mmin:0},
     {property:'gongjiMax',min:300,max:450,am:"add",mmin:0},
     {property:'shiqi',min:1,max:5,am:"add",mmin:0},
     {property:'xingyun',min:1,max:5,am:"add",mmin:0},
     {property:'fuyuan',min:1,max:5,am:"add",mmin:0}
-  ], "ÎÒ½«ÌáÉıÄã{0}-{1}µã¹¥»÷²¢¿Û³ıÄã1200½ğ±Ò£¡",
+  ], "æˆ‘å°†æå‡ä½ {0}-{1}ç‚¹æ”»å‡»å¹¶æ‰£é™¤ä½ 1200é‡‘å¸ï¼",
   {
     property:"jinbi",
     value:1200,
-    des:"µÈÄãÓĞÁË1200½ğ±ÒÔÚÀ´ÕÒÎÒ£¡"
+    des:"ç­‰ä½ æœ‰äº†1200é‡‘å¸åœ¨æ¥æ‰¾æˆ‘ï¼"
   });
 
-  p_goods_array[656] = new AddPropertyGoods(656, "ÀÏÈËÀ¶15²ãÔö¼Ó·ÀÓùÀÏÈË", 603, [
+  p_goods_array[656] = new AddPropertyGoods(656, "è€äººè“15å±‚å¢åŠ é˜²å¾¡è€äºº", 603, [
     {property:'fangyu',min:200,max:300,am:"add",mmin:0},
     {property:'shiqi',min:1,max:5,am:"add",mmin:0},
     {property:'xingyun',min:1,max:5,am:"add",mmin:0},
     {property:'fuyuan',min:1,max:5,am:"add",mmin:0}
-  ], "ÎÒ½«ÌáÉıÄã{0}µã·ÀÓù²¢¿Û³ıÄã800¾­Ñé£¡",
+  ], "æˆ‘å°†æå‡ä½ {0}ç‚¹é˜²å¾¡å¹¶æ‰£é™¤ä½ 800ç»éªŒï¼",
   {
     property:"jingyan",
     value:800,
-    des:"µÈÄãÓĞÁË800¾­ÑéÔÚÀ´ÕÒÎÒ£¡"
+    des:"ç­‰ä½ æœ‰äº†800ç»éªŒåœ¨æ¥æ‰¾æˆ‘ï¼"
   });
 }
 

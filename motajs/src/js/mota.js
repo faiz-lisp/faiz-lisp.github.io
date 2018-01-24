@@ -1,6 +1,6 @@
 /** GB2312(simplified)
- * jquery²å¼ş£¬¶¯Ì¬¼ÓÔØjavascript
- * todo ÕÒµ½¸üºÃµÄ¿ÉÒÔÌæ´ú´Ë·½·¨
+ * jqueryæ’ä»¶ï¼ŒåŠ¨æ€åŠ è½½javascript
+ * todo æ‰¾åˆ°æ›´å¥½çš„å¯ä»¥æ›¿ä»£æ­¤æ–¹æ³•
  */
 jQuery.includePlugin = {
   include: function (file) {
@@ -20,58 +20,58 @@ jQuery.includePlugin = {
   }
 };
 
-//ÒıÓÃÊ¹ÓÃµ½µÄJSÎÄ¼ş
+//å¼•ç”¨ä½¿ç”¨åˆ°çš„JSæ–‡ä»¶
 $.includePlugin.include(['js/StringBuffer.js', 'js/commons.js', 'js/Constants.js'
   , 'js/Location.js', 'js/BaseGoods.js', 'js/GuaiWu.js', 'js/NPC.js', 'js/PlayerObj.js', 'js/Map.js', 'js/DaMen.js'
   , 'js/AddPropertyGoods.js', 'js/BaseViewGoods.js'
   , 'js/SpeakDialogWin.js', 'js/FightDialogWin.js', 'js/ViewGuaiWin.js', 'js/GouMaiWin.js', 'js/debug.js'
 ]);
-//todo*********************************¶¨Òå³£Á¿
-//µØÍ¼¸ñ×ÓµÄ¿í¶ÈÓë¸ß¶È
+//todo*********************************å®šä¹‰å¸¸é‡
+//åœ°å›¾æ ¼å­çš„å®½åº¦ä¸é«˜åº¦
 var GRID_WIDTH = 32
   , GRID_HEIGHT = 32;
 var LU_ID = 509;
 var IMAGE_PATH = "images/";
-//GameÊ±¼ä10ÃëÖÓ=ÏÖÊµÊ±¼ä£¨µ¥Î»£ººÁÃë£©
+//Gameæ—¶é—´10ç§’é’Ÿ=ç°å®æ—¶é—´ï¼ˆå•ä½ï¼šæ¯«ç§’ï¼‰
 var YOUXI_SHIJIAN_10_MIAO_ZHENSHI_SHIJIAN = 0; //.200;
 
-//todo*********************************È«¾Ö±äÁ¿
-//¶¨ÒåÎïÆ·
+//todo*********************************å…¨å±€å˜é‡
+//å®šä¹‰ç‰©å“
 var goodsArray = new Array();
-//¶¨ÒåµØÍ¼
+//å®šä¹‰åœ°å›¾
 var maps = new Array();
-//¶¨ÒåÍæ¼Ò¡¢µ±Ç°µØÍ¼
+//å®šä¹‰ç©å®¶ã€å½“å‰åœ°å›¾
 var player, currentMap; //.
-//¶¨Òå¶Ô»°¿ò¶ÔÏó
+//å®šä¹‰å¯¹è¯æ¡†å¯¹è±¡
 var speakWin, fightWin, viewGuaiWin, goumaiWin;
-//¶¨ÒåÔö¼ÓÊôĞÔ¿ò¶ÔÏó
+//å®šä¹‰å¢åŠ å±æ€§æ¡†å¯¹è±¡
 var addPropertyWin = $('<div/>');
 
-//todo*********************************È«¾Öº¯Êı
+//todo*********************************å…¨å±€å‡½æ•°
 function init() {
-  //³õÊ¼»¯HTMLĞÅÏ¢
+  //åˆå§‹åŒ–HTMLä¿¡æ¯
   initHtmlContent();
-  //¶¨ÒåÍæ¼Ò¶ÔÏó
+  //å®šä¹‰ç©å®¶å¯¹è±¡
   player = new PlayerObj();
-  //³õÊ¼»¯ÎïÆ·ĞÅÏ¢
+  //åˆå§‹åŒ–ç‰©å“ä¿¡æ¯
   initFillGoods(goodsArray);
-  //³õÊ¼»¯µØÍ¼
+  //åˆå§‹åŒ–åœ°å›¾
   initMap(maps, goodsArray);
-  //³õÊ¼»¯¶Ô»°¿ò
+  //åˆå§‹åŒ–å¯¹è¯æ¡†
   speakWin = new SpeakDialogWin(player), fightWin = new FightDialogWin(player)
     , viewGuaiWin = new ViewGuaiWin(player), goumaiWin = new GouMaiWin(player);
-  //³õÊ¼»¯µ±Ç°ÏÔÊ¾µÄµØÍ¼
+  //åˆå§‹åŒ–å½“å‰æ˜¾ç¤ºçš„åœ°å›¾
   currentMap = maps[0];
   currentMap.mapView(player, 0);
-  //Ìí¼ÓÍæ¼ÒĞÅÏ¢¡¢¶Ô»°¿ò¡¢Õ½¶·¿ò¡¢ÊôĞÔ¿òµÈĞÅÏ¢
+  //æ·»åŠ ç©å®¶ä¿¡æ¯ã€å¯¹è¯æ¡†ã€æˆ˜æ–—æ¡†ã€å±æ€§æ¡†ç­‰ä¿¡æ¯
   $("#gameFrame").append(player.pagePlayer).
   append(speakWin.pageContainer).append(fightWin.pageContainer).
   append(viewGuaiWin.pageContainer).append(goumaiWin.pageContainer).
   css('display', 'block');
-  //×¢²áÍæ¼Ò¼üÅÌÊÂ¼ş
+  //æ³¨å†Œç©å®¶é”®ç›˜äº‹ä»¶
   $(document).bind("keydown", keyDownInDocument);
   $(document).bind("mousedown", keyDownInDocument);
-  //ÉèÖÃµ÷ÊÔ£¬Ä¬ÈÏÎªfalse  µ÷ÊÔ¿ÉÒÔ°ÉÍæ¼ÒĞÅÏ¢ºÍ¹ÖÎïĞÅÏ¢·Åµ½ÄÚ´æÖĞ£¬¿ÉÒÔµ÷ÊÔÔö¼Ó¡¢¼õÉÙÍæ¼ÒÊôĞÔºÍ¹ÖÎïÊôĞÔÀ´ÅĞ¶Ï´ò¹ÖÄÑÒ×
+  //è®¾ç½®è°ƒè¯•ï¼Œé»˜è®¤ä¸ºfalse  è°ƒè¯•å¯ä»¥å§ç©å®¶ä¿¡æ¯å’Œæ€ªç‰©ä¿¡æ¯æ”¾åˆ°å†…å­˜ä¸­ï¼Œå¯ä»¥è°ƒè¯•å¢åŠ ã€å‡å°‘ç©å®¶å±æ€§å’Œæ€ªç‰©å±æ€§æ¥åˆ¤æ–­æ‰“æ€ªéš¾æ˜“
   debugMOTA_init();
   debugMOTA(false); //.
 }
@@ -162,7 +162,7 @@ window.requestAnimFrame = (function(){    //.reduce cpu occupy
 
 function keyDownInDocument() {
   var keyCode = event.keyCode; //.
-  if(player.isMoveing) { //Íæ¼ÒÒÆ¶¯(default status)
+  if(player.isMoveing) { //ç©å®¶ç§»åŠ¨(default status)
     if(keyCode == 37) player.moveLeftRight(0, playerCanMove);
     else if(keyCode == 38) player.moveUpDown(0, playerCanMove);
     else if(keyCode == 39) player.moveLeftRight(1, playerCanMove);
@@ -179,20 +179,20 @@ function keyDownInDocument() {
     }
   }
 
-  if(player.isSpeaking) { //Íæ¼Ò¶Ô»°
+  if(player.isSpeaking) { //ç©å®¶å¯¹è¯
     if(keyCode > 8 || event.button >= 0) {
-      if(player.dialogObject.id == 601 || player.dialogObject.id == 602 || player.dialogObject.id == 606) { //Óö¼û¾«Áé¡¢½İ¿Ë¡¢¹«Ö÷
+      if(player.dialogObject.id == 601 || player.dialogObject.id == 602 || player.dialogObject.id == 606) { //é‡è§ç²¾çµã€æ·å…‹ã€å…¬ä¸»
         if(player.dialogObject.isSpeakEnd()) {
-          //µÚÒ»¶ÎËµ»°½áÊø£¬ĞèÒª°ÑNPCµÄaction¸üĞÂ³É1
+          //ç¬¬ä¸€æ®µè¯´è¯ç»“æŸï¼Œéœ€è¦æŠŠNPCçš„actionæ›´æ–°æˆ1
           if(player.dialogObject.action == 0) {
-            //¸üĞÂactionÇ°ĞèÒªÅĞ¶Ï´Ë¶ÎÊÂ¼şµÄ½±ÀøÊÇ·ñÒÑ¾­¸øÓè
+            //æ›´æ–°actionå‰éœ€è¦åˆ¤æ–­æ­¤æ®µäº‹ä»¶çš„å¥–åŠ±æ˜¯å¦å·²ç»ç»™äºˆ
             player.dialogObject.geiyuJiangLi(player);
-            if(player.dialogObject.id == 601) { //¾«Áé
-            } else if(player.dialogObject.id == 602) { //½İ¿Ë
-              //½İ¿ËµÄ½±ÀøÊÇ°Ñ2²ãµÄÍ¨µÀ´ò¿ª
+            if(player.dialogObject.id == 601) { //ç²¾çµ
+            } else if(player.dialogObject.id == 602) { //æ·å…‹
+              //æ·å…‹çš„å¥–åŠ±æ˜¯æŠŠ2å±‚çš„é€šé“æ‰“å¼€
               maps[2].datas[6][1] = goodsArray[LU_ID].clone();
-            } else if(player.dialogObject.id == 606) { //¹«Ö÷
-              //¹«Ö÷´ò¿ªÍ¨Ïò19Â¥µÄÍ¨µÀ
+            } else if(player.dialogObject.id == 606) { //å…¬ä¸»
+              //å…¬ä¸»æ‰“å¼€é€šå‘19æ¥¼çš„é€šé“
               maps[18].changeMapContent(new Location(10, 10), goodsArray[507].clone());
             }
             player.dialogObject.action = 1;
@@ -203,10 +203,10 @@ function keyDownInDocument() {
               if(player.dialogObject.id == 601) {
 
               } else if(player.dialogObject.id == 602) {
-                //½İ¿ËµÄ½±ÀøÊÇ°Ñ18²ã¹«Ö÷µÄÍ¨µÀ´ò¿ª
+                //æ·å…‹çš„å¥–åŠ±æ˜¯æŠŠ18å±‚å…¬ä¸»çš„é€šé“æ‰“å¼€
                 maps[18].datas[7][5] = goodsArray[306].clone();
-              } else if(player.dialogObject.id == 606) { //¹«Ö÷
-                //Game½áÊø
+              } else if(player.dialogObject.id == 606) { //å…¬ä¸»
+                //Gameç»“æŸ
                 finishDongHua(null);
               }
             }
@@ -215,24 +215,24 @@ function keyDownInDocument() {
         } else {
           speakWin.show(player.dialogObject.getSpeakMsg());
         }
-      } else if(player.dialogObject.id == 301 || player.dialogObject.id == 302 || player.dialogObject.id == 303 || //Ô¿³×
-        player.dialogObject.id == 304 || player.dialogObject.id == 305 || player.dialogObject.id == 306 || //´óÃÅ
-        player.dialogObject.id == 307 || player.dialogObject.id == 308 || player.dialogObject.id == 312 || //±¦Ê¯
-        player.dialogObject.id == 309 || player.dialogObject.id == 310 || player.dialogObject.id == 323 || player.dialogObject.id == 324 || //ÑªÆ¿¡¢Ê¥Ë®
-        player.dialogObject.id == 313 || player.dialogObject.id == 315 || player.dialogObject.id == 320 || //ÎäÆ÷
-        player.dialogObject.id == 321 || player.dialogObject.id == 325 || player.dialogObject.id == 326 || //ÎäÆ÷
-        player.dialogObject.id == 314 || player.dialogObject.id == 316 || player.dialogObject.id == 318 || //»Æ½ğ±¦Ïä¡¢¹Å´ú½ğ±Ò¡¢Ê¥Ä¸Ê®×Ö¼Ü
-        player.dialogObject.id == 319 || player.dialogObject.id == 322 || //»ÃÓ°Ñ¥¡¢³úÍ·
-        player.dialogObject.id == 311 || player.dialogObject.id == 317 || //¹ÖÎï²é¿´Êé¡¢·ÉĞĞÆ÷
+      } else if(player.dialogObject.id == 301 || player.dialogObject.id == 302 || player.dialogObject.id == 303 || //é’¥åŒ™
+        player.dialogObject.id == 304 || player.dialogObject.id == 305 || player.dialogObject.id == 306 || //å¤§é—¨
+        player.dialogObject.id == 307 || player.dialogObject.id == 308 || player.dialogObject.id == 312 || //å®çŸ³
+        player.dialogObject.id == 309 || player.dialogObject.id == 310 || player.dialogObject.id == 323 || player.dialogObject.id == 324 || //è¡€ç“¶ã€åœ£æ°´
+        player.dialogObject.id == 313 || player.dialogObject.id == 315 || player.dialogObject.id == 320 || //æ­¦å™¨
+        player.dialogObject.id == 321 || player.dialogObject.id == 325 || player.dialogObject.id == 326 || //æ­¦å™¨
+        player.dialogObject.id == 314 || player.dialogObject.id == 316 || player.dialogObject.id == 318 || //é»„é‡‘å®ç®±ã€å¤ä»£é‡‘å¸ã€åœ£æ¯åå­—æ¶
+        player.dialogObject.id == 319 || player.dialogObject.id == 322 || //å¹»å½±é´ã€é”„å¤´
+        player.dialogObject.id == 311 || player.dialogObject.id == 317 || //æ€ªç‰©æŸ¥çœ‹ä¹¦ã€é£è¡Œå™¨
         player.dialogObject.id == 603 || player.dialogObject.id == 604 ||
-        player.dialogObject.id == 655 || player.dialogObject.id == 656 //¼ÓÊôĞÔÀÏÈË
+        player.dialogObject.id == 655 || player.dialogObject.id == 656 //åŠ å±æ€§è€äºº
       ) {
         player.updatePageInfo();
         speakWin.close();
-      } else if(player.dialogObject.id <= 300) { //Óö¼û²»ÄÜ´òµÄ¹ÖÎï
+      } else if(player.dialogObject.id <= 300) { //é‡è§ä¸èƒ½æ‰“çš„æ€ªç‰©
         speakWin.close();
       } else if(player.dialogObject.id == 605 || player.dialogObject.id == 650 || player.dialogObject.id == 651 ||
-        player.dialogObject.id == 652 || player.dialogObject.id == 653 || player.dialogObject.id == 654) { //¹ºÂòÉÌµê
+        player.dialogObject.id == 652 || player.dialogObject.id == 653 || player.dialogObject.id == 654) { //è´­ä¹°å•†åº—
         player.isGouMai = true;
         speakWin.close();
         player.isMoveing = false;
@@ -241,7 +241,7 @@ function keyDownInDocument() {
     }
   }
 
-  if(player.isFighting) { //Íæ¼Ò´òÕÌ
+  if(player.isFighting) { //ç©å®¶æ‰“ä»—
     if((keyCode > 8 || event.button >= 0) && $("#fightOK").css('display') == 'block') { //== 32
       if(player.dialogObject.id == 32) {
         player.goods["damowang"]++;
@@ -254,11 +254,11 @@ function keyDownInDocument() {
   if(player.isGouMai) {
     if(keyCode == 49 || keyCode == 50 || keyCode == 51 || keyCode == 52) {
       var ret;
-      if(keyCode == 49) { //Êı×Ö¼ü1
+      if(keyCode == 49) { //æ•°å­—é”®1
         ret = goumaiWin.click1(player.dialogObject.id);
-      } else if(keyCode == 50) { //Êı×Ö¼ü2
+      } else if(keyCode == 50) { //æ•°å­—é”®2
         ret = goumaiWin.click2(player.dialogObject.id);
-      } else if(keyCode == 51) { //Êı×Ö¼ü3
+      } else if(keyCode == 51) { //æ•°å­—é”®3
         ret = goumaiWin.click3(player.dialogObject.id);
       } else if(keyCode == 52) {
         ret = goumaiWin.click4(player.dialogObject.id);
@@ -274,8 +274,8 @@ function keyDownInDocument() {
     }
   }
 
-  if(player.goods['viewGuaiBook'] > 0) { //²é¿´¹ÖÎï
-    if(!player.isSpeaking && !player.isFighting && !player.isGouMai) { //l¼ü lookÒâË¼
+  if(player.goods['viewGuaiBook'] > 0) { //æŸ¥çœ‹æ€ªç‰©
+    if(!player.isSpeaking && !player.isFighting && !player.isGouMai) { //lé”® lookæ„æ€
       if(keyCode == 76 && !player.isViewGuai) {
         viewGuaiWin.show(currentMap);
       } else {
@@ -285,15 +285,15 @@ function keyDownInDocument() {
       }
     }
   }
-  //Íæ¼ÒÓĞ³á°ò²¢ÇÒÃ»ÔÚËµ»°£¬Ã»ÔÚ´òÕÌ£¬Ã»ÔÚÂò¶«Î÷£¬Ã»ÔÚ²é¿´¹ÖÎï£¬¿ÉÒÔ·ÉĞĞ
+  //ç©å®¶æœ‰ç¿…è†€å¹¶ä¸”æ²¡åœ¨è¯´è¯ï¼Œæ²¡åœ¨æ‰“ä»—ï¼Œæ²¡åœ¨ä¹°ä¸œè¥¿ï¼Œæ²¡åœ¨æŸ¥çœ‹æ€ªç‰©ï¼Œå¯ä»¥é£è¡Œ
   if(!player.isSpeaking && !player.isFighting && !player.isGouMai && !player.isViewGuai && player.goods['feixingqi'] > 0) {
-    if(keyCode == 87) { //°´W¼ü£¬ÏòÉÏ·ÉĞĞ
+    if(keyCode == 87) { //æŒ‰Wé”®ï¼Œå‘ä¸Šé£è¡Œ
       if(player.visitMaxFloor > currentMap.floor) {
         player.isMoveing = false;
         currentMap = maps[currentMap.floor + 1];
         currentMap.mapView(player, 0);
       }
-    } else if(keyCode == 83) { //°´S¼üÏòÏÂ·ÉĞĞ
+    } else if(keyCode == 83) { //æŒ‰Sé”®å‘ä¸‹é£è¡Œ
       if(currentMap.floor > 0) {
         player.isMoveing = false;
         currentMap = maps[currentMap.floor - 1];
@@ -307,25 +307,25 @@ function keyDownInDocument() {
 function playerCanMove(p_location) {
   if(p_location.x < 0 || p_location.x > currentMap.columns || p_location.y < 0 || p_location.y > currentMap.rows) return false;
   var tmpObj = currentMap.getLocationObj(p_location);
-  //µÀÂ·£¬¿ÉÒÔÍ¨ĞĞ
+  //é“è·¯ï¼Œå¯ä»¥é€šè¡Œ
   if(tmpObj.id == LU_ID) {
     return true;
-  } else if(tmpObj.id == 510) { //À¹Â·ÃÅ£¬Óö¼û¼´ÏûÊ§
+  } else if(tmpObj.id == 510) { //æ‹¦è·¯é—¨ï¼Œé‡è§å³æ¶ˆå¤±
     currentMap.changeMapContent(p_location, goodsArray[LU_ID]);
     return true;
-  } else if(tmpObj.id <= 300) { //¹ÖÎï
+  } else if(tmpObj.id <= 300) { //æ€ªç‰©
     player.dialogObject = tmpObj;
-    //Íæ¼ÒµÄ×î´ó¹¥»÷¶¼²»ÄÜ´ò°ÜµĞÈËµÄ×îĞ¡¹¥»÷£¬ÏÔÊ¾ÎŞ·¨¹¥»÷
+    //ç©å®¶çš„æœ€å¤§æ”»å‡»éƒ½ä¸èƒ½æ‰“è´¥æ•Œäººçš„æœ€å°æ”»å‡»ï¼Œæ˜¾ç¤ºæ— æ³•æ”»å‡»
     var ret = computeFightLossLife(player.property['gongjiMax'], player.property['fangyu'], player.property['sudu'], tmpObj.property['gongjiMin'], tmpObj.property['fangyu'], tmpObj.property['sudu'], tmpObj.property['shengming']);
     if(ret.life > player.property['shengming']) {
-      speakWin.show(getTipWordMsg("ÄãÏÖÔÚ»¹ÎŞ·¨Óë{0}½øĞĞ¿¹ºâ£¬Çë×¥½ôÊ±¼äĞŞÁ¶£¡£¡", [tmpObj.name], "red", "11pt"));
+      speakWin.show(getTipWordMsg("ä½ ç°åœ¨è¿˜æ— æ³•ä¸{0}è¿›è¡ŒæŠ—è¡¡ï¼Œè¯·æŠ“ç´§æ—¶é—´ä¿®ç‚¼ï¼ï¼", [tmpObj.name], "red", "11pt"));
       return false;
     } else {
       fightWin.show(tmpObj);
       currentMap.changeMapContent(p_location, goodsArray[LU_ID]);
       return true;
     }
-  } else if(tmpObj.id == 304 || tmpObj.id == 305 || tmpObj.id == 306) { //¿ªÆô²»Í¬ÑÕÉ«Ô¿³×µÄÃÅ
+  } else if(tmpObj.id == 304 || tmpObj.id == 305 || tmpObj.id == 306) { //å¼€å¯ä¸åŒé¢œè‰²é’¥åŒ™çš„é—¨
     player.dialogObject = tmpObj;
     if(addPlayerProperty(player, speakWin, {
         des: tmpObj.successDes
@@ -338,13 +338,13 @@ function playerCanMove(p_location) {
       currentMap.changeMapContent(p_location, goodsArray[LU_ID]);
       return true;
     }
-  } else if(tmpObj.id == 301 || tmpObj.id == 302 || tmpObj.id == 303 || //Ô¿³×
-    tmpObj.id == 307 || tmpObj.id == 308 || tmpObj.id == 312 || //±¦Ê¯
-    tmpObj.id == 309 || tmpObj.id == 310 || tmpObj.id == 323 || //ÑªÆ¿
-    tmpObj.id == 313 || tmpObj.id == 315 || tmpObj.id == 320 || //ÎäÆ÷ 
-    tmpObj.id == 321 || tmpObj.id == 325 || tmpObj.id == 326 || //ÎäÆ÷
-    tmpObj.id == 314 || tmpObj.id == 316 || tmpObj.id == 319 || //»Æ½ğ±¦Ïä¡¢¹Å´ú½ğ±Ò¡¢»ÃÓ°Ñ¥
-    tmpObj.id == 603 || tmpObj.id == 604 || tmpObj.id == 655 || tmpObj.id == 656 //2²ãÀÏÈË¡¢15²ãÀÏÈË
+  } else if(tmpObj.id == 301 || tmpObj.id == 302 || tmpObj.id == 303 || //é’¥åŒ™
+    tmpObj.id == 307 || tmpObj.id == 308 || tmpObj.id == 312 || //å®çŸ³
+    tmpObj.id == 309 || tmpObj.id == 310 || tmpObj.id == 323 || //è¡€ç“¶
+    tmpObj.id == 313 || tmpObj.id == 315 || tmpObj.id == 320 || //æ­¦å™¨ 
+    tmpObj.id == 321 || tmpObj.id == 325 || tmpObj.id == 326 || //æ­¦å™¨
+    tmpObj.id == 314 || tmpObj.id == 316 || tmpObj.id == 319 || //é»„é‡‘å®ç®±ã€å¤ä»£é‡‘å¸ã€å¹»å½±é´
+    tmpObj.id == 603 || tmpObj.id == 604 || tmpObj.id == 655 || tmpObj.id == 656 //2å±‚è€äººã€15å±‚è€äºº
   ) {
     player.dialogObject = tmpObj;
     if(addPlayerProperty(player, speakWin, {
@@ -355,24 +355,24 @@ function playerCanMove(p_location) {
       return true;
     }
     return false;
-  } else if(tmpObj.id == 324) { //Ê¥Ë®
+  } else if(tmpObj.id == 324) { //åœ£æ°´
     player.dialogObject = tmpObj;
     player.property['shengming'] *= 2; //.*= 2
     currentMap.changeMapContent(p_location, goodsArray[LU_ID]);
     speakWin.show(getTipWordMsg(tmpObj.gainGoodsDes, [tmpObj.name], "red", "11pt"));
     return true;
-  } else if(tmpObj.id == 311 || tmpObj.id == 317 || tmpObj.id == 318 || tmpObj.id == 322) { //²é¿´¹ÖÎïÖ®Êé¡¢·ÉĞĞÆ÷¡¢Ê¥Ä¸Ê®×Ö¼Ü¡¢³úÍ·
+  } else if(tmpObj.id == 311 || tmpObj.id == 317 || tmpObj.id == 318 || tmpObj.id == 322) { //æŸ¥çœ‹æ€ªç‰©ä¹‹ä¹¦ã€é£è¡Œå™¨ã€åœ£æ¯åå­—æ¶ã€é”„å¤´
     player.goods[tmpObj.gainGoodsObj.property]++;
     currentMap.changeMapContent(p_location, goodsArray[LU_ID]);
     player.dialogObject = tmpObj;
     speakWin.show(getTipWordMsg(tmpObj.gainGoodsObj.des, tmpObj.gainGoodsObj.tipDes, "red", "11pt"));
     return true;
   } else if(tmpObj.id == 605 || tmpObj.id == 650 || tmpObj.id == 651 || tmpObj.id == 652 ||
-    tmpObj.id == 653 || tmpObj.id == 654) { //¹ºÂò¶Ô»°
+    tmpObj.id == 653 || tmpObj.id == 654) { //è´­ä¹°å¯¹è¯
     player.dialogObject = tmpObj;
     goumaiWin.show(tmpObj.id);
     return false;
-  } else if(tmpObj.id == 601 || tmpObj.id == 602 || tmpObj.id == 606) { //¾«Áé¡¢½İ¿Ë¡¢¹«Ö÷
+  } else if(tmpObj.id == 601 || tmpObj.id == 602 || tmpObj.id == 606) { //ç²¾çµã€æ·å…‹ã€å…¬ä¸»
     player.dialogObject = tmpObj;
     if(tmpObj.action == 0) {
       speakWin.show(tmpObj.getSpeakMsg());
@@ -388,7 +388,7 @@ function playerCanMove(p_location) {
         return false;
       }
     }
-  } else if(tmpObj.id == 507 || tmpObj.id == 508) { //ÉÏÂ¥¡¢ÏÂÂ¥
+  } else if(tmpObj.id == 507 || tmpObj.id == 508) { //ä¸Šæ¥¼ã€ä¸‹æ¥¼
     player.isMoveing = false;
     var tmpFloor, tmpPlayerPosition;
     if(tmpObj.id == 507) {
