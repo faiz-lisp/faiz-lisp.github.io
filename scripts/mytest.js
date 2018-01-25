@@ -110,9 +110,9 @@ function echo(){
 	// }
 // }
 function f1(){
-	setTimeout(function () { // f1的任务代码
-    echo('st')
-    f1.trigger('done'); //?
+	setTimeout(function () {
+    echo('st');
+    f1.trigger('done');
   }, 1000);
 }
 
