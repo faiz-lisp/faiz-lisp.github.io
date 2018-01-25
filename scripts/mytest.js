@@ -6,7 +6,7 @@ function escape(input) {
 
 
 function binToHex(b){//charToHex
-    var str = b;//prompt("ÇëÊäÈëÄãÏë×ª»¯³ÉÊ®Áù½øÖÆ±àÂëµÄ×Ö·û´®", "");
+    var str = b;//prompt("è¯·è¾“å…¥ä½ æƒ³è½¬åŒ–æˆåå…­è¿›åˆ¶ç¼–ç çš„å­—ç¬¦ä¸²", "");
     var ar=[]
 				,x
 				,y;		
@@ -111,9 +111,9 @@ function echo(){
 // }
 function f1(){
 	setTimeout(function () {
-	¡¡¡¡// f1µÄÈÎÎñ´úÂë
+	ã€€ã€€// f1çš„ä»»åŠ¡ä»£ç 
 		echo('st')
-	¡¡¡¡f1.trigger('done'); //?
+	ã€€ã€€f1.trigger('done'); //?
 	}, 1000);
 }
 
