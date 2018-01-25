@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<style>
+body{
+background-color:0x101010;
+}
+.tagBall{
+width: 800px;
+height: 800px;
+margin:50px auto;
+position: relative;
+}
+.tag{
+display: block;
+position: absolute;
+left: 0px;
+top: 0px;
+color: #000;
+text-decoration: none;
+font-size: 15px;
+font-family: "΢���ź�";
+font-weight: bold;
+}
+.tag:hover{border:1px solid #666;}
+</style>
+<title>3D Rotary Tags - By Faiz</title>
+</head>
+<body>
+<div class="tagBall">
+<a class="tag" target="_blank" href="http://www.baidu.com">L</a>
+<a class="tag" target="_blank" href="../../fruit_ninja_html5/index.html">Happy</a>
+<a class="tag" target="_blank" href="../../motajs/src/index.html">I</a>
+<a class="tag" target="_blank" href="../../sf/index.html">ilu</a>
+<a class="tag" target="_blank" href="../../RussiaSquare/index.html">N</a>
+<a class="tag" target="_blank" href="http://keleyi.com/a/bjad/9sgmqsee.htm">new year</a>
+<a class="tag" target="_blank" href="http://keleyi.com">A</a>
+<a class="tag" target="_blank" href="javascript:location.href='../../game/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">520</a>
+<a class="tag" target="_blank" href="../../Snow3dWithSnow/index.html">merry</a>
+<a class="tag" target="_blank" href="../../rainyday/index.html">Christmas</a>
+<a class="tag" target="_blank" href="../../newform/3/index.html">Hey</a>
+<a class="tag" target="_blank" href="../../dancing_timer_canvas/index.html">Love</a>
+<a class="tag" target="_blank" href="javascript:location.href='....//compatible/'+(1+Math.random().toString().replace(/(^[0|.]*)/g,'')%1)+'/index.html'">U</a>
+<a class="tag" target="_blank" href="../../clay_font/index.html">smile</a>
+<a class="tag" target="_blank" href="../../json/1/index.html">By</a>
+<a class="tag" target="_blank" href="../../flame_canvas/index.html">loving</a>
+<a class="tag" target="_blank" href="../../myEdtr/index.html">falling</a>
+<a class="tag" target="_blank" href="../../src/index.html">Peace</a>
+<a class="tag" target="_blank" href="../../snow3d/snow3d/index.html">care</a>
+<a class="tag" target="_blank" href="../../SoftKeybd/index.html">feel</a>
+<a class="tag" target="_blank" href="http://www.muchina.com">calm</a>
+<a class="tag" target="_blank" href="http://www.ip138.com">Happy!</a>
+<a class="tag" target="_blank" href="../../video_js/index.html">rejoice</a>
+<a class="tag" target="_blank" href="http://www.im.com">celebrate</a>
+<a class="tag" target="_blank" href="../../louver/index.html">glad</a>
+<a class="tag" target="_blank" href="../../chess/index.html">to be happy</a>
+<a class="tag" target="_blank" href="http://www.csdn.net">relax</a>
+<a class="tag" target="_blank" href="data:text/html,<style type=%22text/css%22>#e{position:absolute;top:4%;right:0;bottom:0;left:0;font-size:1.3em}button{position:absolute;top:0;}</style><button onClick=c()>color</button><div id=%22e%22 onkeydown='if(event.altKey)switch(event.keyCode){case 67:c();break;}'></div><script src=%22http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js%22 type=%22text/javascript%22 charset=%22utf-8%22></script><script>var n=1,e=ace.edit(%22e%22);e.setTheme(%22ace/theme/eclipse%22);e.getSession().setMode(%22ace/mode/javascript%22);function c(){e.setTheme(n++%2==0?'ace/theme/eclipse':%22ace/theme/monokai%22);}</script>">feel good</a>
+<a class="tag" target="_blank" href="http://www.jd.com">healthy</a>
+<a class="tag" target="_blank" href="http://www.taobao.com">welldone</a>
+<a class="tag" target="_blank" href="../../louver/index.html">Lov</a>
+<a class="tag" target="_blank" href="http://www.oschina.net">you</a>
+<a class="tag" target="_blank" href="http://coolshell.cn">good luck</a>
+<a class="tag" target="_blank" href="../../Snow3dWithSnow/index.html">peaceful</a>
+<a class="tag" target="_blank" href="http://www.jb51.net">friendly</a>
+<a class="tag" target="_blank" href="../../flame_canvas/index.html">joyful</a>
+<a class="tag" target="_blank" href="../../rainyday/index.html">take care</a>
+<a class="tag" target="_blank" href="http://www.icon-global.com">do</a>
+<a class="tag" target="_blank" href="http://www.icon-global.com/src">u</a>
+<a class="tag" target="_blank" href="files:///">ove</a>
+<a class="tag" target="_blank" href="http://www.51zxw.net">e</a>
+<a class="tag" target="_blank" href="../../fruit_ninja_html5/index.html">faiz</a>
+<a class="tag" target="_blank" href="../../motajs/src/index.html">blog</a>
+<a class="tag" target="_blank" href="../../dancing_timer_canvas/index.html">dancing</a>
+<a class="tag" target="_blank" href="../../SoftKeybd/index.html">github</a>
+<a class="tag" target="_blank" href="http://www.codeceo.com">hello</a>
+</div>
+<script type="text/javascript">
+var tagEle = "querySelectorAll" in document ? document.querySelectorAll(".tag") : getClass("tag"),
+paper = "querySelectorAll" in document ? document.querySelector(".tagBall") : getClass("tagBall")[0];
+RADIUS = 300,
+fallLength = 500,
+tags = [],
+angleX = Math.PI / 500,
+angleY = Math.PI / 500,
+CX = paper.offsetWidth / 2,
+CY = paper.offsetHeight / 2,
+EX = paper.offsetLeft + document.body.scrollLeft + document.documentElement.scrollLeft,
+EY = paper.offsetTop + document.body.scrollTop + document.documentElement.scrollTop;
+
+function getClass(className) {
+var ele = document.getElementsByTagName("*");
+var classEle = [];
+for (var i = 0; i < ele.length; i++) {
+var cn = ele[i].className;
+if (cn === className) {
+classEle.push(ele[i]);
+}
+}
+return classEle;
+}
+
+function innit() {
+for (var i = 0; i < tagEle.length; i++) {
+var a, b;
+var k = (2 * (i + 1) - 1) / tagEle.length - 1;
+var a = Math.acos(k);
+var b = a * Math.sqrt(tagEle.length * Math.PI);
+// var a = Math.random()*2*Math.PI;
+// var b = Math.random()*2*Math.PI;
+var x = RADIUS * Math.sin(a) * Math.cos(b);
+var y = RADIUS * Math.sin(a) * Math.sin(b);
+var z = RADIUS * Math.cos(a);
+var t = new tag(tagEle[i], x, y, z);
+tagEle[i].style.color = "rgb(" + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + "," + parseInt(Math.random() * 255) + ")";
+tags.push(t);
+t.move();
+}
+}
+
+Array.prototype.forEach = function (callback) {
+for (var i = 0; i < this.length; i++) {
+callback.call(this[i]);
+}
+}
+
+function animate() {
+   setInterval(function () {
+      rotateX();
+      rotateY();
+      tags.forEach(function () {
+         this.move();
+      })
+   }, 17)
+}
+
+if ("addEventListener" in window) {
+paper.addEventListener("mousemove", function (event) {
+var x = event.clientX - EX - CX;
+var y = event.clientY - EY - CY;
+// angleY = -x* (Math.sqrt(Math.pow(x , 2) + Math.pow(y , 2)) > RADIUS/4 ? 0.0002 : 0.0001);
+// angleX = -y* (Math.sqrt(Math.pow(x , 2) + Math.pow(y , 2)) > RADIUS/4 ? 0.0002 : 0.0001);
+angleY = x * 0.0001;
+angleX = y * 0.0001;
+});
+}
+else {
+paper.attachEvent("onmousemove", function (event) {
+var x = event.clientX - EX - CX;
+var y = event.clientY - EY - CY;
+angleY = x * 0.0001;
+angleX = y * 0.0001;
+});
+}
+
+function rotateX() {
+   var cos = Math.cos(angleX);
+   var sin = Math.sin(angleX);
+   tags.forEach(function () {
+      var y1 = this.y * cos - this.z * sin;
+      var z1 = this.z * cos + this.y * sin;
+      this.y = y1;
+      this.z = z1;
+   })
+
+}
+
+function rotateY() {
+var cos = Math.cos(angleY);
+var sin = Math.sin(angleY);
+tags.forEach(function () {
+var x1 = this.x * cos - this.z * sin;
+var z1 = this.z * cos + this.x * sin;
+this.x = x1;
+this.z = z1;
+})
+}
+
+var tag = function (ele, x, y, z) {
+this.ele = ele;
+this.x = x;
+this.y = y;
+this.z = z;
+}
+
+tag.prototype = {
+   move: function () {
+      var scale = fallLength / (fallLength - this.z)
+         , alpha = (this.z + RADIUS) / (2 * RADIUS)
+
+      this.ele.style.fontSize = 15 * scale + "px";
+      this.ele.style.opacity = alpha + 0.5;
+      this.ele.style.filter = "alpha(opacity = " + (alpha + 0.5) * 100 + ")";
+      this.ele.style.zIndex = parseInt(scale * 100);
+      this.ele.style.left = this.x + CX - this.ele.offsetWidth / 2 + "px";
+      this.ele.style.top = this.y + CY - this.ele.offsetHeight / 2 + "px";
+   }
+}
+innit();
+animate();
+</script>
+</body>
+</html>
