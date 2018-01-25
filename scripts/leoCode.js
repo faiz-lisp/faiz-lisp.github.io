@@ -1158,7 +1158,7 @@ var leoCode = {
 
                 // editorJs
                 EditorJs = new Editor(ace, {
-                    id: 'editor_js',
+                    id: 'editorscripts',
                     mode: 'ace/mode/javascript',
                     leoBeautify: js_beautify ? {
                         exec: function(editor) {
