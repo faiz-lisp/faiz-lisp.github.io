@@ -38,7 +38,7 @@ DEBUG=1;dCnt=0;
   <!-- <div class=wrap> -->
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
-  <title>Faiz's Blog v0.06/b6</title>
+  <title>Faiz's Blog v0.06/b7</title>
 	<a id=top name=top></a>
   
   
@@ -888,53 +888,53 @@ DEBUG=1;dCnt=0;
 	function getPositionSuccess( position ){
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
-        alert( "�����ڵ�λ�ã� γ��" + lat + "������" + lng );
+        alert( " latitude:" + lat + ",longitude:" + lng );
         if(typeof position.address !== "undefined"){
                 var country = position.address.country;
                 var province = position.address.region;
                 var city = position.address.city;
-                alert(' ��λ�� ' + country + province + 'ʡ' + city +'��');
+                alert(' country ' + country + province + 'province' + city +'city');
         }
 	}
 	function getPositionError(error) {
 		switch (error.code) {
 			case error.TIMEOUT:
-				alert("���ӳ�ʱ��������");
+				alert("TIMEOUT");
 				break;
 			case error.PERMISSION_DENIED:
-				debuglog("���ܾ���ʹ��λ�ù������񣬲�ѯ��ȡ��");
+				debuglog("PERMISSION_DENIED");
 				break;
 			case error.POSITION_UNAVAILABLE:
-				alert("��ȡλ����Ϣʧ��");
+				alert("POSITION_UNAVAILABLE");
 				break;
 		}
 	}
 	
-	function showPosition(position)//Jing:longitude,Wei:latitude
-	{
-		var latlon = position.coords.latitude+','+position.coords.longitude;    //google
-		var url = ''; //'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN';
-		$.ajax({
-			type: "GET",
-			url: url,
-			beforeSend: function(){
-				$("#google_geo").html('���ڶ�λ...');//
-			},
-			success: function (json) {
-				if(json.status=='OK'){
-					var results = json.results;
-					$.each(results,function(index,array){
-						if(index==0){
-							$("#google_geo").html(array['formatted_address']);
-						}
-					});
-				}
-			},
-			error: function (XMLHttpRequest, textStatus, errorThrown) {
-				$("#google_geo").html(latlon+"��ַλ�û�ȡʧ��");
-			}
-		});
-	}
+	<!-- function showPosition(position)//Jing:longitude,Wei:latitude -->
+	<!-- { -->
+		<!-- var latlon = position.coords.latitude+','+position.coords.longitude;    //google -->
+		<!-- var url = ''; //'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN'; -->
+		<!-- $.ajax({ -->
+			<!-- type: "GET", -->
+			<!-- url: url, -->
+			<!-- beforeSend: function(){ -->
+				<!-- $("#google_geo").html('���ڶ�λ...');// -->
+			<!-- }, -->
+			<!-- success: function (json) { -->
+				<!-- if(json.status=='OK'){ -->
+					<!-- var results = json.results; -->
+					<!-- $.each(results,function(index,array){ -->
+						<!-- if(index==0){ -->
+							<!-- $("#google_geo").html(array['formatted_address']); -->
+						<!-- } -->
+					<!-- }); -->
+				<!-- } -->
+			<!-- }, -->
+			<!-- error: function (XMLHttpRequest, textStatus, errorThrown) { -->
+				<!-- $("#google_geo").html(latlon+"��ַλ�û�ȡʧ��"); -->
+			<!-- } -->
+		<!-- }); -->
+	<!-- } -->
 	
 	/*debug*/
 	if(DEBUG){
@@ -1157,8 +1157,8 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		
 		document.write('<br>');				
 		var fls = flashChecker();//.
-		if (fls.f) document.write(unescape("falsh�汾:") + fls.v);
-		else document.write(unescape("��û�а�װflash"));
+		if (fls.f) document.write(unescape("falsh version:") + fls.v);
+		else document.write(unescape("flash unavailable"));
 				
 		//getdata([{"name":"boke"},{"age":"23"}]);
 		//var json = new { a = 1, b = "b" };string jsonstr = new JavaScriptSerializer().Serialize(json);//.
