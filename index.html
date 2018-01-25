@@ -38,7 +38,7 @@ DEBUG= 0; dCnt=0;
   <!-- <div class=wrap> -->
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
-  <title>Faiz's Blog v0.07/b7</title>
+  <title>Faiz's Blog v0.07/b8</title>
 	<a id=top name=top></a>
   
   
@@ -901,16 +901,19 @@ DEBUG= 0; dCnt=0;
 	function getPositionError(error) {
 		switch (error.code) {
 			case error.TIMEOUT:
-				alert("TIMEOUT");
+				alertd("TIMEOUT");
 				break;
 			case error.PERMISSION_DENIED:
 				debuglog("PERMISSION_DENIED");
 				break;
 			case error.POSITION_UNAVAILABLE:
-				alert("POSITION_UNAVAILABLE");
+				alertd("POSITION_UNAVAILABLE");
 				break;
 		}
 	}
+  function alertd(s){
+    if(DEBUG) alert(s)
+  }
 	
 	<!-- function showPosition(position)//Jing:longitude,Wei:latitude -->
 	<!-- { -->
