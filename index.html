@@ -7,7 +7,7 @@ var prox,proy,proxc,proyc
 	,odrag
 	,od
 	; 
-DEBUG=1;dCnt=0;
+DEBUG= 0; dCnt=0;
 //alert('123');
 </script>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ DEBUG=1;dCnt=0;
   <!-- <div class=wrap> -->
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
-  <title>Faiz's Blog v0.06/b7</title>
+  <title>Faiz's Blog v0.07/b7</title>
 	<a id=top name=top></a>
   
   
@@ -53,7 +53,7 @@ DEBUG=1;dCnt=0;
 	<script src='scripts/json2.js'></script>
 	<!--script src='scripts/jump.js'></script-->
 	<script src='scripts/mymath.js'></script>
-	<script src='scripts/mytest.js'></script>
+	<!-- <script src='scripts/mytest.js'></script> -->
     <!-- <script type="text/javascript">
         var scriptDom = document.createElement("script");
         scriptDom.setAttribute("type", "text/javascript");
@@ -142,10 +142,10 @@ DEBUG=1;dCnt=0;
 		return '';
 	}		
 	
-    //math
-    function fibo(n) {
-        return n>1? fibo(n-1)+fibo(n-2): 1;
-    }
+  //math
+  function fibo(n) {
+      return n>1? fibo(n-1)+fibo(n-2): 1;
+  }
     
 	//wmi+ActvX+ie
 	function getSysInfo2(){ 
@@ -172,10 +172,12 @@ DEBUG=1;dCnt=0;
 	} 
 
 	function debuglog( s){//add a global call cntr
-		//p =$(p);
-		var tmp =document.getElementById('debug');//createElement( 'div' );
-		tmp.innerHTML +=s+'<br>';
-		//while(tmp.firstChild){p.appendChild( tmp.firstChild );}
+    if(DEBUG){
+      //p =$(p);
+      var tmp =document.getElementById('debug');//createElement( 'div' );
+      tmp.innerHTML +=s+'<br>';
+      //while(tmp.firstChild){p.appendChild( tmp.firstChild );}
+    }
 	}
 	
 	//function $(obj){		return document.getElementById(obj);	}//.
@@ -617,7 +619,7 @@ DEBUG=1;dCnt=0;
 			, month = date.getMonth() + 1
 			, date1 = date.getDate()
 			, date2 = function(){
-					return['��','һ','��','��','��','��','��'][date.getDay()] }()
+					return['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][date.getDay()] }()
 			, hour  = date.getHours()
 			, minutes= padTime(date.getMinutes())
 			, second = padTime(date.getSeconds())
@@ -1131,7 +1133,7 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		var nv=navigator ,bv=browser.versions;
 		document.write('<br>');
 		//document.write(getSysInfo());//.wmi
-		document.write(''+chkSys());//
+		///document.write(''+chkSys());//
 		var ua = navigator.userAgent
 			,isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua)
 			;
@@ -1213,8 +1215,8 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		</noscript> 
 
 		<script>
-		document.getElementById('time').innerHTML=getBjTime();//.
-		setInterval("document.getElementById('time').innerHTML=getBjTime()",1000);
+		//document.getElementById('time').innerHTML=getBjTime();//.
+		//setInterval("document.getElementById('time').innerHTML=getBjTime()",1000);
 		dCnt+=10000;//
 		</script>		
 	</div>
@@ -1349,12 +1351,12 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
     
 </body></html>
 <script>
-    _i=10
+    _i=6
     d('fibo('+_i+'):'+fibo(_i)+'<br>');
 
     //ContentSize(16)
 
-    d(''+document.body.clientWidth+' '+'<br>');//window.location+
+    //d(''+document.body.clientWidth+' '+'<br>');//window.location+
     dCnt+=1000;
     d(dCnt);//+'(111111)');
 	//document.querySelector('#title').innerHTML+='asd'
