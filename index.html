@@ -39,7 +39,7 @@ DEBUG= 0; dCnt=0;
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
   
-  <xmp><title>Faiz's Blog v0.09/b12</title>
+  <xmp><title>Faiz's Blog v0.10/b12</title>
   [ ]:# (md format with xmp in html file)
 ### Data Markup Language:
   * [markdown用法 /learning the markdown format](blog-html/demo1.html)
@@ -51,7 +51,7 @@ DEBUG= 0; dCnt=0;
     * [Structure and Interpretation of Computer Programs](https://lfe.gitbooks.io/sicp/fm/preface-3/21stcent.html)
 
 ### Others:
-  * [支付宝红包/red packet of Alibaba](news/ali.html)
+  [//]:# (* [red packet of Alibaba](news/ali.html))
   
 ### Payment:
   * [My BTC Address](blog-html/demo4.html)
@@ -1054,20 +1054,21 @@ DEBUG= 0; dCnt=0;
 	
 	<canvas id=cv width=4 height=18></canvas>
   
-	<INPUT onkeypress="SubmitKeyClick()" id="inp1" type="text">
-<input type="hidden" name="FunName">
-	<button id=submit name='submit' style="display:show" onclick="showtest(document.getElementById('inp1').value)" action="testjson.js">showTest
-	</button>
-	<button id=setLocSto name='setLocSto' style="display:show" onclick="setLocSto(document.getElementById('inp1').value)">setLocSto
-	</button>	<!--$('#aaa').val()-->
-	</button>
-	<button id=getLocSto name='getLocSto' style="display:show" onclick="getLocSto()">getLocSto
-	</button>
-	<button id=rmLocSto name='rmLocSto' style="display:show" onclick="rmLocSto($('#inp1').val())">rmLocSto
-	</button>	
-	<button id=show1 name='show1' style="display:show" onclick="show('fd')">show1</button>
-	<button id=hide1 name='hide1' style="display:show" onclick="hide('fd')">hide1</button>
-   
+  <div class="wrap" style="display:none">
+    <INPUT onkeypress="SubmitKeyClick()" id="inp1" type="text">
+    <input type="hidden" name="FunName">
+    <button id=submit name='submit' style="display:show" onclick="showtest(document.getElementById('inp1').value)" action="testjson.js">showTest
+    </button>
+    <button id=setLocSto name='setLocSto' style="display:show" onclick="setLocSto(document.getElementById('inp1').value)">setLocSto
+    </button>	<!--$('#aaa').val()-->
+    </button>
+    <button id=getLocSto name='getLocSto' style="display:show" onclick="getLocSto()">getLocSto
+    </button>
+    <button id=rmLocSto name='rmLocSto' style="display:show" onclick="rmLocSto($('#inp1').val())">rmLocSto
+    </button>	
+    <button id=show1 name='show1' style="display:show" onclick="show('fd')">show1</button>
+    <button id=hide1 name='hide1' style="display:show" onclick="hide('fd')">hide1</button>
+  </div>
   
 	<div id="fd" class="fd" style="display:none;filter:alpha(opacity=80)" onMousemove="
 var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px'"> 
