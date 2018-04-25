@@ -1,14 +1,27 @@
-
-html { font-size:100%; }
-body{
-background-size:cover;
-width:95%; margin:0; Padding:1.5em;
-overflow:scroll;
-background-color:#f8f8f8;
-background: url(img/background.png);
-border:0 solid #FF0099;
-/*font: arial;*/
+html {
+  font-size:100%;    
+  /* margin: 0; */
+  /* padding: 0; */
+  /* height: 100%; */
+  /* overflow: hidden; */
 }
+body{
+  background-size:cover;
+  width:95%; margin:0; Padding:1.5em;
+  overflow:scroll;
+  background-color:#f8f8f8;
+  background: url(img/background.png);
+  border:0 solid #FF0099;
+  /*font: arial;*/  
+  /* height: 100%; */
+}
+
+#cas{
+  position:absolute;
+  z-index:-2;
+  height: 150%;
+}
+
 #cv{
     background: #eee;
     border-radius: 9px;/*20px*/
