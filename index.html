@@ -55,38 +55,39 @@ DEBUG= 0; dCnt=0;
 
 <!-- 临时加的特效 -->
 <canvas id="cas"></canvas>
-<script src="scripts/rotated-bones.js"></script>
+<!-- <script src="scripts/rotated-bones.js"></script> -->
 
 
   <!-- <div class=wrap> -->
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
   
-  <xmp><title>Faiz's Blog v0.12/b16</title>
+  <xmp><title>Faiz's Blog v0.12/b17</title>
   [ ]:# (md format with xmp in html file)
 ### Data Markup Language:
-  * [markdown用法 /learning the markdown format](blog-html/demo1.html)
+  * [Learning the markdown syntax /Markdown语法](blog-html/demo1.html)
 
 ### Programming Language:
   * c
-    * [Priority of Operator In C](blog-html/demo7.html)
+    * [Priority of Operators In C /C语言里运算符的优先级](blog-html/demo7.html)
   * C++
   * Lisp
-    * How To Design Programs
-    * [Structure and Interpretation of Computer Programs](https://sarabander.github.io/sicp/html/index.xhtml)
+    * [Structure and Interpretation of Computer Programs /计算机程序的结构和解释](https://sarabander.github.io/sicp/html/index.xhtml)
     * [Abbreviations in Common-Lisp /Lisp中的缩写](blog-html/demo9.html)
+
+[//]:# (* How To Design Programs)
 
 ### Others:
   [//]:# (* [red packet of Alibaba](news/ali.html\))
   [//]:# (* [summary of concept](blog-html/demo6.html\))
-  * [my red packet](redpacket/3.html)
-  * [stock](blog-html/demo5.html)
-  * [Terminology in Stock Market/股市术语](blog-html/demo8.html)
+  * [About stock market](blog-html/demo5.html)
+  * [Terminology in Stock Market](blog-html/demo8.html)
   
 ### Relative to me:
   [//]:# (* [My github address](https://github.com/faiz-lisp\))
-  * [My skill/experience tree](blog-html/demo11.html)
-  * [My BTC address](blog-html/demo4.html)
+  * [My skill/experience tree /我的技能树](blog-html/demo11.html)
+  * [Please get your lucky money /这里领取红包](redpacket/3.html)
+  * [My BTC address /我的BTC地址](blog-html/demo4.html)
   </xmp>
 	<a id=top name=top></a>
   
@@ -854,7 +855,7 @@ DEBUG= 0; dCnt=0;
 			debuglog("Welcome back! It's your "+foo+"th(/rd/nd) time visit.");//your next coming');//welcome back			
 		}else{
 			//document.cookie='cnt=1;path=/';
-			alert("Thanks for your first time come in.");//F5 do not add cnt;
+			alert("Thanks for your first visit!");//F5 do not add cnt;
 			foo=1;
 		}
 		localStorage.setItem("cnt", foo); }catch(e){d();}
@@ -1112,7 +1113,7 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 	<div class="wrap">
 	<div class="content">	
     <br/>
-		<div id="title">html project list:</div>
+		<div id="title">Some HTML Projects:</div>
 		<br/>
 		<div id="mota"><a href='motajs/src/index.html'>Magic Tower</a></div>
 		<div id="fruit_ninja"><a        href='fruit_ninja_html5/index.html'>   Fruit Ninja</a></div>
@@ -1381,12 +1382,13 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		debuglog('<div width="50px"/>'+edd+'='+storage.getItem(edd));
 	}
 
+  //获取定位
 	var position_option = {
         enableHighAccuracy: true,
         maximumAge: 30000,
         timeout: 20000
 	};
-	navigator.geolocation.getCurrentPosition(getPositionSuccess, getPositionError, position_option);
+	//navigator.geolocation.getCurrentPosition(getPositionSuccess, getPositionError, position_option);
 
 
 	//
