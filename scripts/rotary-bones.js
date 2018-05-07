@@ -19,7 +19,7 @@
   })();
 
   // 鼠标活动时，获取鼠标坐标
-  var warea = {x: null, y: null, max: 10000}; //2w is radius
+  var warea = {x: null, y: null, max: 1000}; //. 1w<-2w is radius
   window.onmousemove = function(e) {
     e = e || window.event;
     //warea.x = e.clientX; //
@@ -54,7 +54,7 @@
   // 延迟100秒开始执行动画，如果立即执行有时位置计算会出错
   setTimeout(function() {
     animate();
-  }, 100); //100
+  }, 1000); //100
 
   // 每一帧循环的逻辑
   function animate() {
