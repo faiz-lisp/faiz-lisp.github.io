@@ -19,7 +19,7 @@
   })();
 
   // 鼠标活动时，获取鼠标坐标
-  var warea = {x: null, y: null, max: 25000}; //2w is radius
+  var warea = {x: null, y: null, max: 10000}; //2w is radius
   window.onmousemove = function(e) {
     e = e || window.event;
     //warea.x = e.clientX; //
@@ -40,14 +40,14 @@
   for (var i = 0; i < 300; i++) { // 300
     var x = Math.random() * canvas.width;
     var y = Math.random() * canvas.height;
-    var xa = Math.random() * 2 -1; // *2
-    var ya = Math.random() * 2 -1; // *2
+    var xa = (Math.random() * 2 -1)*0.6; // *1
+    var ya = (Math.random() * 2 -1)*0.6; // *1
     dots.push({
       x: x,
       y: y,
       xa: xa,
       ya: ya,
-      max: 5000 //5k<- 6k
+      max: 5500 //5k<- 6k
     })
   }
 
@@ -74,7 +74,7 @@
 
       // 绘制点
       var _rat = 0.5;
-      ctx.fillRect(dot.x - 0.5, dot.y - 0.5*_rat, 1, 1*_rat); //
+      ctx.fillRect(dot.x - 0.5, dot.y - 0.5*_rat, 0.5, 0.5*_rat); //0.5 <- 1
 
       // 循环比对粒子间的距离
       for (var i = 0; i < ndots.length; i++) {
@@ -103,7 +103,7 @@
 
           // 画线
           ctx.beginPath();
-          ctx.lineWidth = ratio / 2 *_rat;
+          ctx.lineWidth = ratio / 2 *_rat; // /2 to control lineWidth
           ctx.strokeStyle = 'rgba(0,0,0,' + (ratio + 0.2) + ')';
           ctx.moveTo(dot.x, dot.y);
           ctx.lineTo(d2.x, d2.y);
