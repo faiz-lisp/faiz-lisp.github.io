@@ -1,4 +1,4 @@
-//need: canvas style fix
+//ver 0.9
 
 //<script>
   var canvas = document.getElementById("cas");
@@ -14,16 +14,20 @@
 
   var RAF = (function() {
     return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-          window.setTimeout(callback, 1000 / 60); //
+          window.setTimeout(callback, 1000 / 50); //50<- 60?
         };
   })();
 
   // 鼠标活动时，获取鼠标坐标
-  var warea = {x: null, y: null, max: 20000}; //
+  var warea = {x: null, y: null, max: 25000}; //2w is radius
   window.onmousemove = function(e) {
     e = e || window.event;
-    warea.x = e.clientX;
-    warea.y = e.clientY;
+    //warea.x = e.clientX; //
+    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+    warea.x = e.pageX || e.clientX + scrollX;
+    warea.y = (e.pageY || e.clientY + scrollY) >> 1;
+    //warea.y = e.clientY;
   };
   window.onmouseout = function(e) {
     warea.x = null;
@@ -33,17 +37,17 @@
   // 添加粒子
   // x，y为粒子坐标，xa, ya为粒子xy轴加速度，max为连线的最大距离
   var dots = [];
-  for (var i = 0; i < 300; i++) { //
+  for (var i = 0; i < 300; i++) { // 300
     var x = Math.random() * canvas.width;
     var y = Math.random() * canvas.height;
-    var xa = Math.random() * 1 - 1; //<- *2
-    var ya = Math.random() * 1 - 1; //<- *2
+    var xa = Math.random() * 2 -1; // *2
+    var ya = Math.random() * 2 -1; // *2
     dots.push({
       x: x,
       y: y,
       xa: xa,
       ya: ya,
-      max: 6000 //
+      max: 5000 //5k<- 6k
     })
   }
 
@@ -69,15 +73,16 @@
       dot.ya *= (dot.y > canvas.height || dot.y < 0) ? -1 : 1;
 
       // 绘制点
-      ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 1, 1);
+      var _rat = 0.5;
+      ctx.fillRect(dot.x - 0.5, dot.y - 0.5*_rat, 1, 1*_rat); //
 
       // 循环比对粒子间的距离
       for (var i = 0; i < ndots.length; i++) {
         var d2 = ndots[i];
         if (dot === d2 || d2.x === null || d2.y === null) continue;
 
-        var xc = dot.x - d2.x;
-        var yc = dot.y - d2.y;
+        var xc = dot.x - d2.x; //-
+        var yc = (dot.y - d2.y)<<1;
 
         // 两个粒子之间的距离
         var dis = xc * xc + yc * yc;
@@ -98,7 +103,7 @@
 
           // 画线
           ctx.beginPath();
-          ctx.lineWidth = ratio / 2;
+          ctx.lineWidth = ratio / 2 *_rat;
           ctx.strokeStyle = 'rgba(0,0,0,' + (ratio + 0.2) + ')';
           ctx.moveTo(dot.x, dot.y);
           ctx.lineTo(d2.x, d2.y);
