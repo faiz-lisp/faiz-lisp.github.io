@@ -19,7 +19,7 @@
   })();
 
   // 鼠标活动时，获取鼠标坐标
-  var warea = {x: null, y: null, max: 1000}; //. 1w<-2w is radius
+  var warea = {x: null, y: null, max: 1000}; //. 1w<-2w is radius, try 2k on phn
   window.onmousemove = function(e) {
     e = e || window.event;
     //warea.x = e.clientX; //
@@ -37,7 +37,7 @@
   // 添加粒子
   // x，y为粒子坐标，xa, ya为粒子xy轴加速度，max为连线的最大距离
   var dots = [];
-  for (var i = 0; i < 300; i++) { // 300
+  for (var i = 0; i < 300; i++) { // 300, try 250 on phn
     var x = Math.random() * canvas.width;
     var y = Math.random() * canvas.height;
     var xa = (Math.random() * 2 -1)*0.6; // *1
@@ -47,7 +47,7 @@
       y: y,
       xa: xa,
       ya: ya,
-      max: 5500 //5k<- 6k
+      max: 5500 //5k<- 6k, try 5k on phn
     })
   }
 

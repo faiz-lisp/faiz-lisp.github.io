@@ -147,7 +147,7 @@ DEBUG= 0; dCnt=0;
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
   
-  <xmp><title>Faiz's Blog v0.13 /1b</title>
+  <xmp><title>Faiz's Blog v0.13 /1c</title>
   [ ]:# (md format with xmp in html file)
 ### Data Markup Language:
   * [Learning the markdown syntax /Markdown语法](blog-html/demo1.html)
@@ -170,8 +170,7 @@ DEBUG= 0; dCnt=0;
   * [About stock market](blog-html/demo5.html)
   * [Terminology in Stock Market](blog-html/demo8.html)
   
-### Relative to me:
-  [//]:# (* [My github address](https://github.com/faiz-lisp\))
+### Relatived to me:
   * [My skill/experience tree /我的技能树](blog-html/demo11.html)
   * [Please get your lucky money /这里领取红包](https://faiz-lisp.github.io/lucky-money/3.html)
   * [My BTC address /我的BTC地址](blog-html/myBtcAddr.html)
@@ -279,15 +278,15 @@ DEBUG= 0; dCnt=0;
 	{ 
 		var t, l, w, h; 
 		if (document.documentElement && document.documentElement.scrollTop) { 
-		t = document.documentElement.scrollTop; 
-		l = document.documentElement.scrollLeft; 
-		w = document.documentElement.scrollWidth; 
-		h = document.documentElement.scrollHeight; 
+      t = document.documentElement.scrollTop; 
+      l = document.documentElement.scrollLeft; 
+      w = document.documentElement.scrollWidth; 
+      h = document.documentElement.scrollHeight; 
 		} else if (document.body) { 
-		t = document.body.scrollTop; 
-		l = document.body.scrollLeft; 
-		w = document.body.scrollWidth; 
-		h = document.body.scrollHeight; 
+      t = document.body.scrollTop; 
+      l = document.body.scrollLeft; 
+      w = document.body.scrollWidth; 
+      h = document.body.scrollHeight; 
 		} 
 		return { t: t, l: l, w: w, h: h }; 
 	} 		
@@ -318,8 +317,7 @@ DEBUG= 0; dCnt=0;
 			if (navigator.appName.indexOf('Netscape') != -1) 
 			{	
 					return("Firefox/Netscape"); 
-			}else
-			
+			}else			
 			{
 				return("notIE");
 			}
@@ -1036,7 +1034,7 @@ DEBUG= 0; dCnt=0;
 		}
 	}
 	
-	/*function strAdd(sNum1, sNum2)
+	/*function strAdd(sNum1, sNum2) //big
 	{ 
 		//����һλ��λ�Լ�¼����λ��һ������
 		var sNum1 = ['0', sNum1].join(''),
@@ -1129,13 +1127,13 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		<div id="fruit_ninja"><a        href='fruit_ninja_html5/index.html'>   Fruit Ninja</a></div>
 		<div id="street_fighter"><a     href='sf/index.html'>                  Street Fighter</a></div>
 		<div id="russia_square"><a      href='RussiaSquare/index.html'>        Tetris</a></div>
-		<div id="rainyday"><a           href='rainyday/index.html'>            Rainy Day</a></div>
+		<!-- <div id="rainyday"><a           href='rainyday/index.html'>            Rainy Day</a></div> -->
 		<div id="dancing_timer"><a      href='dancing_timer_canvas/index.html'>Dancing Timer</a></div>
-		<div id="flame"><a              href='flame_canvas/index.html'>        Flame</a></div>
+		<!-- <div id="flame"><a              href='flame_canvas/index.html'>        Flame</a></div> -->
 		<div id="virtual_keybd"><a      href='SoftKeybd/index.html'>           Virtual Keyboard</a></div>
 		<div id="snow_3d"><a            href='snow3d/snow3d/index.html'>       Snow 3d</a></div>
-		<div id="snow3d_with_snow"><a   href='Snow3dWithSnow/index.html'>      Snow3d With Snow</a></div>
-		<div id="3d_rotatable_tags"><a  href='newform/2/index.html'>           3d Rotatable Tags</a></div>
+		<!-- <div id="snow3d_with_snow"><a   href='Snow3dWithSnow/index.html'>      Snow3d With Snow</a></div> -->
+		<!-- <div id="3d_rotatable_tags"><a  href='newform/2/index.html'>           3d Rotatable Tags</a></div> -->
 		<div id="video_player"><a       style="display:none" href='videoscripts/index.html'>        x Video Player</a></div>
 		<div id="my_editor"><a          style="display:none" href='myEdtr/index.html'>              x my editor</a></div>
 		<div id="chess"><a              style="display:none" href='chess/index.html'>               x incomplete Chess</a></div>
