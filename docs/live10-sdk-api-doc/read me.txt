@@ -1,0 +1,11 @@
+
+需要查看api说明时,请直接双击在浏览器中查看:
+	Live10.0.2-sdk-api-doc-cn.html
+	
+	
+1. 汉化
+2. 修正翻译
+3. 添加跳转
+4. 添加解释
+5. 修改encoding: 从Windows-1252改为utf-8,方便直接输入中文
+6. 修正了默认的encoding设置到utf-8
