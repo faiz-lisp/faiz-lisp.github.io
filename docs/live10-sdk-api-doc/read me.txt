@@ -1,6 +1,6 @@
 
 需要查看api说明时,请直接双击在浏览器中查看:
-	Live10.0.2-sdk-api-doc-cn.html
+	Live10-sdk-api-doc-cn.html
 	
 	
 1. 汉化
