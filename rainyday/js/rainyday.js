@@ -26,11 +26,13 @@ function RainyDay(options, canvas) {
         reflectionScaledownFactor: 3,
         reflectionDropMappingWidth: 200,
         reflectionDropMappingHeight: 200,
-        width: this.img.clientWidth,
+		
+        width:  this.img.clientWidth,
         height: this.img.clientHeight,
+		
         position: 'absolute',
-        top: 0,
-        left: 0
+        // top: 0,
+        // left: 0
     };
 
     // add the defaults to options
