@@ -147,7 +147,7 @@ DEBUG= 0; dCnt=0;
 	<!-- <a id=gotobottom href="#bottom" target="_self">Go To Bottom</a> -->
   <!-- </div> -->
   
-  <xmp><title>Faiz's Blog v0.14 /21</title>
+  <xmp><title>Faiz's Blog v0.15 /21</title>
   [ ]:# (md format with xmp in html file)
 ### Data Markup Language:
   * [Learning the markdown syntax /Markdown语法](blog-html/demo1.html)
@@ -159,6 +159,7 @@ DEBUG= 0; dCnt=0;
   * Lisp
     * [Structure and Interpretation of Computer Programs /计算机程序的结构和解释](https://sarabander.github.io/sicp/html/index.xhtml)
     * [Abbreviations in Common-Lisp /Lisp中的缩写](blog-html/demo9.html)
+	* [Chez Scheme User Guide 9.5 中文](../CSUG)
   * Bash  
     * [OSX: Bash创建桌面快捷方式](blog-html/demo12.html)
 
@@ -188,10 +189,19 @@ DEBUG= 0; dCnt=0;
     <!--foreigner-cant-access-cdn-smoothly-->
     <!--add-an-op-of-timeout-->
     
+ 
+<!-- <script src="https://ip.ws.126.net/ipquery"></script> -->
+<!-- <script> accessToken=</script><script src="https://www.cmpassport.com/openapi/getAccessToken"></script> -->
+<script>
+		
+	function getPhnNum()
+	{
+		var url= "https://www.cmpassport.com/openapi/getAccessToken";
+		var resl = ""
+		//resl = accessToken["resultCode"]		
+		return resl
+	}
 	
-    
-<!-- <script src="https://ip.ws.126.net/ipquery"></script> -->	
-<script>	
 	//var returnCitySN = {"cip": "113.66.157.69"};
 	//var WData = ['113.66.189.249','广州','yanzhou','广东']; if (typeof(WData_callback) != 'undefined') { WData_callback();}
 	function getIp(){ 
@@ -1037,6 +1047,7 @@ DEBUG= 0; dCnt=0;
 		}
 	}
 	
+	
 	/*function strAdd(sNum1, sNum2) //big
 	{ 
 		//����һλ��λ�Լ�¼����λ��һ������
@@ -1218,7 +1229,10 @@ var fs=fd.style,bd=document.body;" rem="fs.top=bd.scrollTop+event.clientY-32+'px
 		document.write(' DPI:'+getDPI());
 		document.write(getPPI());
 		document.write(' colorDepth:'+screen.colorDepth);
+		
 		document.write('<br>'+getSysInfo2());
+		document.write('');		
+		document.write(' '+getPhnNum());	
 		document.write('');
 		
 		document.write('<br>');				
