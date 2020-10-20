@@ -3,9 +3,10 @@
     <title>Html-Qrcode Demo</title>
 <body>
 
-    <div id="qr-reader" style="width:500px"></div>
+    <div id="qr-reader" style="width:500px"></div>    
+    <div id="qr-reader-results0"></div>
     
-    <div id="qr-reader-results"></div>
+    <input id="qr-reader-results"></input>
 </body>
 
 <!-- <script src="jsm/html5-qrcode.min.js"></script> -->
@@ -18,6 +19,7 @@
             document.readyState === "interactive") {
             // Call on next available tick
             setTimeout (fn, 1);
+            
         } else {
             document.addEventListener ("DOMContentLoaded", fn);
         }
@@ -25,21 +27,23 @@
 
     docReady (function () {
         var resultContainer = document.getElementById('qr-reader-results'); //
+        
         var lastResult, countResults = 0;
-        function onScanSuccess (qrCodeMessage) {
+        function onScanSuccess (qrCodeMessage) { //
             if (qrCodeMessage !== lastResult) {
                 ++countResults;
                 lastResult= qrCodeMessage;
-                resultContainer.innerHTML
-                    //+= `<div>[${countResults}] - ${qrCodeMessage}</div>`; //
-                    = `<div>${qrCodeMessage}</div>`; //
+                //resultContainer.innerHTML
+                    //+= `<div>[${countResults}] - ${qrCodeMessage}</div>`;
+                    //= `<div>${qrCodeMessage}</div>`;
+                resultContainer.value= `${qrCodeMessage}`;
             }
         }
 
         var html5QrcodeScanner = new Html5QrcodeScanner (
             "qr-reader", { fps: 10, qrbox: 250 }
         );
-        html5QrcodeScanner.render(onScanSuccess);
+        html5QrcodeScanner.render(onScanSuccess); //
     });
 </script>
 </head>
