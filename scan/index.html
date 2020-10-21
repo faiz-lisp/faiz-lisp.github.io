@@ -22,7 +22,13 @@
     {
         var resultContainer = document.getElementById ('qr-reader-results'); //
         var qrReader = document.getElementById("qr-reader");
-        qrReader.style.display= "block";
+        
+        var qrState = qrReader.style.display; //        
+        //alert(qrState);
+        qrReader.style.display= (qrState != "block")? "block": "none";
+        
+        // var qrWidth = qrReader.style.width;
+        // qrReader.style.width= qrWidth!="500px"? "500px": "501px";
         
         var html5QrcodeScanner = new Html5QrcodeScanner (
             "qr-reader", { fps: 10, qrbox: 250 }
@@ -46,28 +52,28 @@
         html5QrcodeScanner.render (onScanSuccess); //
     }
 
-    <!-- docReady (function () { -->
-        <!-- var resultContainer = document.getElementById('qr-reader-results'); // -->
+    // docReady (function () {
+        // var resultContainer = document.getElementById('qr-reader-results'); //
         
-        <!-- var lastResult, countResults = 0; -->
-        <!-- function onScanSuccess (qrCodeMessage) { // -->
-            <!-- if (qrCodeMessage !== lastResult) { -->
-                <!-- ++countResults; -->
-                <!-- lastResult= qrCodeMessage; -->
-                <!-- //resultContainer.innerHTML -->
-                    <!-- //+= `<div>[${countResults}] - ${qrCodeMessage}</div>`; -->
-                    <!-- //= `<div>${qrCodeMessage}</div>`; -->
-                <!-- resultContainer.value= `${qrCodeMessage}`; -->
-            <!-- } -->
-            <!-- return `${qrCodeMessage}`; //+ -->
-        <!-- } -->
+        // var lastResult, countResults = 0;
+        // function onScanSuccess (qrCodeMessage) { //
+            // if (qrCodeMessage !== lastResult) {
+                // ++countResults;
+                // lastResult= qrCodeMessage;
+                // resultContainer.innerHTML
+                    // += `<div>[${countResults}] - ${qrCodeMessage}</div>`;
+                    // = `<div>${qrCodeMessage}</div>`;
+                // resultContainer.value= `${qrCodeMessage}`;
+            // }
+            // return `${qrCodeMessage}`; //+
+        // }
 
-        <!-- var html5QrcodeScanner = new Html5QrcodeScanner ( -->
-            <!-- "qr-reader", { fps: 10, qrbox: 250 } -->
-        <!-- ); -->
+        // var html5QrcodeScanner = new Html5QrcodeScanner (
+            // "qr-reader", { fps: 10, qrbox: 250 }
+        // );
         
-        <!-- html5QrcodeScanner.render(onScanSuccess); // -->
-    <!-- }); -->
+        // html5QrcodeScanner.render(onScanSuccess); //
+    // });
 </script>
 </head>
 
