@@ -2047,4 +2047,10 @@ var Html5QrcodeScanner = function() {
         }
     }]), a
 }();
-_defineProperty(Html5QrcodeScanner, "SCAN_TYPE_CAMERA", "SCAN_TYPE_CAMERA"), _defineProperty(Html5QrcodeScanner, "SCAN_TYPE_FILE", "SCAN_TYPE_FILE"), _defineProperty(Html5QrcodeScanner, "STATUS_SUCCESS", "STATUS_SUCCESS"), _defineProperty(Html5QrcodeScanner, "STATUS_WARNING", "STATUS_WARNING"), _defineProperty(Html5QrcodeScanner, "STATUS_DEFAULT", "STATUS_DEFAULT"), _defineProperty(Html5QrcodeScanner, "ASSET_FILE_SCAN", "https://raw.githubusercontent.com/mebjas/html5-qrcode/master/assets/file-scan.gif"), _defineProperty(Html5QrcodeScanner, "ASSET_CAMERA_SCAN", "https://raw.githubusercontent.com/mebjas/html5-qrcode/master/assets/camera-scan.gif");
+_defineProperty(Html5QrcodeScanner, "SCAN_TYPE_CAMERA", "SCAN_TYPE_CAMERA")
+, _defineProperty(Html5QrcodeScanner, "SCAN_TYPE_FILE", "SCAN_TYPE_FILE")
+, _defineProperty(Html5QrcodeScanner, "STATUS_SUCCESS", "STATUS_SUCCESS")
+, _defineProperty(Html5QrcodeScanner, "STATUS_WARNING", "STATUS_WARNING")
+, _defineProperty(Html5QrcodeScanner, "STATUS_DEFAULT", "STATUS_DEFAULT")
+, _defineProperty(Html5QrcodeScanner, "ASSET_FILE_SCAN", "https://raw.githubusercontent.com/mebjas/html5-qrcode/master/assets/file-scan.gif")
+, _defineProperty(Html5QrcodeScanner, "ASSET_CAMERA_SCAN", "https://raw.githubusercontent.com/mebjas/html5-qrcode/master/assets/camera-scan.gif");
