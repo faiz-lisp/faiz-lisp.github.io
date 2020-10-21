@@ -1,87 +1,85 @@
 <html>
 <head>
-    <title>Html-Qrcode Demo</title>
+    <!-- <script src="jsm/html5-qrcode.min.js"></script> -->
+    <script src="js/html5-qrcode.js"></script>
 
-<!-- <script src="jsm/html5-qrcode.min.js"></script> -->
-<script src="js/html5-qrcode.js"></script>
-
-<script>
-    function docReady (fn) {
-        // See if DOM is already available
-        if (document.readyState === "complete" ||
-            document.readyState === "interactive") {
-            // Call on next available tick
-            setTimeout (fn, 1);
-            
-        } else {
-            document.addEventListener ("DOMContentLoaded", fn);
-        }
-    }
-    
-    function scan()
-    {
-        var resultContainer = document.getElementById ('qr-reader-results'); //
-        var qrReader = document.getElementById("qr-reader");
-        
-        var qrState = qrReader.style.display; //        
-        //alert(qrState);
-        qrReader.style.display= (qrState != "block")? "block": "none";
-        
-        // var qrWidth = qrReader.style.width;
-        // qrReader.style.width= qrWidth!="500px"? "500px": "501px";
-        
-        var html5QrcodeScanner = new Html5QrcodeScanner (
-            "qr-reader", { fps: 10, qrbox: 250 }
-        );
-        
-        var lastResult, countResults = 0;
-        function onScanSuccess (qrCodeMessage)
-        {
-            if (qrCodeMessage !== lastResult) {
-                ++countResults;
-                lastResult= qrCodeMessage;
-                //resultContainer.innerHTML
-                    //+= `<div>[${countResults}] - ${qrCodeMessage}</div>`;
-                resultContainer.value= `${qrCodeMessage}`;
-                              
-                document.getElementById("qr-reader").style.display="none"; //
-                //html5QrcodeScanner.stop();
-            }
-            //return `${qrCodeMessage}`;
-        }        
-        html5QrcodeScanner.render (onScanSuccess); //
-    }
-
-    // docReady (function () {
-        // var resultContainer = document.getElementById('qr-reader-results'); //
-        
-        // var lastResult, countResults = 0;
-        // function onScanSuccess (qrCodeMessage) { //
-            // if (qrCodeMessage !== lastResult) {
-                // ++countResults;
-                // lastResult= qrCodeMessage;
-                // resultContainer.innerHTML
-                    // += `<div>[${countResults}] - ${qrCodeMessage}</div>`;
-                    // = `<div>${qrCodeMessage}</div>`;
-                // resultContainer.value= `${qrCodeMessage}`;
+    <script>
+        // function docReady (fn) {
+            /// See if DOM is already available
+            // if (document.readyState === "complete" ||
+                // document.readyState === "interactive") {
+                /// Call on next available tick
+                // setTimeout (fn, 1);
+                
+            // } else {
+                // document.addEventListener ("DOMContentLoaded", fn);
             // }
-            // return `${qrCodeMessage}`; //+
         // }
-
-        // var html5QrcodeScanner = new Html5QrcodeScanner (
-            // "qr-reader", { fps: 10, qrbox: 250 }
-        // );
         
-        // html5QrcodeScanner.render(onScanSuccess); //
-    // });
-</script>
-</head>
+        function scan() //v0.22
+        {
+            var resultContainer = document.getElementById ('qr-reader-results'); //
+            var qrReader = document.getElementById("qr-reader");
+            
+            var qrState = qrReader.style.display; //
+            qrReader.style.display= (qrState != "block")? "block": "none";
+            
+            // var qrWidth = qrReader.style.width;
+            // qrReader.style.width= qrWidth!="500px"? "500px": "501px";
+            
+            var html5QrcodeScanner = new Html5QrcodeScanner (
+                "qr-reader", { fps: 10, qrbox: 250 }
+            );
+            
+            var lastResult, countResults = 0;
+            function onScanSuccess (qrCodeMessage)
+            {
+                if (qrCodeMessage !== lastResult) {
+                    ++countResults;
+                    lastResult= qrCodeMessage;
+                    //resultContainer.innerHTML
+                        //+= `<div>[${countResults}] - ${qrCodeMessage}</div>`;
+                    resultContainer.value= `${qrCodeMessage}`;
+                                  
+                    qrReader.style.display="none"; //
+                    qrReader.html5_qrcode_stop();
+                }
+                //return `${qrCodeMessage}`;
+            }        
+            html5QrcodeScanner.render (onScanSuccess); //
+        }
 
+        // docReady (function () {
+            // var resultContainer = document.getElementById('qr-reader-results'); //
+            
+            // var lastResult, countResults = 0;
+            // function onScanSuccess (qrCodeMessage) { //
+                // if (qrCodeMessage !== lastResult) {
+                    // ++countResults;
+                    // lastResult= qrCodeMessage;
+                    // resultContainer.innerHTML
+                        // += `<div>[${countResults}] - ${qrCodeMessage}</div>`;
+                        // = `<div>${qrCodeMessage}</div>`;
+                    // resultContainer.value= `${qrCodeMessage}`;
+                // }
+                // return `${qrCodeMessage}`; //+
+            // }
+
+            // var html5QrcodeScanner = new Html5QrcodeScanner (
+                // "qr-reader", { fps: 10, qrbox: 250 }
+            // );
+            
+            // html5QrcodeScanner.render(onScanSuccess); //
+        // });
+    </script>
+
+</head>
 <body>
 
     <div id="qr-reader" style="width:500px"></div>
     <input id="qr-reader-results"></input>
     <button onclick="scan()"><img src="res/scan.gif" alt="Scan serial"/></button>
+    <!-- please search ASSET_FILE_SCAN in your js, and replace them to be faster -->
 
 </body>
 </html>
